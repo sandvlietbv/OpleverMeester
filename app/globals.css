@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Merkkleuren — OpleverMeester */
+  --om-navy: #0b1d33;
+  --om-navy-light: #14304f;
+  --om-navy-soft: #1c3b5e;
+  --om-orange: #e76f2c;
+  --om-orange-light: #f2905a;
+  --om-white: #ffffff;
+  --om-gray-light: #f4f5f7;
+  --om-gray-mid: #e4e7eb;
+  --om-text-muted: #5b6472;
+
+  --om-radius: 14px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  color: var(--om-navy);
+  background: var(--om-white);
+}
+
+/* Zichtbare focus-ring — toegankelijkheid (WCAG AA) */
+:focus-visible {
+  outline: 2px solid var(--om-orange);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.container-om {
+  max-width: 1240px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .container-om {
+    padding-inline: 2.5rem;
+  }
+}
+
+/* Signature: 'ruimte-lijn' divider — deur die opent, als sectie-scheiding */
+.room-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--om-gray-mid) 20%,
+    var(--om-gray-mid) 80%,
+    transparent 100%
+  );
+}
