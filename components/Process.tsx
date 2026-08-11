@@ -1,12 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { CheckCircle2 } from "lucide-react";
 
 const STEPS = [
   { title: "Aanvraag", body: "U vertelt ons de situatie — telefonisch, via WhatsApp of het formulier." },
   { title: "Opname", body: "Wij bekijken de ruimte en maken een heldere, vrijblijvende offerte." },
-  { title: "Uitvoering", body: "Op de afgesproken datum voeren wij het werk zorgvuldig uit." },
-  { title: "Oplevering", body: "U ontvangt de ruimte precies zoals afgesproken, klaar voor de volgende stap." },
+  { title: "Planning", body: "We stemmen datum, aanpak en eventuele spoed af in één overzicht." },
+  { title: "Uitvoering & oplevering", body: "Op de afgesproken datum voeren wij het werk zorgvuldig uit en leveren op." },
 ];
 
 export default function Process() {
@@ -32,26 +33,22 @@ export default function Process() {
           Vier stappen. Geen verrassingen.
         </motion.p>
 
-        <div className="mt-16 grid gap-10 md:grid-cols-4 md:gap-8">
+        <div className="mt-16 grid gap-5 lg:grid-cols-4">
           {STEPS.map((step, i) => (
             <motion.div
               key={step.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="relative"
+              transition={{ duration: 0.5, delay: i * 0.08 }}
+              className="rounded-om border border-white/10 bg-white/5 p-6"
             >
-              <span className="font-display text-sm font-medium text-orange-light">
-                Stap {i + 1}
-              </span>
-              <h3 className="mt-3 font-display text-xl font-semibold">
-                {step.title}
-              </h3>
+              <div className="flex items-center gap-2 text-orange-light">
+                <CheckCircle2 className="h-5 w-5" />
+                <span className="text-sm font-medium">Stap {i + 1}</span>
+              </div>
+              <h3 className="mt-4 font-display text-xl font-semibold">{step.title}</h3>
               <p className="mt-3 leading-relaxed text-white/65">{step.body}</p>
-              {i < STEPS.length - 1 && (
-                <div className="mt-8 hidden h-px w-full bg-white/10 md:block" />
-              )}
             </motion.div>
           ))}
         </div>

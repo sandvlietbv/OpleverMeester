@@ -1,13 +1,9 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import WhyUs from "@/components/WhyUs";
 import ForWhom from "@/components/ForWhom";
 import Services from "@/components/Services";
 import Process from "@/components/Process";
-import Trust from "@/components/Trust";
-import Reviews from "@/components/Reviews";
 import FAQ from "@/components/FAQ";
-import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
 const JSON_LD = {
@@ -32,15 +28,11 @@ export default function HomePage() {
       <Header />
       <main>
         <Hero />
-        <WhyUs />
-        <ForWhom />
         <div className="room-divider" />
         <Services />
+        <ForWhom />
         <Process />
-        <Trust />
-        <Reviews />
         <FAQ />
-        <Contact />
       </main>
       <Footer />
     </>

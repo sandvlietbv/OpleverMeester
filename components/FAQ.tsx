@@ -65,10 +65,7 @@ export default function FAQ() {
                   />
                 </button>
                 {isOpen && (
-                  <div
-                    id={`faq-panel-${i}`}
-                    className="px-6 pb-5 leading-relaxed text-muted"
-                  >
+                  <div id={`faq-panel-${i}`} className="px-6 pb-5 leading-relaxed text-muted">
                     {item.a}
                   </div>
                 )}

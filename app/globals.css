@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 :root {
-  /* Merkkleuren — OpleverMeester */
   --om-navy: #0b1d33;
   --om-navy-light: #14304f;
   --om-navy-soft: #1c3b5e;
@@ -13,7 +12,6 @@
   --om-gray-light: #f4f5f7;
   --om-gray-mid: #e4e7eb;
   --om-text-muted: #5b6472;
-
   --om-radius: 14px;
 }
 
@@ -40,7 +38,6 @@ body {
   background: var(--om-white);
 }
 
-/* Zichtbare focus-ring — toegankelijkheid (WCAG AA) */
 :focus-visible {
   outline: 2px solid var(--om-orange);
   outline-offset: 3px;
@@ -59,7 +56,6 @@ body {
   }
 }
 
-/* Signature: 'ruimte-lijn' divider — deur die opent, als sectie-scheiding */
 .room-divider {
   width: 100%;
   height: 1px;
