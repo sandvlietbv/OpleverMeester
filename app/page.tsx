@@ -4,7 +4,6 @@ import WhyUs from "@/components/WhyUs";
 import ForWhom from "@/components/ForWhom";
 import Services from "@/components/Services";
 import Process from "@/components/Process";
-import Trust from "@/components/Trust";
 import Reviews from "@/components/Reviews";
 import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
@@ -37,7 +36,6 @@ export default function HomePage() {
         <div className="room-divider" />
         <Services />
         <Process />
-        <Trust />
         <Reviews />
         <FAQ />
         <Contact />

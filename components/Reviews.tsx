@@ -46,7 +46,7 @@ export default function Reviews() {
             </span>
           </div>
           <a
-            href="https://g.page/r/review"
+            href="#contact"
             className="text-sm font-semibold text-orange hover:underline"
           >
             Bekijk al onze reviews →

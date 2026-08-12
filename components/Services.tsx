@@ -8,7 +8,6 @@ import {
   Truck,
   Building2,
   Warehouse,
-  Package,
   Zap,
 } from "lucide-react";
 
