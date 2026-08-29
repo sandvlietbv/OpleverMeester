@@ -3,7 +3,6 @@
 import { useRef, useState } from "react";
 import { Phone } from "lucide-react";
 
-const PHONE_DISPLAY = "06 45 31 68 51";
 const PHONE_TEL = "+31645316851";
 
 export default function Contact() {
@@ -54,7 +53,7 @@ export default function Contact() {
             <p><strong>2.</strong> Wij nemen de digitale intake telefonisch met u door.</p>
             <p><strong>3.</strong> Daarna maken we de offerte en kunnen we schakelen.</p>
           </div>
-          <a href={`tel:${PHONE_TEL}`} className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-navy"><Phone className="h-4 w-4 text-orange" />Liever direct overleggen? {PHONE_DISPLAY}</a>
+          <a href={`tel:${PHONE_TEL}`} className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-navy"><Phone className="h-4 w-4 text-orange" />Liever direct overleggen?</a>
         </div>
 
         <div className="rounded-om border border-surface-mid bg-surface-light p-5 md:p-8">
@@ -74,7 +73,7 @@ export default function Contact() {
               <FormSection number="04" title="Wat moeten we vooraf weten?">
                 <label htmlFor="situatie" className="sr-only">Korte toelichting</label><textarea id="situatie" name="situatie" rows={4} placeholder="Bijvoorbeeld: woning staat vol, laminaat moet eruit, sleuteloverdracht is gepland, zware spullen aanwezig…" className="w-full rounded-om border border-surface-mid bg-white px-4 py-3 text-navy outline-none placeholder:text-muted/60 focus:border-orange" />
               </FormSection>
-              {error && <p role="alert" className="text-sm text-red-700">{error} Bel ons anders op {PHONE_DISPLAY}.</p>}
+              {error && <p role="alert" className="text-sm text-red-700">{error} Probeer het opnieuw of kies voor direct overleg.</p>}
               <button type="submit" disabled={submitting} className="w-full rounded-om bg-orange px-6 py-4 text-base font-semibold text-white hover:bg-orange-light disabled:opacity-60">{submitting ? "Versturen…" : "Intake versturen"}</button>
               <p className="text-center text-xs text-muted">We gebruiken deze gegevens om uw aanvraag te beoordelen en contact met u op te nemen.</p>
             </form>
