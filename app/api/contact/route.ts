@@ -51,6 +51,7 @@ export async function POST(request: Request) {
       cache: "no-store",
       signal: AbortSignal.timeout(10_000),
     });
+    await response.text();
 
     if (!response.ok) {
       console.error("PRIDE intake rejected contact submission", { status: response.status });
