@@ -15,7 +15,6 @@ const JSON_LD = {
   "@type": "LocalBusiness",
   name: "OpleverMeester",
   description: "OpleverMeester helpt woningen, bedrijfspanden, kantoren en opslagruimtes ontruimen, bezemschoon en opleverklaar maken.",
-  telephone: "+31645316851",
   url: "https://oplevermeester.nl",
   areaServed: "NL",
   priceRange: "€€",

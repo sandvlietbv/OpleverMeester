@@ -10,9 +10,6 @@ const NAV_LINKS = [
   { label: "Over ons", href: "#vertrouwen" },
 ];
 
-const PHONE_DISPLAY = "06 45 31 68 51";
-const PHONE_TEL = "+31645316851";
-
 export default function Header() {
   const [open, setOpen] = useState(false);
 
@@ -31,10 +28,7 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="hidden items-center gap-4 md:flex">
-          <a href={`tel:${PHONE_TEL}`} className="text-sm font-semibold text-navy transition-colors hover:text-orange">
-            {PHONE_DISPLAY}
-          </a>
+        <div className="hidden md:flex">
           <a href="#intake" className="rounded-om bg-orange px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-orange-light">
             Start intake
           </a>
@@ -58,7 +52,6 @@ export default function Header() {
                 {link.label}
               </a>
             ))}
-            <a href={`tel:${PHONE_TEL}`} className="px-2 py-3 text-base font-semibold text-navy">Bel: {PHONE_DISPLAY}</a>
             <a href="#intake" className="mt-2 rounded-om bg-orange px-5 py-3 text-center text-base font-semibold text-white" onClick={() => setOpen(false)}>
               Start intake
             </a>
