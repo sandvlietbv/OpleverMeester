@@ -14,8 +14,7 @@ const JSON_LD = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: "OpleverMeester",
-  description:
-    "OpleverMeester regelt het complete opleverproces van woningen en bedrijfspanden, van ontruiming tot opleverklaar maken en schoonmaak.",
+  description: "OpleverMeester helpt woningen, bedrijfspanden, kantoren en opslagruimtes ontruimen, bezemschoon en opleverklaar maken.",
   telephone: "+31645316851",
   url: "https://oplevermeester.nl",
   areaServed: "NL",
@@ -23,26 +22,5 @@ const JSON_LD = {
 };
 
 export default function HomePage() {
-  return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }}
-      />
-      <Header />
-      <main>
-        <Hero />
-        <Contact />
-        <WhyUs />
-        <ForWhom />
-        <div className="room-divider" />
-        <Services />
-        <Process />
-        <Trust />
-        <Reviews />
-        <FAQ />
-      </main>
-      <Footer />
-    </>
-  );
+  return <><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }} /><Header /><main><Hero /><Contact /><Trust /><Services /><ForWhom /><WhyUs /><Process /><Reviews /><FAQ /></main><Footer /></>;
 }

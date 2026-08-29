@@ -4,52 +4,23 @@ import { motion } from "framer-motion";
 
 const PHONE_DISPLAY = "06 45 31 68 51";
 const PHONE_TEL = "+31645316851";
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 16 },
-  show: (delay = 0) => ({ opacity: 1, y: 0, transition: { duration: 0.5, delay, ease: [0.22, 1, 0.36, 1] } }),
-};
+const fadeUp = { hidden: { opacity: 0, y: 14 }, show: (delay = 0) => ({ opacity: 1, y: 0, transition: { duration: 0.45, delay, ease: [0.22, 1, 0.36, 1] } }) };
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-navy text-white">
-      <DoorMotif className="pointer-events-none absolute -right-24 top-1/2 hidden h-[500px] w-[500px] -translate-y-1/2 opacity-[0.07] lg:block" />
-      <div className="container-om relative flex min-h-[72vh] flex-col justify-center py-20 md:min-h-[70vh] md:py-24">
-        <motion.p initial="hidden" animate="show" custom={0} variants={fadeUp} className="mb-4 text-sm font-medium uppercase tracking-[0.16em] text-orange-light">
-          Opleveren zonder gedoe
-        </motion.p>
-        <motion.h1 initial="hidden" animate="show" custom={0.08} variants={fadeUp} className="max-w-4xl font-display text-4xl font-semibold leading-[1.06] tracking-tight md:text-6xl lg:text-[4.1rem]">
-          Woning, bedrijfspand of opslagruimte opleveren?
-          <br />
-          Wij pakken het met u op.
-        </motion.h1>
-        <motion.p initial="hidden" animate="show" custom={0.16} variants={fadeUp} className="mt-6 max-w-2xl text-lg leading-relaxed text-white/75 md:text-xl">
-          Geef ons de belangrijkste gegevens van de locatie en de situatie. Dan weten we snel waar we over praten en kunnen we gericht met u schakelen.
-        </motion.p>
-        <motion.div initial="hidden" animate="show" custom={0.24} variants={fadeUp} className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
-          <a href="#intake" className="rounded-om bg-orange px-7 py-3.5 text-center text-base font-semibold text-white shadow-lg shadow-orange/20 transition-colors hover:bg-orange-light">
-            Start intake
-          </a>
-          <a href={`tel:${PHONE_TEL}`} className="rounded-om border border-white/25 px-7 py-3.5 text-center text-base font-semibold text-white transition-colors hover:border-white/50 hover:bg-white/5">
-            Direct overleggen: {PHONE_DISPLAY}
-          </a>
-        </motion.div>
-        <motion.div initial="hidden" animate="show" custom={0.32} variants={fadeUp} className="mt-10 grid max-w-3xl gap-3 text-sm text-white/65 sm:grid-cols-3">
-          <span>Vast aanspreekpunt</span>
-          <span>Heldere afspraken</span>
-          <span>Snel inzicht in wat nodig is</span>
-        </motion.div>
+    <section className="bg-navy text-white">
+      <div className="container-om grid min-h-[66vh] items-center gap-10 py-16 md:py-20 lg:grid-cols-[1.25fr_.75fr]">
+        <div>
+          <motion.p initial="hidden" animate="show" custom={0} variants={fadeUp} className="mb-4 text-sm font-medium uppercase tracking-[0.14em] text-orange-light">OpleverMeester</motion.p>
+          <motion.h1 initial="hidden" animate="show" custom={0.06} variants={fadeUp} className="max-w-4xl font-display text-4xl font-semibold leading-[1.05] tracking-tight md:text-6xl lg:text-[4rem]">Ruimte opleveren?<br />Wij regelen wat nodig is.</motion.h1>
+          <motion.p initial="hidden" animate="show" custom={0.12} variants={fadeUp} className="mt-6 max-w-2xl text-lg leading-relaxed text-white/75 md:text-xl">Woning, bedrijfspand, kantoor of opslagruimte. Geef de situatie door en wij kijken direct wat er nodig is om de ruimte goed op te leveren.</motion.p>
+          <motion.div initial="hidden" animate="show" custom={0.18} variants={fadeUp} className="mt-8 flex flex-col gap-3 sm:flex-row"><a href="#intake" className="rounded-om bg-orange px-7 py-3.5 text-center font-semibold text-white hover:bg-orange-light">Start intake</a><a href={`tel:${PHONE_TEL}`} className="rounded-om border border-white/25 px-7 py-3.5 text-center font-semibold text-white hover:border-white/50">Bel {PHONE_DISPLAY}</a></motion.div>
+        </div>
+        <motion.aside initial="hidden" animate="show" custom={0.22} variants={fadeUp} className="border-l border-white/15 pl-7 lg:pl-9">
+          <p className="text-sm font-semibold text-orange-light">Van probleem naar oplevering</p>
+          <div className="mt-5 space-y-5 text-sm leading-relaxed text-white/70"><p><strong className="block text-base text-white">Eén aanspreekpunt</strong>We houden de lijnen kort en maken duidelijk wat er moet gebeuren.</p><p><strong className="block text-base text-white">Duidelijke planning</strong>U weet waar u aan toe bent en wanneer de ruimte klaar moet zijn.</p><p><strong className="block text-base text-white">Opleveren zoals afgesproken</strong>We sturen op het eindresultaat, niet op losse klusjes.</p></div>
+        </motion.aside>
       </div>
     </section>
-  );
-}
-
-function DoorMotif({ className }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" className={className} aria-hidden="true">
-      <rect x="60" y="40" width="180" height="320" rx="4" stroke="white" strokeWidth="2" />
-      <path d="M240 40 L340 70 L340 330 L240 360" stroke="white" strokeWidth="2" strokeLinejoin="round" />
-      <circle cx="220" cy="205" r="4" fill="white" />
-    </svg>
   );
 }
