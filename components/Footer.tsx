@@ -13,7 +13,7 @@ const FOOTER_LINKS = [
     heading: "Bedrijf",
     links: [
       { label: "Over ons", href: "/over-ons" },
-      { label: "Contact", href: "/#contact" },
+      { label: "Start intake", href: "/#intake" },
     ],
   },
   {
