@@ -15,7 +15,7 @@ const JSON_LD = {
   "@type": "LocalBusiness",
   name: "OpleverMeester",
   description:
-    "OpleverMeester regelt het complete opleverproces van woningen en bedrijfspanden — ontruiming, opleverklaar maken en schoonmaak.",
+    "OpleverMeester regelt het complete opleverproces van woningen en bedrijfspanden, van ontruiming tot opleverklaar maken en schoonmaak.",
   telephone: "+31645316851",
   url: "https://oplevermeester.nl",
   areaServed: "NL",
@@ -32,6 +32,7 @@ export default function HomePage() {
       <Header />
       <main>
         <Hero />
+        <Contact />
         <WhyUs />
         <ForWhom />
         <div className="room-divider" />
@@ -40,7 +41,6 @@ export default function HomePage() {
         <Trust />
         <Reviews />
         <FAQ />
-        <Contact />
       </main>
       <Footer />
     </>
