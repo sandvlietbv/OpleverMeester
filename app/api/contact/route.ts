@@ -18,12 +18,16 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: false, error: "Contactformulier tijdelijk niet beschikbaar." }, { status: 503 });
   }
 
-  let payload: ContactPayload;
+  let parsed: unknown;
   try {
-    payload = await request.json() as ContactPayload;
+    parsed = await request.json();
   } catch {
     return NextResponse.json({ ok: false, error: "Ongeldige aanvraag." }, { status: 400 });
   }
+  if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) {
+    return NextResponse.json({ ok: false, error: "Ongeldige aanvraag." }, { status: 400 });
+  }
+  const payload = parsed as ContactPayload;
 
   const name = text(payload.name);
   const email = text(payload.email).toLowerCase();
@@ -45,6 +49,7 @@ export async function POST(request: Request) {
       },
       body: JSON.stringify({ name, email, phone: phone || undefined, message, sourcePage, submissionId }),
       cache: "no-store",
+      signal: AbortSignal.timeout(10_000),
     });
 
     if (!response.ok) {
