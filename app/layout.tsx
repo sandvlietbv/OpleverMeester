@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Inter } from "next/font/google";
 import { GeistSans } from "geist/font/sans";
 import "./globals.css";
@@ -39,6 +40,8 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
+const GA_MEASUREMENT_ID = "G-Q12VQ3YP0M";
+
 export default function RootLayout({
   children,
 }: {
@@ -47,6 +50,18 @@ export default function RootLayout({
   return (
     <html lang="nl" className={`${inter.variable} ${GeistSans.variable}`}>
       <body className="font-sans antialiased">{children}</body>
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${GA_MEASUREMENT_ID}');
+        `}
+      </Script>
     </html>
   );
 }
