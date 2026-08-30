@@ -15,7 +15,7 @@ declare global {
 }
 
 function setAnalyticsDisabled(disabled: boolean) {
-  (window as Window & Record<string, unknown>)[`ga-disable-${GA_MEASUREMENT_ID}`] = disabled;
+  Reflect.set(window, `ga-disable-${GA_MEASUREMENT_ID}`, disabled);
 }
 
 function startAnalytics() {
