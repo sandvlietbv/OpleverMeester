@@ -60,7 +60,7 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="container-om flex flex-col gap-2 py-6 text-xs text-white/45 sm:flex-row sm:items-center sm:justify-between">
           <span>© {new Date().getFullYear()} OpleverMeester. Alle rechten voorbehouden.</span>
-          <span>KvK: [in te vullen] · BTW: [in te vullen]</span>
+          <span>KvK: 96147067</span>
         </div>
       </div>
     </footer>
