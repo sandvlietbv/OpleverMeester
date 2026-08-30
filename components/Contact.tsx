@@ -2,6 +2,12 @@
 
 import { useRef, useState } from "react";
 
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
@@ -35,6 +41,13 @@ export default function Contact() {
         body: JSON.stringify({ name: form.get("naam"), email: form.get("email"), phone: form.get("telefoon"), message, sourcePage: landingUrl, submissionId: submissionId.current }),
       });
       if (!response.ok) throw new Error("De intake kon niet worden verstuurd.");
+
+      window.gtag?.("event", "generate_lead", {
+        form_name: "oplevermeester_intake",
+        source_page: landingUrl,
+        object_type: String(form.get("type") || "onbekend"),
+        urgency: String(form.get("urgentie") || "onbekend"),
+      });
       setSubmitted(true);
     } catch (cause) {
       setError(cause instanceof Error ? cause.message : "Versturen is niet gelukt.");
