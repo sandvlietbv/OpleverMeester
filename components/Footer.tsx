@@ -4,21 +4,30 @@ const FOOTER_LINKS = [
   {
     heading: "Diensten",
     links: [
-      { label: "Woningontruiming Groningen", href: "/woningontruiming-groningen" },
-      { label: "Alle diensten", href: "/#diensten" },
+      { label: "Woningontruiming", href: "/woningontruiming" },
+      { label: "Huurwoning opleveren", href: "/huurwoning-opleveren" },
+      { label: "Na overlijden", href: "/huis-leeghalen-na-overlijden" },
+      { label: "Spoedontruiming", href: "/spoedontruiming" },
+      { label: "Bedrijfsontruiming", href: "/bedrijfsontruiming" },
+      { label: "Kosten woningontruiming", href: "/kosten-woningontruiming" },
+    ],
+  },
+  {
+    heading: "Regio & zakelijk",
+    links: [
+      { label: "Groningen", href: "/woningontruiming-groningen" },
+      { label: "Friesland", href: "/woningontruiming-friesland" },
+      { label: "Drenthe", href: "/woningontruiming-drenthe" },
+      { label: "Bewindvoerders & curatoren", href: "/zakelijk/bewindvoerders-en-curatoren" },
+      { label: "Vastgoedbeheer & corporaties", href: "/zakelijk/vastgoedbeheer-en-corporaties" },
     ],
   },
   {
     heading: "OpleverMeester",
     links: [
-      { label: "Voor wie", href: "/#voor-wie" },
+      { label: "Seniorenverhuizing", href: "/seniorenverhuizing-en-oplevering" },
+      { label: "Vloer verwijderen", href: "/vloer-verwijderen-oplevering" },
       { label: "Werkwijze", href: "/#werkwijze" },
-      { label: "Over ons", href: "/#vertrouwen" },
-    ],
-  },
-  {
-    heading: "Aanvraag",
-    links: [
       { label: "Start intake", href: "/#intake" },
       { label: "Veelgestelde vragen", href: "/#faq" },
     ],
@@ -44,10 +53,7 @@ export default function Footer() {
             <ul className="mt-4 flex flex-col gap-2.5">
               {col.links.map((link) => (
                 <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-white/60 transition-colors hover:text-orange-light"
-                  >
+                  <Link href={link.href} className="text-sm text-white/60 transition-colors hover:text-orange-light">
                     {link.label}
                   </Link>
                 </li>
