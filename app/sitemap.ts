@@ -19,5 +19,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.9,
     },
+    {
+      url: `${baseUrl}/huurwoning-opleveren`,
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
   ];
 }

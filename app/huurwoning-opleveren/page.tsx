@@ -1,0 +1,137 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import Contact from "@/components/Contact";
+
+export const metadata: Metadata = {
+  title: "Huurwoning opleveren | Leeg, netjes en klaar voor overdracht",
+  description:
+    "Huurwoning opleveren? OpleverMeester helpt met leeghalen, afvoer, schoonmaak en afgesproken herstelpunten. Eén aanspreekpunt tot aan de overdracht.",
+  alternates: { canonical: "/huurwoning-opleveren" },
+  openGraph: {
+    title: "Huurwoning opleveren | OpleverMeester",
+    description: "Van vertrekkende huurder naar een lege, nette woning voor inspectie en sleuteloverdracht.",
+    url: "https://oplevermeester.nl/huurwoning-opleveren",
+    type: "website",
+    locale: "nl_NL",
+  },
+};
+
+const JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Huurwoning opleveren",
+  serviceType: "Huurwoning leeghalen en opleverklaar maken",
+  provider: { "@type": "LocalBusiness", name: "OpleverMeester", url: "https://oplevermeester.nl" },
+  areaServed: [
+    { "@type": "AdministrativeArea", name: "Groningen" },
+    { "@type": "AdministrativeArea", name: "Friesland" },
+    { "@type": "AdministrativeArea", name: "Drenthe" },
+  ],
+  url: "https://oplevermeester.nl/huurwoning-opleveren",
+};
+
+export default function HuurwoningOpleverenPage() {
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }} />
+      <header className="border-b border-surface-mid bg-white">
+        <div className="container-om flex h-16 items-center justify-between md:h-20">
+          <Link href="/" className="font-display text-lg font-semibold tracking-tight text-navy md:text-xl">Oplever<span className="text-orange">Meester</span></Link>
+          <a href="#intake" className="rounded-om bg-orange px-5 py-2.5 text-sm font-semibold text-white hover:bg-orange-light">Start intake</a>
+        </div>
+      </header>
+
+      <main>
+        <section className="bg-navy py-16 text-white md:py-24">
+          <div className="container-om max-w-5xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.14em] text-orange-light">Huurwoning opleveren</p>
+            <h1 className="mt-4 max-w-4xl font-display text-4xl font-semibold leading-tight tracking-tight md:text-6xl">Uw huurwoning leeg, netjes en klaar voor de overdracht.</h1>
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/75 md:text-xl">De huur stopt en de woning moet worden opgeleverd. OpleverMeester helpt met leeghalen, afvoer, schoonmaak en afgesproken herstelpunten, zodat u niet zelf meerdere partijen hoeft te regelen.</p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a href="#intake" className="rounded-om bg-orange px-7 py-3.5 font-semibold text-white hover:bg-orange-light">Start intake</a>
+              <Link href="/woningontruiming-groningen" className="rounded-om border border-white/20 px-7 py-3.5 font-semibold text-white hover:bg-white/10">Woningontruiming Groningen</Link>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-white py-16 md:py-20">
+          <div className="container-om grid gap-10 lg:grid-cols-3">
+            <div>
+              <p className="text-sm font-semibold text-orange">Voor inspectie en sleuteloverdracht</p>
+              <h2 className="mt-2 font-display text-3xl font-semibold tracking-tight text-navy">Wat moet er nog gebeuren voordat u de sleutel inlevert?</h2>
+            </div>
+            <div className="lg:col-span-2 grid gap-5 md:grid-cols-2">
+              {[
+                ["Woning leeghalen", "Achtergebleven meubels, spullen en restmateriaal volgens afspraak verwijderen."],
+                ["Afvoer regelen", "Spullen en materiaal afvoeren en waar mogelijk gescheiden verwerken."],
+                ["Schoon opleveren", "De woning schoonmaken richting het afgesproken opleverniveau."],
+                ["Herstelpunten", "Afgesproken kleine herstelpunten meenemen in één plan voor de oplevering."],
+              ].map(([title, body]) => (
+                <div key={title} className="rounded-om border border-surface-mid bg-surface-light p-6">
+                  <h3 className="font-display text-lg font-semibold text-navy">{title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted">{body}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-surface-light py-16 md:py-20">
+          <div className="container-om grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+            <div>
+              <p className="text-sm font-semibold text-orange">Rustige regie</p>
+              <h2 className="mt-2 font-display text-3xl font-semibold tracking-tight text-navy">Niet gokken wat “bezemschoon” betekent.</h2>
+              <p className="mt-4 max-w-xl leading-relaxed text-muted">De precieze oplevereisen verschillen per verhuurder en woning. Daarom beginnen we met uw situatie, eventuele inspectiepunten en de datum waarop de woning klaar moet zijn. Op basis daarvan bepalen we wat werkelijk nodig is.</p>
+            </div>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {[
+                "Einddatum en sleuteloverdracht meenemen in de planning",
+                "Opleverpunten of inspectielijst bespreken",
+                "Woning, berging en eventuele buitenruimte meenemen",
+                "Vloeren of losse onderdelen verwijderen wanneer afgesproken",
+                "Schoonmaak en kleine herstelpunten combineren",
+                "Eén aanspreekpunt voor planning en uitvoering",
+              ].map((item) => <div key={item} className="rounded-om border border-surface-mid bg-white p-5 text-sm font-medium text-navy">{item}</div>)}
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-white py-16 md:py-20">
+          <div className="container-om max-w-4xl">
+            <p className="text-sm font-semibold text-orange">Werkwijze</p>
+            <h2 className="mt-2 font-display text-3xl font-semibold tracking-tight text-navy">Van opleverpunten naar een duidelijk plan.</h2>
+            <div className="mt-8 grid gap-4 md:grid-cols-3">
+              {[
+                ["01", "Start intake", "Geef adres, omvang, einddatum en de belangrijkste opleverpunten door."],
+                ["02", "Situatie afstemmen", "We bepalen welke werkzaamheden nodig zijn en wat u eventueel zelf doet."],
+                ["03", "Plan en offerte", "U krijgt duidelijkheid over werkzaamheden, planning en prijs vóór de uitvoering."],
+              ].map(([number, title, body]) => (
+                <div key={number} className="rounded-om border border-surface-mid p-6">
+                  <span className="text-sm font-semibold text-orange">{number}</span>
+                  <h3 className="mt-3 font-display text-lg font-semibold text-navy">{title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted">{body}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-surface-light py-16 md:py-20">
+          <div className="container-om max-w-4xl">
+            <p className="text-sm font-semibold text-orange">Ook als de deadline dichtbij komt</p>
+            <h2 className="mt-2 font-display text-3xl font-semibold tracking-tight text-navy">Begin met wat er nog openstaat.</h2>
+            <p className="mt-4 max-w-2xl leading-relaxed text-muted">Heeft u al een voorinspectie gehad, een lijst met opleverpunten ontvangen of staat de sleuteloverdracht vast? Zet dat in de intake. Dan kunnen we de aanvraag beoordelen vanuit de echte situatie, zonder algemene beloftes over wat uw verhuurder accepteert.</p>
+          </div>
+        </section>
+
+        <Contact />
+      </main>
+
+      <footer className="border-t border-surface-mid bg-white py-8">
+        <div className="container-om flex flex-col gap-2 text-sm text-muted md:flex-row md:items-center md:justify-between">
+          <p>© OpleverMeester</p><Link href="/" className="font-medium text-navy hover:text-orange">Terug naar homepage</Link>
+        </div>
+      </footer>
+    </>
+  );
+}
