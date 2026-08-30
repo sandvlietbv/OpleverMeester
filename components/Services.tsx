@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import {
   Home,
@@ -8,19 +9,18 @@ import {
   Truck,
   Building2,
   Warehouse,
-  Package,
   Zap,
 } from "lucide-react";
 
 const SERVICES = [
-  { icon: Home, title: "Woningontruiming", body: "Volledige ontruiming, respectvol en zorgvuldig." },
-  { icon: Sparkles, title: "Opleverklaar maken", body: "Van sleuteloverdracht tot oplevering, precies zoals afgesproken." },
-  { icon: Sparkles, title: "Schoonmaak", body: "Bezemschoon tot diepgereinigd, naar wens van de ontvangende partij." },
-  { icon: Wrench, title: "Kleine herstelwerkzaamheden", body: "Kleine reparaties zodat de ruimte direct in orde is." },
-  { icon: Truck, title: "Afvoer inboedel", body: "Gescheiden en verantwoord afgevoerd, inclusief hergebruik waar mogelijk." },
-  { icon: Building2, title: "Bedrijfspanden", body: "Kantoren en bedrijfsruimtes leeg en opleverklaar." },
-  { icon: Warehouse, title: "Garageboxen & opslagruimtes", body: "Ook de kleinere ruimtes pakken we compleet aan." },
-  { icon: Zap, title: "Spoedopleveringen", body: "Een strakke deadline? Wij schakelen snel." },
+  { icon: Home, title: "Woningontruiming", body: "Volledige ontruiming, respectvol en zorgvuldig.", href: "/woningontruiming" },
+  { icon: Sparkles, title: "Opleverklaar maken", body: "Van sleuteloverdracht tot oplevering, precies zoals afgesproken.", href: "/huurwoning-opleveren" },
+  { icon: Sparkles, title: "Schoonmaak", body: "Bezemschoon tot diepgereinigd, naar wens van de ontvangende partij.", href: "/woningontruiming" },
+  { icon: Wrench, title: "Kleine herstelwerkzaamheden", body: "Kleine reparaties zodat de ruimte direct in orde is.", href: "/huurwoning-opleveren" },
+  { icon: Truck, title: "Afvoer inboedel", body: "Gescheiden en verantwoord afgevoerd, inclusief hergebruik waar mogelijk.", href: "/woningontruiming" },
+  { icon: Building2, title: "Bedrijfspanden", body: "Kantoren en bedrijfsruimtes leeg en opleverklaar.", href: "/bedrijfsontruiming" },
+  { icon: Warehouse, title: "Garageboxen & opslagruimtes", body: "Ook de kleinere ruimtes pakken we compleet aan.", href: "/woningontruiming" },
+  { icon: Zap, title: "Spoedopleveringen", body: "Een strakke deadline? Wij schakelen snel.", href: "/spoedontruiming" },
 ];
 
 export default function Services() {
@@ -55,13 +55,16 @@ export default function Services() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.4, delay: (i % 4) * 0.05 }}
-              className="bg-white p-7"
+              className="bg-white"
             >
-              <s.icon className="h-6 w-6 text-orange" strokeWidth={1.75} />
-              <h3 className="mt-5 font-display text-base font-semibold text-navy">
-                {s.title}
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted">{s.body}</p>
+              <Link href={s.href} className="group block h-full p-7 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange focus-visible:ring-inset">
+                <s.icon className="h-6 w-6 text-orange" strokeWidth={1.75} />
+                <h3 className="mt-5 font-display text-base font-semibold text-navy group-hover:text-orange">
+                  {s.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted">{s.body}</p>
+                <span className="mt-4 inline-block text-sm font-semibold text-orange">Bekijk dienst →</span>
+              </Link>
             </motion.div>
           ))}
         </div>
