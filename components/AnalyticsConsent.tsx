@@ -14,8 +14,14 @@ declare global {
   }
 }
 
+function setAnalyticsDisabled(disabled: boolean) {
+  (window as Window & Record<string, unknown>)[`ga-disable-${GA_MEASUREMENT_ID}`] = disabled;
+}
+
 function startAnalytics() {
-  if (typeof window === "undefined" || window.gtag) return;
+  if (typeof window === "undefined") return;
+  setAnalyticsDisabled(false);
+  if (window.gtag) return;
 
   window.dataLayer = window.dataLayer || [];
   window.gtag = function gtag(...args: unknown[]) {
@@ -33,6 +39,17 @@ function startAnalytics() {
   }
 }
 
+function stopAnalytics() {
+  if (typeof window === "undefined") return;
+  setAnalyticsDisabled(true);
+
+  for (const cookie of document.cookie.split(";")) {
+    const name = cookie.split("=")[0]?.trim();
+    if (!name || (!name.startsWith("_ga") && name !== "_gid" && name !== "_gat")) continue;
+    document.cookie = `${name}=; Max-Age=0; path=/; SameSite=Lax`;
+  }
+}
+
 export default function AnalyticsConsent() {
   const [consent, setConsent] = useState<Consent>(null);
   const [loaded, setLoaded] = useState(false);
@@ -44,6 +61,7 @@ export default function AnalyticsConsent() {
     setConsent(initial);
     setLoaded(true);
     if (initial === "accepted") startAnalytics();
+    else stopAnalytics();
   }, []);
 
   function choose(next: Exclude<Consent, null>) {
@@ -51,6 +69,7 @@ export default function AnalyticsConsent() {
     setConsent(next);
     setPreferencesOpen(false);
     if (next === "accepted") startAnalytics();
+    else stopAnalytics();
   }
 
   if (!loaded) return null;
