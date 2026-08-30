@@ -2,11 +2,30 @@
 
 import { useRef, useState } from "react";
 
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
+function trackEvent(name: string, parameters: Record<string, string> = {}) {
+  window.gtag?.("event", name, parameters);
+}
+
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
   const submissionId = useRef<string>(crypto.randomUUID());
+  const intakeStarted = useRef(false);
+
+  function handleIntakeStart() {
+    if (intakeStarted.current) return;
+    intakeStarted.current = true;
+    trackEvent("intake_start", {
+      source_page: window.location.pathname + window.location.search,
+    });
+  }
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -35,6 +54,11 @@ export default function Contact() {
         body: JSON.stringify({ name: form.get("naam"), email: form.get("email"), phone: form.get("telefoon"), message, sourcePage: landingUrl, submissionId: submissionId.current }),
       });
       if (!response.ok) throw new Error("De intake kon niet worden verstuurd.");
+      trackEvent("generate_lead", {
+        source_page: landingUrl,
+        object_type: String(form.get("type") || "onbekend"),
+        planning: String(form.get("urgentie") || "onbekend"),
+      });
       setSubmitted(true);
     } catch (cause) {
       setError(cause instanceof Error ? cause.message : "Versturen is niet gelukt.");
@@ -59,7 +83,7 @@ export default function Contact() {
           {submitted ? (
             <div className="py-10"><p className="text-sm font-semibold text-orange">Intake ontvangen</p><h3 className="mt-2 font-display text-2xl font-semibold text-navy">Duidelijk. Wij pakken hem vanaf hier op.</h3><p className="mt-3 max-w-xl text-muted">We bekijken de gegevens en nemen contact met u op om de ruimte en werkzaamheden goed door te nemen.</p></div>
           ) : (
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} onFocusCapture={handleIntakeStart} className="space-y-6">
               <FormSection number="01" title="Wie kunnen we spreken?">
                 <div className="grid gap-4 md:grid-cols-2"><Field label="Naam" name="naam" type="text" required /><Field label="Telefoon" name="telefoon" type="tel" required /><div className="md:col-span-2"><Field label="E-mail" name="email" type="email" required /></div></div>
               </FormSection>
