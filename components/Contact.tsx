@@ -14,6 +14,8 @@ export default function Contact() {
     setSubmitting(true);
     setError("");
     const form = new FormData(e.currentTarget);
+    const landingUrl = window.location.pathname + window.location.search + window.location.hash;
+    const referrer = document.referrer || "Direct / onbekend";
     const message = [
       `Object: ${form.get("type")}`,
       `Locatie: ${form.get("adres")}, ${form.get("plaats")}`,
@@ -23,13 +25,14 @@ export default function Contact() {
       `Vervuiling: ${form.get("vervuiling")}`,
       `Verdieping/bereikbaarheid: ${form.get("bereikbaarheid")}`,
       `Situatie: ${form.get("situatie") || "Niet toegelicht"}`,
+      `Herkomst: ${referrer}`,
     ].join("\n");
 
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name: form.get("naam"), email: form.get("email"), phone: form.get("telefoon"), message, sourcePage: window.location.pathname + window.location.hash, submissionId: submissionId.current }),
+        body: JSON.stringify({ name: form.get("naam"), email: form.get("email"), phone: form.get("telefoon"), message, sourcePage: landingUrl, submissionId: submissionId.current }),
       });
       if (!response.ok) throw new Error("De intake kon niet worden verstuurd.");
       setSubmitted(true);
