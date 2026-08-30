@@ -4,23 +4,23 @@ const FOOTER_LINKS = [
   {
     heading: "Diensten",
     links: [
-      { label: "Woningontruiming", href: "/diensten/woningontruiming" },
-      { label: "Opleverklaar maken", href: "/diensten/opleverklaar-maken" },
-      { label: "Bedrijfspanden", href: "/diensten/bedrijfspanden" },
+      { label: "Woningontruiming Groningen", href: "/woningontruiming-groningen" },
+      { label: "Alle diensten", href: "/#diensten" },
     ],
   },
   {
-    heading: "Bedrijf",
+    heading: "OpleverMeester",
     links: [
-      { label: "Over ons", href: "/over-ons" },
+      { label: "Voor wie", href: "/#voor-wie" },
+      { label: "Werkwijze", href: "/#werkwijze" },
+      { label: "Over ons", href: "/#vertrouwen" },
+    ],
+  },
+  {
+    heading: "Aanvraag",
+    links: [
       { label: "Start intake", href: "/#intake" },
-    ],
-  },
-  {
-    heading: "Juridisch",
-    links: [
-      { label: "Privacy", href: "/privacy" },
-      { label: "Algemene voorwaarden", href: "/algemene-voorwaarden" },
+      { label: "Veelgestelde vragen", href: "/#faq" },
     ],
   },
 ];
