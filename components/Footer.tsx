@@ -4,23 +4,23 @@ const FOOTER_LINKS = [
   {
     heading: "Diensten",
     links: [
-      { label: "Woningontruiming", href: "/diensten/woningontruiming" },
-      { label: "Opleverklaar maken", href: "/diensten/opleverklaar-maken" },
-      { label: "Bedrijfspanden", href: "/diensten/bedrijfspanden" },
+      { label: "Woningontruiming Groningen", href: "/woningontruiming-groningen" },
+      { label: "Alle diensten", href: "/#diensten" },
     ],
   },
   {
-    heading: "Bedrijf",
+    heading: "OpleverMeester",
     links: [
-      { label: "Over ons", href: "/over-ons" },
+      { label: "Voor wie", href: "/#voor-wie" },
+      { label: "Werkwijze", href: "/#werkwijze" },
+      { label: "Over ons", href: "/#vertrouwen" },
+    ],
+  },
+  {
+    heading: "Aanvraag",
+    links: [
       { label: "Start intake", href: "/#intake" },
-    ],
-  },
-  {
-    heading: "Juridisch",
-    links: [
-      { label: "Privacy", href: "/privacy" },
-      { label: "Algemene voorwaarden", href: "/algemene-voorwaarden" },
+      { label: "Veelgestelde vragen", href: "/#faq" },
     ],
   },
 ];
@@ -60,7 +60,7 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="container-om flex flex-col gap-2 py-6 text-xs text-white/45 sm:flex-row sm:items-center sm:justify-between">
           <span>© {new Date().getFullYear()} OpleverMeester. Alle rechten voorbehouden.</span>
-          <span>KvK: [in te vullen] · BTW: [in te vullen]</span>
+          <span>KvK: 96147067</span>
         </div>
       </div>
     </footer>

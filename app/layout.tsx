@@ -24,6 +24,9 @@ export const metadata: Metadata = {
     "opleverpartner",
     "Groningen",
   ],
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "OpleverMeester — Elke ruimte. Zorgeloos opleverklaar.",
     description:
