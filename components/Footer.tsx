@@ -30,6 +30,7 @@ const FOOTER_LINKS = [
       { label: "Werkwijze", href: "/#werkwijze" },
       { label: "Start intake", href: "/#intake" },
       { label: "Veelgestelde vragen", href: "/#faq" },
+      { label: "Privacy", href: "/privacy" },
     ],
   },
 ];
