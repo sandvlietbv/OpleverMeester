@@ -17,6 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/kosten-woningontruiming`, changeFrequency: "weekly", priority: 0.85 },
     { url: `${baseUrl}/vloer-verwijderen-oplevering`, changeFrequency: "weekly", priority: 0.8 },
     { url: `${baseUrl}/zakelijk/bewindvoerders-en-curatoren`, changeFrequency: "weekly", priority: 0.85 },
+    { url: `${baseUrl}/zakelijk/bewindvoerders-en-curatoren/woning-opleveren`, changeFrequency: "weekly", priority: 0.85 },
     { url: `${baseUrl}/zakelijk/vastgoedbeheer-en-corporaties`, changeFrequency: "weekly", priority: 0.85 },
   ];
 }
