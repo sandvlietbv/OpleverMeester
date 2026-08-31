@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/woningontruiming-drenthe`, changeFrequency: "weekly", priority: 0.9 },
     { url: `${baseUrl}/huis-leeghalen-na-overlijden`, changeFrequency: "weekly", priority: 0.9 },
     { url: `${baseUrl}/huurwoning-opleveren`, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${baseUrl}/inspectierapport-woning-wat-nu`, changeFrequency: "weekly", priority: 0.9 },
     { url: `${baseUrl}/spoedontruiming`, changeFrequency: "weekly", priority: 0.9 },
     { url: `${baseUrl}/seniorenverhuizing-en-oplevering`, changeFrequency: "weekly", priority: 0.85 },
     { url: `${baseUrl}/bedrijfsontruiming`, changeFrequency: "weekly", priority: 0.85 },
