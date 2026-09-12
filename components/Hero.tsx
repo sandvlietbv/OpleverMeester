@@ -15,7 +15,7 @@ export default function Hero() {
           <motion.p initial="hidden" animate="show" custom={0.12} variants={fadeUp} className="mt-6 max-w-2xl text-lg leading-relaxed text-white/75 md:text-xl">Woning, bedrijfspand, kantoor of opslagruimte. Geef de situatie door en wij kijken direct wat er nodig is om de ruimte goed op te leveren.</motion.p>
           <motion.div initial="hidden" animate="show" custom={0.18} variants={fadeUp} className="mt-8 flex flex-wrap items-start gap-3">
             <a href="#intake" className="inline-flex rounded-om bg-orange px-7 py-3.5 text-center font-semibold text-white hover:bg-orange-light">Start intake</a>
-            <UrgentCallButton variant="hero" source="hero" />
+            <div className="hidden lg:block"><UrgentCallButton variant="hero" source="hero" /></div>
           </motion.div>
         </div>
         <motion.aside initial="hidden" animate="show" custom={0.22} variants={fadeUp} className="border-l border-white/15 pl-7 lg:pl-9">
