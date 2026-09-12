@@ -64,9 +64,9 @@ export default function UrgentCallButton({ variant = "header", source }: Props) 
 
       {open && (
         <div id={panelId} className={panelClass} role="region" aria-live="polite">
-          <p className="font-display text-base font-semibold text-navy">Snel overleggen?</p>
+          <p className="font-display text-base font-semibold text-navy">Spoed of een korte deadline?</p>
           <p className="mt-1 text-sm leading-relaxed text-muted">
-            Is de eindinspectie, sleuteloverdracht of andere deadline dichtbij? Bel OpleverMeester direct.
+            Bel direct voor kort overleg of om een afspraak te maken. We kijken meteen wat praktisch mogelijk is.
           </p>
           <div className="mt-4 flex flex-wrap items-center gap-3">
             <span className="font-display text-lg font-semibold tracking-tight text-navy">{PHONE_DISPLAY}</span>
