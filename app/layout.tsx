@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { GeistSans } from "geist/font/sans";
 import AnalyticsConsent from "../components/AnalyticsConsent";
+import UrgentCallDock from "../components/UrgentCallDock";
 import "./globals.css";
 
 const inter = Inter({
@@ -49,6 +50,7 @@ export default function RootLayout({
     <html lang="nl" className={`${inter.variable} ${GeistSans.variable}`}>
       <body className="font-sans antialiased">
         {children}
+        <UrgentCallDock />
         <AnalyticsConsent />
       </body>
     </html>
