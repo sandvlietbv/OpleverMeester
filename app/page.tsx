@@ -13,4 +13,4 @@ import Pricing from "@/components/Pricing";
 
 const JSON_LD={"@context":"https://schema.org","@type":"LocalBusiness",name:"OpleverMeester",url:"https://www.oplevermeester.nl",telephone:"+31645316851",email:"info@oplevermeester.nl",areaServed:["Groningen","Friesland","Drenthe"],priceRange:"€532,40+ incl. btw"};
 
-export default function HomePage(){return <><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(JSON_LD)}}/><Header/><main><Hero/><Pricing/><Contact/><Trust/><Services/><ForWhom/><WhyUs/><Process/><Reviews/><FAQ/></main><Footer/></>}
+export default function HomePage(){return <><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(JSON_LD)}}/><Header/><main><Hero/><Pricing/><Contact/><Trust/><Reviews/><Services/><ForWhom/><WhyUs/><Process/><FAQ/></main><Footer/></>}
