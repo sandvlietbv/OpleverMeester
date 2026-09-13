@@ -15,7 +15,6 @@ export default function Hero() {
             <a href={PHONE_HREF} className="inline-flex rounded-om border border-white/30 px-6 py-3.5 font-semibold text-white hover:border-orange-light hover:text-orange-light">Bel {PHONE_DISPLAY}</a>
             <a href={WHATSAPP_HREF} target="_blank" rel="noreferrer" className="inline-flex rounded-om border border-white/20 px-6 py-3.5 font-semibold text-white/90 hover:border-orange-light hover:text-orange-light">WhatsApp</a>
           </div>
-          <p className="mt-4 text-sm text-white/55">Liever eerst een prijsrichting? De intake geeft een indicatie vanaf €532,40 incl. btw.</p>
         </div>
         <aside className="border-l border-white/15 pl-7 lg:pl-9">
           <p className="text-sm font-semibold text-orange-light">Van probleem naar oplevering</p>
