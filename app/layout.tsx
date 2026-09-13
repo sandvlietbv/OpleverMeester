@@ -5,54 +5,30 @@ import AnalyticsConsent from "../components/AnalyticsConsent";
 import UrgentCallDock from "../components/UrgentCallDock";
 import "./globals.css";
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-});
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://oplevermeester.nl"),
+  metadataBase: new URL("https://www.oplevermeester.nl"),
   title: {
-    default: "OpleverMeester — Elke ruimte. Zorgeloos opleverklaar.",
+    default: "Woningontruiming & opleveren in Noord-Nederland | OpleverMeester",
     template: "%s | OpleverMeester",
   },
-  description:
-    "OpleverMeester regelt het complete opleverproces van woningen en bedrijfspanden — ontruiming, opleverklaar maken en schoonmaak. Eén aanspreekpunt, van A tot Z.",
-  keywords: [
-    "woningontruiming",
-    "opleverklaar maken",
-    "bedrijfsruimte ontruimen",
-    "opleverpartner",
-    "Groningen",
-  ],
-  alternates: {
-    canonical: "/",
-  },
+  description: "Woning of bedrijfspand ontruimen en opleverklaar maken in Groningen, Friesland en Drenthe. Start de intake of bel direct met OpleverMeester.",
+  alternates: { canonical: "/" },
   openGraph: {
-    title: "OpleverMeester — Elke ruimte. Zorgeloos opleverklaar.",
-    description:
-      "Van woning tot bedrijfspand. Wij regelen het complete opleverproces van A tot Z.",
-    url: "https://oplevermeester.nl",
+    title: "Woningontruiming & opleveren in Noord-Nederland | OpleverMeester",
+    description: "Van woningontruiming tot opleverklaar maken. Eén aanspreekpunt in Groningen, Friesland en Drenthe.",
+    url: "https://www.oplevermeester.nl",
     siteName: "OpleverMeester",
     locale: "nl_NL",
     type: "website",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "OpleverMeester" }],
   },
+  twitter: { card: "summary_large_image", images: ["/opengraph-image"] },
+  icons: { icon: "/icon.svg" },
   robots: { index: true, follow: true },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <html lang="nl" className={`${inter.variable} ${GeistSans.variable}`}>
-      <body className="font-sans antialiased">
-        {children}
-        <UrgentCallDock />
-        <AnalyticsConsent />
-      </body>
-    </html>
-  );
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return <html lang="nl" className={`${inter.variable} ${GeistSans.variable}`}><body className="font-sans antialiased">{children}<UrgentCallDock /><AnalyticsConsent /></body></html>;
 }
