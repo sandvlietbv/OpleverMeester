@@ -9,17 +9,8 @@ import Reviews from "@/components/Reviews";
 import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import Pricing from "@/components/Pricing";
 
-const JSON_LD = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  name: "OpleverMeester",
-  description: "OpleverMeester helpt woningen, bedrijfspanden, kantoren en opslagruimtes ontruimen, bezemschoon en opleverklaar maken.",
-  url: "https://oplevermeester.nl",
-  areaServed: "NL",
-  priceRange: "€€",
-};
+const JSON_LD={"@context":"https://schema.org","@type":"LocalBusiness",name:"OpleverMeester",url:"https://www.oplevermeester.nl",telephone:"+31645316851",email:"info@oplevermeester.nl",address:{"@type":"PostalAddress",streetAddress:"Lijsterbeslaan 43",addressLocality:"Groningen",addressCountry:"NL"},areaServed:["Groningen","Friesland","Drenthe"],priceRange:"€440+",founder:{"@type":"Person",name:"Fabian"}};
 
-export default function HomePage() {
-  return <><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }} /><Header /><main><Hero /><Contact /><Trust /><Services /><ForWhom /><WhyUs /><Process /><Reviews /><FAQ /></main><Footer /></>;
-}
+export default function HomePage(){return <><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(JSON_LD)}}/><Header/><main><Hero/><Pricing/><Contact/><Trust/><Services/><ForWhom/><WhyUs/><Process/><Reviews/><FAQ/></main><Footer/></>}
