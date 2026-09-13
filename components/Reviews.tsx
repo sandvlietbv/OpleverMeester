@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const GOOGLE_PROFILE_URL =
   "https://www.google.com/maps/search/?api=1&query=OpleverMeester%20Groningen%200645316851";
-const GOOGLE_REVIEW_URL = "https://share.google/eRTY86v3tqbdXVBnF";
+const GOOGLE_REVIEW_URL = "https://g.page/r/CXb3g8hAsZmiECE/review";
 
 declare global {
   interface Window {
