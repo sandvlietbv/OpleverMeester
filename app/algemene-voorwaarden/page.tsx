@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 export const metadata:Metadata={title:"Algemene voorwaarden",description:"Algemene voorwaarden van OpleverMeester.",alternates:{canonical:"/algemene-voorwaarden"}};
 
 const sections=[
-["1. Wie wij zijn","OpleverMeester is een eenmanszaak gevestigd aan Lijsterbeslaan 43 in Groningen, ingeschreven bij de Kamer van Koophandel onder nummer 96147067. Contact: info@oplevermeester.nl en 06 45 31 68 51."],
+["1. Wie wij zijn","OpleverMeester is een eenmanszaak, ingeschreven bij de Kamer van Koophandel onder nummer 96147067 en actief vanuit Groningen. Contact: info@oplevermeester.nl en 06 45 31 68 51."],
 ["2. Offerte en overeenkomst","Een aanvraag of prijsindicatie op de website is nog geen definitieve overeenkomst. Voor uitvoering ontvangt u duidelijkheid over de afgesproken werkzaamheden, planning en projectprijs. De overeenkomst ontstaat wanneer u met het aanbod instemt."],
 ["3. Wat is inbegrepen","We voeren uit wat in de offerte of opdrachtbevestiging staat. Werkzaamheden, afvoer, materialen of andere posten die niet zijn afgesproken worden niet zonder overleg toegevoegd."],
 ["4. Wijzigingen tijdens de opdracht","Blijkt tijdens de uitvoering dat de situatie wezenlijk anders is dan vooraf kon worden vastgesteld, dan bespreken we eerst de gevolgen voor werk, planning en prijs. Extra werkzaamheden worden pas uitgevoerd na akkoord, behalve wanneer direct handelen noodzakelijk is voor veiligheid of om schade te beperken."],
