@@ -11,6 +11,6 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Pricing from "@/components/Pricing";
 
-const JSON_LD={"@context":"https://schema.org","@type":"LocalBusiness",name:"OpleverMeester",url:"https://www.oplevermeester.nl",telephone:"+31645316851",email:"info@oplevermeester.nl",address:{"@type":"PostalAddress",streetAddress:"Lijsterbeslaan 43",addressLocality:"Groningen",addressCountry:"NL"},areaServed:["Groningen","Friesland","Drenthe"],priceRange:"€440+",founder:{"@type":"Person",name:"Fabian"}};
+const JSON_LD={"@context":"https://schema.org","@type":"LocalBusiness",name:"OpleverMeester",url:"https://www.oplevermeester.nl",telephone:"+31645316851",email:"info@oplevermeester.nl",areaServed:["Groningen","Friesland","Drenthe"],priceRange:"€440 excl. btw / €532,40 incl. btw",founder:{"@type":"Person",name:"Fabian"}};
 
 export default function HomePage(){return <><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(JSON_LD)}}/><Header/><main><Hero/><Pricing/><Contact/><Trust/><Services/><ForWhom/><WhyUs/><Process/><Reviews/><FAQ/></main><Footer/></>}

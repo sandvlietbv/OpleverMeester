@@ -32,7 +32,7 @@ export default function Footer() {
         <span className="font-display text-lg font-semibold">Oplever<span className="text-orange">Meester</span></span>
         <p className="mt-4 text-sm text-white/60">Elke ruimte. Zorgeloos opleverklaar.</p>
         <div className="mt-5 text-sm leading-7 text-white/65">
-          <p>OpleverMeester</p><p>Lijsterbeslaan 43, Groningen</p>
+          <p>OpleverMeester · Groningen</p>
           <a href="tel:+31645316851" className="block hover:text-orange-light">06 45 31 68 51</a>
           <a href="mailto:info@oplevermeester.nl" className="block hover:text-orange-light">info@oplevermeester.nl</a>
         </div>
