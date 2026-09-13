@@ -2,14 +2,17 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import UrgentCallButton from "@/components/UrgentCallButton";
 
 const NAV_LINKS = [
-  { label: "Diensten", href: "#diensten" },
-  { label: "Voor wie", href: "#voor-wie" },
-  { label: "Werkwijze", href: "#werkwijze" },
-  { label: "Over ons", href: "#vertrouwen" },
+  { label: "Diensten", href: "/#diensten" },
+  { label: "Prijzen", href: "/#prijzen" },
+  { label: "Werkwijze", href: "/#werkwijze" },
+  { label: "Over ons", href: "/over-ons" },
 ];
+
+const PHONE_DISPLAY = "06 45 31 68 51";
+const PHONE_HREF = "tel:+31645316851";
+const WHATSAPP_HREF = "https://wa.me/31645316851?text=Hallo%20OpleverMeester%2C%20ik%20wil%20graag%20mijn%20situatie%20bespreken.";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -21,17 +24,22 @@ export default function Header() {
           Oplever<span className="text-orange">Meester</span>
         </Link>
 
-        <nav className="hidden items-center gap-7 lg:flex" aria-label="Hoofdmenu">
+        <nav className="hidden items-center gap-6 lg:flex" aria-label="Hoofdmenu">
           {NAV_LINKS.map((link) => (
-            <a key={link.href} href={link.href} className="text-sm font-medium text-navy/75 transition-colors hover:text-orange">
+            <Link key={link.href} href={link.href} className="text-sm font-medium text-navy/75 transition-colors hover:text-orange">
               {link.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
-        <div className="hidden items-center gap-2 lg:flex">
-          <UrgentCallButton variant="header" source="header" />
-          <a href="#intake" className="rounded-om bg-orange px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-orange-light">
+        <div className="hidden items-center gap-3 lg:flex">
+          <a href={PHONE_HREF} className="text-sm font-semibold text-navy hover:text-orange" aria-label={`Bel OpleverMeester op ${PHONE_DISPLAY}`}>
+            {PHONE_DISPLAY}
+          </a>
+          <a href={WHATSAPP_HREF} target="_blank" rel="noreferrer" className="rounded-om border border-surface-mid px-4 py-2.5 text-sm font-semibold text-navy hover:border-orange">
+            WhatsApp
+          </a>
+          <a href="/#intake" className="rounded-om bg-orange px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-orange-light">
             Start intake
           </a>
         </div>
@@ -50,11 +58,15 @@ export default function Header() {
         <div id="mobiel-menu" className="border-t border-surface-mid bg-white lg:hidden">
           <nav className="container-om flex flex-col gap-1 py-4" aria-label="Mobiel menu">
             {NAV_LINKS.map((link) => (
-              <a key={link.href} href={link.href} className="rounded-om px-2 py-3 text-base font-medium text-navy hover:bg-surface-light" onClick={() => setOpen(false)}>
+              <Link key={link.href} href={link.href} className="rounded-om px-2 py-3 text-base font-medium text-navy hover:bg-surface-light" onClick={() => setOpen(false)}>
                 {link.label}
-              </a>
+              </Link>
             ))}
-            <a href="#intake" className="mt-2 rounded-om bg-orange px-5 py-3 text-center text-base font-semibold text-white" onClick={() => setOpen(false)}>
+            <div className="mt-2 grid grid-cols-2 gap-2">
+              <a href={PHONE_HREF} className="rounded-om bg-navy px-4 py-3 text-center text-sm font-semibold text-white">Bel {PHONE_DISPLAY}</a>
+              <a href={WHATSAPP_HREF} target="_blank" rel="noreferrer" className="rounded-om border border-surface-mid px-4 py-3 text-center text-sm font-semibold text-navy">WhatsApp</a>
+            </div>
+            <a href="/#intake" className="mt-2 rounded-om bg-orange px-5 py-3 text-center text-base font-semibold text-white" onClick={() => setOpen(false)}>
               Start intake
             </a>
           </nav>
