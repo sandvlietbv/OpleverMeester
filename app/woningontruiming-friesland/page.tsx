@@ -1,24 +1,35 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Header from "@/components/Header";
 import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Woningontruiming Friesland | OpleverMeester",
-  description: "Woningontruiming in Friesland? OpleverMeester helpt met leeghalen, afvoer, schoonmaak en opleverklaar maken vanuit één aanspreekpunt.",
+  title: "Woningontruiming Friesland | Vanaf €440 incl. btw",
+  description: "Woningontruiming in Friesland? OpleverMeester regelt leeghalen, afvoer, schoonmaak en opleverklaar maken vanuit één aanspreekpunt.",
   alternates: { canonical: "/woningontruiming-friesland" },
+  openGraph: { title: "Woningontruiming Friesland | OpleverMeester", description: "Woning leeg en opleverklaar in Leeuwarden, Drachten, Sneek, Heerenveen en omgeving.", url: "https://www.oplevermeester.nl/woningontruiming-friesland", type: "website", locale: "nl_NL" },
 };
 
-const JSON_LD = { "@context":"https://schema.org", "@type":"Service", name:"Woningontruiming Friesland", serviceType:"Woningontruiming en oplevering", provider:{"@type":"LocalBusiness",name:"OpleverMeester",url:"https://oplevermeester.nl"}, areaServed:{"@type":"AdministrativeArea",name:"Friesland"}, url:"https://oplevermeester.nl/woningontruiming-friesland" };
+const JSON_LD = { "@context":"https://schema.org", "@type":"Service", name:"Woningontruiming Friesland", serviceType:"Woningontruiming en oplevering", provider:{"@type":"LocalBusiness",name:"OpleverMeester",url:"https://www.oplevermeester.nl",telephone:"+31645316851"}, areaServed:{"@type":"AdministrativeArea",name:"Friesland"}, url:"https://www.oplevermeester.nl/woningontruiming-friesland" };
 
 export default function Page() {
   return <>
     <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(JSON_LD)}} />
-    <header className="border-b border-surface-mid bg-white"><div className="container-om flex h-16 items-center justify-between md:h-20"><Link href="/" className="font-display text-lg font-semibold text-navy md:text-xl">Oplever<span className="text-orange">Meester</span></Link><a href="#intake" className="rounded-om bg-orange px-5 py-2.5 text-sm font-semibold text-white">Start intake</a></div></header>
+    <Header />
     <main>
-      <section className="bg-navy py-16 text-white md:py-24"><div className="container-om max-w-5xl"><p className="text-sm font-semibold uppercase tracking-[0.14em] text-orange-light">Woningontruiming Friesland</p><h1 className="mt-4 max-w-4xl font-display text-4xl font-semibold leading-tight md:text-6xl">Een woning in Friesland leeg en correct opleveren.</h1><p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/75">Voor verhuizing, overlijden, verkoop of einde huur: OpleverMeester coördineert het leeghalen en de afgesproken opleverwerkzaamheden vanuit één aanspreekpunt.</p><a href="#intake" className="mt-8 inline-block rounded-om bg-orange px-7 py-3.5 font-semibold text-white">Bespreek uw situatie</a></div></section>
-      <section className="bg-white py-16 md:py-20"><div className="container-om grid gap-8 md:grid-cols-3">{[["Leeuwarden en omgeving","Aanvragen uit Leeuwarden en omliggende plaatsen kunnen via dezelfde intake worden beoordeeld."],["Drachten en midden Friesland","Ook hier starten we bij omvang, toegang, planning en gewenste eindstaat."],["Sneek en overige plaatsen","De exacte inzet hangt af van locatie, werkzaamheden en planning."]].map(([t,b])=><div key={t} className="rounded-om border border-surface-mid p-6"><h2 className="font-display text-xl font-semibold text-navy">{t}</h2><p className="mt-2 text-sm leading-relaxed text-muted">{b}</p></div>)}</div></section>
-      <section className="bg-surface-light py-16 md:py-20"><div className="container-om max-w-4xl"><p className="text-sm font-semibold text-orange">Complete oplevering</p><h2 className="mt-2 font-display text-3xl font-semibold text-navy">Niet alleen spullen eruit.</h2><p className="mt-4 leading-relaxed text-muted">Waar nodig kunnen afvoer, schoonmaak en afgesproken kleine herstelpunten worden meegenomen. Zo hoeft u niet voor ieder onderdeel een andere partij te zoeken.</p><div className="mt-6"><Link href="/woningontruiming" className="font-semibold text-navy hover:text-orange">Meer over woningontruiming →</Link></div></div></section>
+      <section className="bg-navy py-16 text-white md:py-24"><div className="container-om max-w-5xl"><p className="text-sm font-semibold uppercase tracking-[0.14em] text-orange-light">Woningontruiming Friesland</p><h1 className="mt-4 max-w-4xl font-display text-4xl font-semibold leading-tight md:text-6xl">Een woning in Friesland leeg en klaar voor overdracht.</h1><p className="mt-6 max-w-3xl text-lg leading-relaxed text-white/75">Van Leeuwarden en Drachten tot Sneek, Heerenveen en omliggende plaatsen: we brengen eerst omvang, bereikbaarheid en oplevereis in kaart. Daarna combineren we waar nodig leeghalen, afvoer, schoonmaak en opleverpunten in één opdracht.</p><div className="mt-8 flex flex-wrap gap-3"><a href="#intake" className="rounded-om bg-orange px-7 py-3.5 font-semibold text-white">Start intake</a><a href="tel:+31645316851" className="rounded-om border border-white/25 px-7 py-3.5 font-semibold text-white">Bel 06 45 31 68 51</a></div><p className="mt-4 text-sm text-white/55">Indicatieve projectprijzen beginnen vanaf €440 inclusief btw.</p></div></section>
+
+      <section className="bg-white py-16 md:py-20"><div className="container-om max-w-6xl"><p className="text-sm font-semibold text-orange">Friesland is niet één type opdracht</p><h2 className="mt-2 max-w-3xl font-display text-3xl font-semibold text-navy">Van stadsappartement tot woning met schuur of extra opslag.</h2><div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-4">{[
+        ["Leeuwarden", "Bij appartementen en woningen in de stad kijken we direct naar verdieping, lift, loopafstand en laadmogelijkheden."],
+        ["Drachten", "Een normale gezinswoning kan vaak overzichtelijk worden gepland wanneer omvang, inboedel en einddatum vooraf duidelijk zijn."],
+        ["Sneek", "Bij verhuizing, overlijden of einde huur kunnen meerdere werkzaamheden in één oplevertraject worden samengebracht."],
+        ["Heerenveen & omgeving", "Ook buiten de grotere plaatsen nemen we bijgebouwen, bereikbaarheid en extra inboedel mee in de intake."],
+      ].map(([t,b])=><article key={t} className="rounded-om border border-surface-mid p-6"><h3 className="font-display text-xl font-semibold text-navy">{t}</h3><p className="mt-2 text-sm leading-relaxed text-muted">{b}</p></article>)}</div></div></section>
+
+      <section className="bg-surface-light py-16 md:py-20"><div className="container-om grid gap-10 lg:grid-cols-[.9fr_1.1fr]"><div><p className="text-sm font-semibold text-orange">Eén projectprijs</p><h2 className="mt-2 font-display text-3xl font-semibold text-navy">De intake bepaalt de prijsrichting.</h2><p className="mt-4 leading-relaxed text-muted">Een kleine vrijwel lege woning vraagt iets anders dan een volle woning met verdiepingen, schuur of veel afvoer. Daarom gebruiken we geen kunstmatige vaste pakketprijs voor iedere situatie.</p><Link href="/kosten-woningontruiming" className="mt-5 inline-flex font-semibold text-navy underline decoration-orange underline-offset-4">Bekijk prijsopbouw en vanafprijzen</Link></div><div className="grid gap-4 sm:grid-cols-2">{["Leeghalen en sorteren","Reguliere afvoer waar afgesproken","Schoon opleveren","Afgesproken kleine herstelpunten","Planning op de overdrachtsdatum","Eén aanspreekpunt voor het geheel"].map((x)=><div key={x} className="rounded-om border border-surface-mid bg-white p-5 text-sm font-medium text-navy">{x}</div>)}</div></div></section>
       <Contact />
     </main>
+    <Footer />
   </>;
 }
