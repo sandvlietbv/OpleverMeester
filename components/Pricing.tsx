@@ -1,10 +1,10 @@
 import Link from "next/link";
 
 const tiers = [
-  ["Compacte opdracht", "vanaf €440 excl. btw", "€532,40 incl. btw", "Beperkte ontruiming, enkele opleverpunten of een kleine ruimte."],
-  ["Standaard opdracht", "vanaf €880 excl. btw", "€1.064,80 incl. btw", "Een normale woning of appartement met meerdere werkzaamheden."],
-  ["Uitgebreide opdracht", "vanaf €1.320 excl. btw", "€1.597,20 incl. btw", "Een grotere woning, meer inboedel of meerdere opleverwerkzaamheden."],
-  ["Meerdaagse opdracht", "vanaf €1.760 excl. btw", "€2.129,60 incl. btw", "Een grotere of complexere oplevering met extra inzet of afvoer."],
+  ["Compacte opdracht", "vanaf €532,40 incl. btw", "Beperkte ontruiming, enkele opleverpunten of een kleine ruimte."],
+  ["Standaard opdracht", "vanaf €1.064,80 incl. btw", "Een normale woning of appartement met meerdere werkzaamheden."],
+  ["Uitgebreide opdracht", "vanaf €1.597,20 incl. btw", "Een grotere woning, meer inboedel of meerdere opleverwerkzaamheden."],
+  ["Meerdaagse opdracht", "vanaf €2.129,60 incl. btw", "Een grotere of complexere oplevering met extra inzet of afvoer."],
 ];
 
 export default function Pricing() {
@@ -14,14 +14,13 @@ export default function Pricing() {
         <div className="max-w-3xl">
           <p className="text-sm font-semibold uppercase tracking-[0.12em] text-orange">Prijsindicatie</p>
           <h2 className="mt-2 font-display text-3xl font-semibold tracking-tight text-navy md:text-4xl">Eerst weten welke orde van grootte bij uw situatie past.</h2>
-          <p className="mt-4 leading-relaxed text-muted">We werken met projectprijzen. Onze basisprijzen zijn exclusief btw. Omdat we ook particulieren helpen, tonen we bij ieder bedrag direct de consumentenprijs inclusief 21% btw. Via de intake maken we de indicatie specifieker op basis van ruimte, omvang, bereikbaarheid en planning.</p>
+          <p className="mt-4 leading-relaxed text-muted">We werken met projectprijzen. De bedragen hieronder zijn vanafprijzen inclusief 21% btw. Via de intake maken we de indicatie specifieker op basis van ruimte, omvang, bereikbaarheid en planning.</p>
         </div>
         <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-          {tiers.map(([label, priceEx, priceIncl, text]) => (
+          {tiers.map(([label, price, text]) => (
             <article key={label} className="rounded-om border border-surface-mid bg-white p-6">
               <p className="text-sm font-semibold text-orange">{label}</p>
-              <p className="mt-2 font-display text-2xl font-semibold tracking-tight text-navy">{priceEx}</p>
-              <p className="mt-1 text-sm font-semibold text-muted">{priceIncl}</p>
+              <p className="mt-2 font-display text-2xl font-semibold tracking-tight text-navy">{price}</p>
               <p className="mt-3 text-sm leading-relaxed text-muted">{text}</p>
             </article>
           ))}
