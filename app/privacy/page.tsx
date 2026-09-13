@@ -4,7 +4,7 @@ import Footer from "../../components/Footer";
 
 export const metadata: Metadata = {
   title: "Privacyverklaring",
-  description: "Lees hoe OpleverMeester omgaat met persoonsgegevens, intakegegevens en analytics.",
+  description: "Lees hoe OpleverMeester omgaat met persoonsgegevens, intakegegevens, foto's en analytics.",
   alternates: { canonical: "/privacy" },
   robots: { index: false, follow: true },
 };
@@ -34,7 +34,12 @@ export default function PrivacyPage() {
 
               <section>
                 <h2 className="text-xl font-semibold text-navy">Welke gegevens verwerken we?</h2>
-                <p className="mt-2">Wanneer u een intake start of verstuurt, kunt u onder meer naam, telefoonnummer, e-mailadres, adres of plaats, informatie over het object, gewenste planning en een toelichting op uw situatie doorgeven. We verwerken alleen gegevens die u zelf verstrekt of die nodig zijn om uw aanvraag technisch af te handelen.</p>
+                <p className="mt-2">Wanneer u een intake start of verstuurt, kunt u onder meer naam, telefoonnummer, e-mailadres, adres of plaats, informatie over het object, gewenste planning en een toelichting op uw situatie doorgeven. Bij de Snelle prijscheck kunt u daarnaast vrijwillig foto&apos;s van de ruimte of inboedel toevoegen. We verwerken alleen gegevens die u zelf verstrekt of die nodig zijn om uw aanvraag technisch af te handelen.</p>
+              </section>
+
+              <section>
+                <h2 className="text-xl font-semibold text-navy">Foto&apos;s bij de prijscheck</h2>
+                <p className="mt-2">Foto&apos;s zijn niet verplicht. Als u ze toevoegt, gebruiken we ze om uw aanvraag en de opgegeven omvang of werkzaamheden te controleren. De foto&apos;s worden privé opgeslagen en zijn niet openbaar via de website. Binnen onze interne PRIDE-omgeving worden ze alleen via tijdelijk beveiligde links beschikbaar gemaakt voor de behandeling van de betreffende aanvraag.</p>
               </section>
 
               <section>
@@ -44,7 +49,7 @@ export default function PrivacyPage() {
 
               <section>
                 <h2 className="text-xl font-semibold text-navy">Google Analytics</h2>
-                <p className="mt-2">Google Analytics wordt pas geladen nadat u daarvoor kiest. Hiermee meten we bijvoorbeeld paginaweergaven, het starten van een intake en een succesvol verstuurde aanvraag. We sturen via onze eigen analytics-events geen naam, e-mailadres, telefoonnummer of adres naar Google Analytics. Als u kiest voor “Alleen noodzakelijk”, laden we Google Analytics niet.</p>
+                <p className="mt-2">Google Analytics wordt pas geladen nadat u daarvoor kiest. Hiermee meten we bijvoorbeeld paginaweergaven, het starten van een intake en een succesvol verstuurde aanvraag. We sturen via onze eigen analytics-events geen naam, e-mailadres, telefoonnummer, adres of foto&apos;s naar Google Analytics. Als u kiest voor “Alleen noodzakelijk”, laden we Google Analytics niet.</p>
               </section>
 
               <section>
@@ -54,7 +59,7 @@ export default function PrivacyPage() {
 
               <section>
                 <h2 className="text-xl font-semibold text-navy">Bewaren en beveiligen</h2>
-                <p className="mt-2">We bewaren persoonsgegevens niet langer dan nodig voor het doel waarvoor ze zijn verzameld en eventuele wettelijke verplichtingen. We nemen passende technische en organisatorische maatregelen om gegevens te beschermen tegen verlies, misbruik en ongeoorloofde toegang.</p>
+                <p className="mt-2">We bewaren persoonsgegevens en eventuele intakefoto&apos;s niet langer dan nodig voor het doel waarvoor ze zijn verzameld en eventuele wettelijke verplichtingen. We nemen passende technische en organisatorische maatregelen om gegevens te beschermen tegen verlies, misbruik en ongeoorloofde toegang.</p>
               </section>
 
               <section>
@@ -64,7 +69,7 @@ export default function PrivacyPage() {
 
               <section>
                 <h2 className="text-xl font-semibold text-navy">Wijzigingen</h2>
-                <p className="mt-2">We kunnen deze privacyverklaring aanpassen als de website, dienstverlening of gebruikte systemen veranderen. Deze versie is bijgewerkt op 30 augustus 2026.</p>
+                <p className="mt-2">We kunnen deze privacyverklaring aanpassen als de website, dienstverlening of gebruikte systemen veranderen. Deze versie is bijgewerkt op 13 september 2026.</p>
               </section>
             </div>
           </div>
