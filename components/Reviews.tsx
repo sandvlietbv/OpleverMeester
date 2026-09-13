@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 
 const GOOGLE_PROFILE_URL =
   "https://www.google.com/maps/search/?api=1&query=OpleverMeester%20Groningen%200645316851";
+const GOOGLE_REVIEW_URL = "https://share.google/eRTY86v3tqbdXVBnF";
 
 declare global {
   interface Window {
@@ -59,7 +60,7 @@ export default function Reviews() {
               Bekijk op Google ↗
             </a>
             <a
-              href={GOOGLE_PROFILE_URL}
+              href={GOOGLE_REVIEW_URL}
               target="_blank"
               rel="noreferrer"
               onClick={() => trackGoogleReviewClick("write")}
