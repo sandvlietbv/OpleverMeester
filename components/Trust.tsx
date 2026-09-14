@@ -16,11 +16,11 @@ export default function Trust() {
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.12em] text-orange">Persoonlijk geregeld</p>
             <h2 className="mt-2 max-w-2xl font-display text-3xl font-semibold tracking-tight text-navy md:text-4xl">U weet wie verantwoordelijk is voor uw oplevering.</h2>
-            <p className="mt-5 max-w-2xl leading-relaxed text-muted">OpleverMeester is opgericht door Fabian. U heeft geen anoniem loket, maar één aanspreekpunt dat de situatie doorneemt, de uitvoering organiseert en bereikbaar blijft tot de ruimte is opgeleverd.</p>
+            <p className="mt-5 max-w-2xl leading-relaxed text-muted">OpleverMeester is uw vaste aanspreekpunt. Geen anoniem loket, maar één team dat de situatie doorneemt, de uitvoering organiseert en bereikbaar blijft tot de ruimte is opgeleverd.</p>
             <p className="mt-4 max-w-2xl leading-relaxed text-muted">Vertrouwen bouwen we met duidelijke afspraken, bereikbaarheid en zichtbaar resultaat.</p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Link href="/over-ons" className="rounded-om border border-surface-mid bg-white px-5 py-3 text-sm font-semibold text-navy hover:border-orange">Lees hoe we werken</Link>
-              <a href="tel:+31645316851" className="rounded-om bg-navy px-5 py-3 text-sm font-semibold text-white">Bel Fabian via 06 45 31 68 51</a>
+              <a href="tel:+31645316851" className="rounded-om bg-navy px-5 py-3 text-sm font-semibold text-white">Bel OpleverMeester via 06 45 31 68 51</a>
             </div>
           </div>
 
