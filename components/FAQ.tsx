@@ -18,7 +18,7 @@ export default function FAQ() {
     <div className="container-om max-w-3xl">
       <h2 className="font-display text-3xl font-semibold tracking-tight text-navy md:text-4xl">Veelgestelde vragen</h2>
       <div className="mt-10 divide-y divide-surface-mid rounded-om border border-surface-mid bg-white">
-        {FAQS.map(([q, a], i) => <details key={q} className="group" open={i === 0}><summary className="cursor-pointer list-none px-6 py-5 font-display font-semibold text-navy">{q}<span className="float-right text-orange">+</span></summary><div className="px-6 pb-5 leading-relaxed text-muted">{a}</div></details>)}
+        {FAQS.map(([q, a]) => <details key={q} className="group"><summary className="cursor-pointer list-none px-6 py-5 font-display font-semibold text-navy">{q}<span className="float-right text-orange">+</span></summary><div className="px-6 pb-5 leading-relaxed text-muted">{a}</div></details>)}
       </div>
     </div>
   </section>;
