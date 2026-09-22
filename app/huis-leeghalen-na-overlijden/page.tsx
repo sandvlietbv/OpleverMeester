@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Contact from "@/components/Contact";
+import VisualProof from "@/components/VisualProof";
 
 export const metadata: Metadata = {
   title: "Huis leeghalen na overlijden",
@@ -87,6 +88,8 @@ export default function HuisLeeghalenNaOverlijdenPage() {
             </div>
           </div>
         </section>
+
+        <VisualProof src="/images/visual-proof/overlijden.webp" alt="Warme, geleefde woonkamer met persoonlijke inrichting" eyebrow="Een woning waar geleefd is" title="Aandacht voor de spullen én de situatie." text="Een huis leeghalen na een overlijden begint niet bij afvoer, maar bij rustig bepalen wat bewaard blijft, apart moet worden gezet en pas daarna kan worden weggehaald." />
 
         <section className="bg-white py-16 md:py-20">
           <div className="container-om grid gap-10 lg:grid-cols-3">
