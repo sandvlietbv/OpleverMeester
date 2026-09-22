@@ -22,6 +22,7 @@ export default function Hero() {
           <div className="relative aspect-[16/10] overflow-hidden rounded-om bg-navy-light shadow-[0_24px_70px_rgba(0,0,0,0.28)]">
             <Image src="/images/visual-proof/homepage-hero.webp" alt="Leeg opgeleverde woonkamer met daglicht" fill priority fetchPriority="high" sizes="(min-width: 1024px) 42vw, 100vw" className="object-cover" style={{ objectPosition: "center 52%" }} />
           </div>
+          <p className="mt-4 max-w-xl text-sm leading-relaxed text-white/65">Van een volle of onduidelijke ruimte naar overzicht en een afgesproken eindstaat.</p>
           <div className="mt-5 grid gap-3 border-t border-white/15 pt-5 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3">
             {["Eén aanspreekpunt", "Duidelijke planning", "Opleveren zoals afgesproken"].map((item) => <p key={item} className="text-sm font-semibold leading-snug text-white/90">{item}</p>)}
           </div>

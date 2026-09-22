@@ -89,7 +89,7 @@ export default function HuisLeeghalenNaOverlijdenPage() {
           </div>
         </section>
 
-        <VisualProof src="/images/visual-proof/overlijden.webp" alt="Warme, geleefde woonkamer met persoonlijke inrichting" eyebrow="Een woning waar geleefd is" title="Aandacht voor de spullen én de situatie." text="Een huis leeghalen na een overlijden begint niet bij afvoer, maar bij rustig bepalen wat bewaard blijft, apart moet worden gezet en pas daarna kan worden weggehaald." imageFirst variant="editorial" />
+        <VisualProof src="/images/visual-proof/overlijden.webp" alt="Warme, geleefde woonkamer met persoonlijke inrichting" eyebrow="Een woning waar geleefd is" title="Aandacht voor de spullen én de situatie." text="Een huis leeghalen na een overlijden begint niet bij afvoer, maar bij rustig bepalen wat bewaard blijft, apart moet worden gezet en pas daarna kan worden weggehaald." considerations={["Wat persoonlijk of waardevol is", "Wie beslissingen kan nemen", "Wanneer de woning gereed moet zijn"]} imageFirst variant="editorial" />
 
         <section className="bg-white py-16 md:py-20">
           <div className="container-om grid gap-10 lg:grid-cols-3">
