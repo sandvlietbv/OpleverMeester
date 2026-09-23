@@ -5,15 +5,15 @@ import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Kosten woningontruiming | Vanaf €532,40 incl. btw",
-  description: "Wat kost een woningontruiming? Bekijk projectprijzen vanaf €532,40 inclusief btw en krijg via de intake een indicatie op basis van uw situatie.",
+  description: "Wat kost een woningontruiming? Bekijk projectprijzen vanaf €595 inclusief btw en krijg via de intake een indicatie op basis van uw situatie.",
   alternates: { canonical: "/kosten-woningontruiming" },
 };
 
 const tiers = [
-  ["Compacte opdracht", "vanaf €532,40 incl. btw", "Beperkte ontruiming, enkele opleverpunten of een kleine ruimte."],
-  ["Standaard opdracht", "vanaf €1.064,80 incl. btw", "Een normale woning of appartement met meerdere werkzaamheden."],
-  ["Uitgebreide opdracht", "vanaf €1.597,20 incl. btw", "Een grotere woning, meer inboedel of meerdere opleverwerkzaamheden."],
-  ["Meerdaagse opdracht", "vanaf €2.129,60 incl. btw", "Grotere of complexere oplevering met extra inzet, bereikbaarheid of afvoer."],
+  ["Compacte opdracht", "vanaf €595 incl. btw", "Beperkte ontruiming, enkele opleverpunten of een kleine ruimte."],
+  ["Standaard opdracht", "vanaf €1.095 incl. btw", "Een normale woning of appartement met meerdere werkzaamheden."],
+  ["Uitgebreide opdracht", "vanaf €1.595 incl. btw", "Een grotere woning, meer inboedel of meerdere opleverwerkzaamheden."],
+  ["Meerdaagse opdracht", "vanaf €2.195 incl. btw", "Grotere of complexere oplevering met extra inzet, bereikbaarheid of afvoer."],
 ];
 
 export default function Page() {
