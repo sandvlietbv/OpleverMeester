@@ -5,7 +5,7 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Woningontruiming Groningen | Vanaf €532,40 incl. btw",
+  title: "Woningontruiming Groningen | Vanaf €595 incl. btw",
   description: "Woning laten ontruimen in Groningen? OpleverMeester werkt vanuit Groningen en regelt leeghalen, afvoer en opleverklaar maken vanuit één aanspreekpunt.",
   alternates: { canonical: "/woningontruiming-groningen" },
   openGraph: {
@@ -43,7 +43,7 @@ export default function WoningontruimingGroningenPage() {
           <h1 className="mt-4 max-w-4xl font-display text-4xl font-semibold leading-tight tracking-tight md:text-6xl">Woning leeg en correct opleveren in Groningen.</h1>
           <p className="mt-6 max-w-3xl text-lg leading-relaxed text-white/75 md:text-xl">OpleverMeester is gevestigd in Groningen. Moet een woning leeg vanwege verhuizing, overlijden, verkoop of einde huur, dan kijken we eerst naar de woning, bereikbaarheid en deadline en maken daar één opleverplan van.</p>
           <div className="mt-8 flex flex-wrap gap-3"><a href="#intake" className="rounded-om bg-orange px-7 py-3.5 font-semibold text-white hover:bg-orange-light">Start intake</a><a href="tel:+31645316851" className="rounded-om border border-white/25 px-7 py-3.5 font-semibold text-white">Bel 06 45 31 68 51</a></div>
-          <p className="mt-4 text-sm text-white/55">Indicatieve projectprijzen beginnen vanaf €532,40 incl. btw.</p>
+          <p className="mt-4 text-sm text-white/55">Indicatieve projectprijzen beginnen vanaf €595 incl. btw.</p>
         </div>
       </section>
 
