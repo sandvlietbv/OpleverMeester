@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 
 const GOOGLE_PROFILE_URL =
   "https://www.google.com/maps/search/?api=1&query=OpleverMeester%20Groningen%200645316851";
-const GOOGLE_REVIEW_URL = "https://g.page/r/CXb3g8hAsZmiECE/review";
 
 declare global {
   interface Window {
@@ -13,7 +12,7 @@ declare global {
 }
 
 export default function Reviews() {
-  function trackGoogleReviewClick(action: "view" | "write") {
+  function trackGoogleReviewClick(action: "view") {
     window.gtag?.("event", "google_review_click", {
       source: "homepage_reviews",
       action,
@@ -49,7 +48,7 @@ export default function Reviews() {
             </div>
           </div>
 
-          <div className="mt-6 flex flex-col gap-3 sm:flex-row md:mt-0 md:shrink-0">
+          <div className="mt-6 md:mt-0 md:shrink-0">
             <a
               href={GOOGLE_PROFILE_URL}
               target="_blank"
@@ -58,15 +57,6 @@ export default function Reviews() {
               className="inline-flex items-center justify-center rounded-om border border-surface-mid bg-white px-5 py-3 text-sm font-semibold text-navy transition-colors hover:border-orange focus:outline-none focus:ring-2 focus:ring-orange focus:ring-offset-2"
             >
               Bekijk op Google ↗
-            </a>
-            <a
-              href={GOOGLE_REVIEW_URL}
-              target="_blank"
-              rel="noreferrer"
-              onClick={() => trackGoogleReviewClick("write")}
-              className="inline-flex items-center justify-center rounded-om bg-navy px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-navy-light focus:outline-none focus:ring-2 focus:ring-navy focus:ring-offset-2"
-            >
-              Review schrijven
             </a>
           </div>
         </motion.div>

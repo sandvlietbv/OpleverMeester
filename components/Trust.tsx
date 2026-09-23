@@ -1,33 +1,26 @@
-import { ShieldCheck, HeartHandshake, CalendarCheck, UserRound } from "lucide-react";
-import Link from "next/link";
+import { CalendarCheck, MessageCircle, UserRound } from "lucide-react";
 
 const VALUES = [
-  { icon: ShieldCheck, label: "Duidelijke afspraken" },
-  { icon: HeartHandshake, label: "Respectvol in elke situatie" },
-  { icon: CalendarCheck, label: "Planning vóór uitvoering" },
   { icon: UserRound, label: "Eén vast aanspreekpunt" },
+  { icon: MessageCircle, label: "Duidelijke afspraken" },
+  { icon: CalendarCheck, label: "Planning vóór uitvoering" },
 ];
 
 export default function Trust() {
   return (
-    <section id="vertrouwen" className="bg-surface-light py-20 md:py-24">
+    <section id="vertrouwen" className="bg-surface-light py-14 md:py-16">
       <div className="container-om">
-        <div className="grid gap-10 lg:grid-cols-[1fr_.9fr] lg:items-start">
+        <div className="grid gap-8 lg:grid-cols-[.9fr_1.1fr] lg:items-center">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.12em] text-orange">Persoonlijk geregeld</p>
-            <h2 className="mt-2 max-w-2xl font-display text-3xl font-semibold tracking-tight text-navy md:text-4xl">U weet wie verantwoordelijk is voor uw oplevering.</h2>
-            <p className="mt-5 max-w-2xl leading-relaxed text-muted">OpleverMeester is uw vaste aanspreekpunt. Geen anoniem loket, maar één team dat de situatie doorneemt, de uitvoering organiseert en bereikbaar blijft tot de ruimte is opgeleverd.</p>
-            <p className="mt-4 max-w-2xl leading-relaxed text-muted">Vertrouwen bouwen we met duidelijke afspraken, bereikbaarheid en zichtbaar resultaat.</p>
-            <div className="mt-6 flex flex-wrap gap-3">
-              <Link href="/over-ons" className="rounded-om border border-surface-mid bg-white px-5 py-3 text-sm font-semibold text-navy hover:border-orange">Lees hoe we werken</Link>
-              <a href="tel:+31645316851" className="rounded-om bg-navy px-5 py-3 text-sm font-semibold text-white">Bel OpleverMeester via 06 45 31 68 51</a>
-            </div>
+            <h2 className="mt-2 max-w-xl font-display text-3xl font-semibold tracking-tight text-navy md:text-4xl">U houdt overzicht. Wij regelen de uitvoering.</h2>
+            <p className="mt-4 max-w-xl leading-relaxed text-muted">Team OpleverMeester bespreekt wat er speelt, maakt duidelijke afspraken en blijft bereikbaar tot de ruimte is opgeleverd.</p>
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid gap-3 sm:grid-cols-3">
             {VALUES.map((v) => (
-              <div key={v.label} className="flex min-h-36 flex-col items-start gap-4 rounded-om border border-surface-mid bg-white p-6">
-                <v.icon className="h-7 w-7 text-orange" strokeWidth={1.75} />
+              <div key={v.label} className="flex min-h-32 flex-col items-start gap-4 rounded-om border border-surface-mid bg-white p-5">
+                <v.icon className="h-6 w-6 text-orange" strokeWidth={1.75} />
                 <span className="font-display text-base font-semibold text-navy">{v.label}</span>
               </div>
             ))}
