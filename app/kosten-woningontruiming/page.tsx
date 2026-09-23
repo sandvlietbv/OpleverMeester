@@ -4,7 +4,7 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Kosten woningontruiming | Vanaf €532,40 incl. btw",
+  title: "Kosten woningontruiming | Vanaf €595 incl. btw",
   description: "Wat kost een woningontruiming? Bekijk projectprijzen vanaf €595 inclusief btw en krijg via de intake een indicatie op basis van uw situatie.",
   alternates: { canonical: "/kosten-woningontruiming" },
 };
