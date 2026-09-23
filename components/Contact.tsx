@@ -70,10 +70,10 @@ function getEstimate(data: IntakeData): Estimate {
   if (data.bereikbaarheid === "1 verdieping zonder lift") score += 1;
   if (data.bereikbaarheid === "Meerdere verdiepingen zonder lift") score += 2;
 
-  if (score <= 1) return { label: "Compacte opdracht", price: "vanaf €532,40 incl. btw", amount: 532.4 };
-  if (score <= 3) return { label: "Standaard opdracht", price: "vanaf €1.064,80 incl. btw", amount: 1064.8 };
-  if (score <= 5) return { label: "Uitgebreide opdracht", price: "vanaf €1.597,20 incl. btw", amount: 1597.2 };
-  return { label: "Meerdaagse opdracht", price: "vanaf €2.129,60 incl. btw", amount: 2129.6 };
+  if (score <= 1) return { label: "Compacte opdracht", price: "vanaf €595 incl. btw", amount: 595 };
+  if (score <= 3) return { label: "Standaard opdracht", price: "vanaf €1.095 incl. btw", amount: 1095 };
+  if (score <= 5) return { label: "Uitgebreide opdracht", price: "vanaf €1.595 incl. btw", amount: 1595 };
+  return { label: "Meerdaagse opdracht", price: "vanaf €2.195 incl. btw", amount: 2195 };
 }
 
 export default function Contact() {
