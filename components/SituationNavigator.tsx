@@ -4,6 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
+declare global { interface Window { gtag?: (...args: unknown[]) => void } }
+
 const SITUATIONS = [
   {
     label: "Woning leeghalen",
@@ -68,6 +70,7 @@ export default function SituationNavigator() {
                 href={situation.href}
                 onMouseEnter={() => setActive(index)}
                 onFocus={() => setActive(index)}
+                onClick={() => window.gtag?.("event", "situation_selected", { situation: situation.label, destination: situation.href, source_page: window.location.pathname })}
                 aria-current={active === index ? "true" : undefined}
                 className={`group flex min-h-[76px] items-center justify-between gap-4 rounded-om border px-5 py-4 transition-colors focus-visible:outline-none ${active === index ? "border-orange bg-orange/[0.06]" : "border-surface-mid bg-white hover:border-orange/60"}`}
               >

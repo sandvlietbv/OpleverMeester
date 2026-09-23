@@ -8,11 +8,11 @@ export default function Hero() {
       <div className="container-om grid min-h-[66vh] items-center gap-10 py-14 md:py-20 lg:grid-cols-[1.08fr_.92fr]">
         <div>
           <p className="mb-4 text-sm font-medium uppercase tracking-[0.14em] text-orange-light">OpleverMeester · Groningen, Friesland & Drenthe</p>
-          <h1 className="max-w-4xl font-display text-4xl font-semibold leading-[1.05] tracking-tight md:text-6xl lg:text-[4rem]">Ruimte opleveren?<br />Wij regelen wat nodig is.</h1>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/75 md:text-xl">Woning, bedrijfspand, kantoor of opslagruimte. Geef de situatie door en wij kijken direct wat er nodig is om de ruimte goed op te leveren.</p>
+          <h1 className="max-w-4xl font-display text-4xl font-semibold leading-[1.05] tracking-tight md:text-6xl lg:text-[4rem]">Woning of bedrijfspand leeg en opleverklaar.</h1>
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/75 md:text-xl">Zonder alles zelf te regelen. Van leeghalen en afvoer tot schoonmaak en afgesproken herstelpunten: één team brengt overzicht en regelt de uitvoering.</p>
           <div className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-4">
             <a href="#situaties" className="inline-flex rounded-om bg-orange px-7 py-3.5 text-center font-semibold text-white hover:bg-orange-light">Kies uw situatie</a>
-            <a href={PHONE_HREF} className="font-semibold text-white/90 underline decoration-white/30 underline-offset-4 hover:text-orange-light">Of bel {PHONE_DISPLAY}</a>
+            <a href={PHONE_HREF} className="inline-flex min-h-12 items-center font-semibold text-white/90 underline decoration-white/30 underline-offset-4 hover:text-orange-light">Of bel {PHONE_DISPLAY}</a>
           </div>
         </div>
         <aside className="order-last" aria-label="Het resultaat van een oplevering">
