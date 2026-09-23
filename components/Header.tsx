@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 
 const NAV_LINKS = [
-  { label: "Diensten", href: "/#diensten" },
+  { label: "Situaties", href: "/#situaties" },
   { label: "Prijzen", href: "/#prijzen" },
   { label: "Werkwijze", href: "/#werkwijze" },
   { label: "Over ons", href: "/over-ons" },
@@ -44,7 +44,7 @@ export default function Header() {
           </a>
         </div>
 
-        <button type="button" className="flex h-10 w-10 items-center justify-center rounded-om text-navy lg:hidden" onClick={() => setOpen((v) => !v)} aria-expanded={open} aria-controls="mobiel-menu" aria-label={open ? "Menu sluiten" : "Menu openen"}>
+        <button type="button" className="flex h-12 w-12 items-center justify-center rounded-om text-navy lg:hidden" onClick={() => setOpen((v) => !v)} aria-expanded={open} aria-controls="mobiel-menu" aria-label={open ? "Menu sluiten" : "Menu openen"}>
           <span className="sr-only">Menu</span>
           <div className="flex flex-col gap-1.5">
             <span className={`h-0.5 w-6 bg-navy transition-transform ${open ? "translate-y-2 rotate-45" : ""}`} />
