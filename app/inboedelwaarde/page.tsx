@@ -1,0 +1,6 @@
+import type { Metadata } from "next";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import InboedelChecker from "@/components/InboedelChecker";
+export const metadata: Metadata = { title: "Wat is mijn inboedel waard? | Gratis inventarisatie", description: "Maak gratis een overzicht van verkoopbare inboedel. Ontdek wat mogelijk herbruikbaar is en vraag vrijblijvend een beoordeling bij ontruiming aan.", alternates:{canonical:"/inboedelwaarde"} };
+export default function Page(){return <><Header/><main><section className="bg-navy text-white py-14 md:py-20"><div className="container-om max-w-4xl"><p className="text-orange-light font-semibold">Gratis inboedelcheck</p><h1 className="font-display text-4xl md:text-5xl font-semibold mt-3">Wat is mijn inboedel waard?</h1><p className="mt-5 text-lg text-white/80 max-w-2xl">Maak in enkele minuten een overzicht van je spullen. Ontdek wat mogelijk verkoopbaar is en welke opties je hebt bij een woningontruiming.</p></div></section><InboedelChecker/></main><Footer/></>}
