@@ -6,6 +6,8 @@ import Link from "next/link";
 const NAV_LINKS = [
   { label: "Situaties", href: "/#situaties" },
   { label: "Prijzen", href: "/#prijzen" },
+  { label: "Inboedelwaarde", href: "/inboedelwaarde" },
+  { label: "Zakelijk portaal", href: "/zakelijk/opleverportaal" },
   { label: "Werkwijze", href: "/#werkwijze" },
   { label: "Over ons", href: "/over-ons" },
 ];
