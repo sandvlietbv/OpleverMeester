@@ -7,6 +7,7 @@ const FOOTER_LINKS = [
     { label: "Na overlijden", href: "/huis-leeghalen-na-overlijden" },
     { label: "Spoedontruiming", href: "/spoedontruiming" },
     { label: "Kosten woningontruiming", href: "/kosten-woningontruiming" },
+    { label: "Wat is mijn inboedel waard?", href: "/inboedelwaarde" },
   ]},
   { heading: "Regio & zakelijk", links: [
     { label: "Groningen", href: "/woningontruiming-groningen" },
@@ -14,6 +15,7 @@ const FOOTER_LINKS = [
     { label: "Drenthe", href: "/woningontruiming-drenthe" },
     { label: "Bewindvoerders & curatoren", href: "/zakelijk/bewindvoerders-en-curatoren" },
     { label: "Vastgoedbeheer & corporaties", href: "/zakelijk/vastgoedbeheer-en-corporaties" },
+    { label: "Zakelijk opleverportaal", href: "/zakelijk/opleverportaal" },
   ]},
   { heading: "OpleverMeester", links: [
     { label: "Over ons", href: "/over-ons" },
