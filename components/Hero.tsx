@@ -1,7 +1,5 @@
 import Image from "next/image";
 
-const PHONE_DISPLAY = "06 45 31 68 51";
-const PHONE_HREF = "tel:+31645316851";
 const WHATSAPP_HREF = "https://wa.me/31645316851?text=Hallo%20OpleverMeester%2C%20ik%20heb%20een%20vraag%20over%20het%20leeghalen%20en%20opleveren%20van%20een%20woning.";
 export default function Hero() {
   return (
