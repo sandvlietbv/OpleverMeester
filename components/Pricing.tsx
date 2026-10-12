@@ -11,7 +11,7 @@ export default function Pricing() {
             <p className="mt-4 max-w-2xl leading-relaxed text-muted">De uiteindelijke projectprijs hangt af van de ruimte, hoeveelheid inboedel, bereikbaarheid en werkzaamheden. U ziet via de prijscheck eerst een passende orde van grootte.</p>
             <Link href="/kosten-woningontruiming" className="mt-4 inline-flex text-sm font-semibold text-navy hover:text-orange">Bekijk hoe de prijs is opgebouwd →</Link>
           </div>
-          <a href="#intake" className="inline-flex justify-center rounded-om bg-orange px-6 py-3.5 font-semibold text-white hover:bg-orange-light">Start snelle prijscheck</a>
+          <a href="#intake" className="inline-flex justify-center rounded-om bg-orange px-6 py-3.5 font-semibold text-white hover:bg-orange-light">Ontvang een prijsindicatie</a>
         </div>
       </div>
     </section>
