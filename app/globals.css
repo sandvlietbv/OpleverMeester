@@ -3,18 +3,16 @@
 @tailwind utilities;
 
 :root {
-  /* Merkkleuren — OpleverMeester */
   --om-navy: #0b1d33;
   --om-navy-light: #14304f;
   --om-navy-soft: #1c3b5e;
   --om-orange: #e76f2c;
   --om-orange-light: #f2905a;
   --om-white: #ffffff;
-  --om-gray-light: #f4f5f7;
-  --om-gray-mid: #e4e7eb;
-  --om-text-muted: #5b6472;
-
-  --om-radius: 14px;
+  --om-gray-light: #f7f6f3;
+  --om-gray-mid: #e7e4de;
+  --om-text-muted: #586170;
+  --om-radius: 16px;
 }
 
 html {
@@ -40,7 +38,11 @@ body {
   background: var(--om-white);
 }
 
-/* Zichtbare focus-ring — toegankelijkheid (WCAG AA) */
+::selection {
+  background: rgba(231, 111, 44, 0.2);
+  color: var(--om-navy);
+}
+
 :focus-visible {
   outline: 2px solid var(--om-orange);
   outline-offset: 3px;
@@ -59,7 +61,6 @@ body {
   }
 }
 
-/* Signature: 'ruimte-lijn' divider — deur die opent, als sectie-scheiding */
 .room-divider {
   width: 100%;
   height: 1px;
@@ -70,4 +71,37 @@ body {
     var(--om-gray-mid) 80%,
     transparent 100%
   );
+}
+
+.om-pulse-ring {
+  animation: om-pulse-ring 2.6s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+}
+
+@keyframes om-pulse-ring {
+  0% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  70% {
+    opacity: 0;
+    transform: scale(1.7);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.7);
+  }
+}
+
+.om-soft-float {
+  animation: om-soft-float 6s ease-in-out infinite;
+}
+
+@keyframes om-soft-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -8px, 0);
+  }
 }

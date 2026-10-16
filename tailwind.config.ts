@@ -18,17 +18,17 @@ const config: Config = {
           light: "#f2905a",
         },
         surface: {
-          light: "#f4f5f7",
-          mid: "#e4e7eb",
+          light: "#f7f6f3",
+          mid: "#e7e4de",
         },
-        muted: "#5b6472",
+        muted: "#586170",
       },
       fontFamily: {
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
         display: ["var(--font-geist-sans)", "var(--font-inter)", "system-ui", "sans-serif"],
       },
       borderRadius: {
-        om: "14px",
+        om: "16px",
       },
       maxWidth: {
         om: "1240px",
