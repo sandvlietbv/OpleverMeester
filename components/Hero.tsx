@@ -15,8 +15,8 @@ export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-navy text-white">
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 opacity-70">
-        <div className="absolute -left-28 top-28 h-72 w-72 rounded-full border border-orange/15" />
-        <div className="absolute -left-8 top-48 h-36 w-36 rounded-full border border-orange/10" />
+        <div className="absolute -left-28 top-28 h-72 w-72 rounded-full border border-orange/[0.15]" />
+        <div className="absolute -left-8 top-48 h-36 w-36 rounded-full border border-orange/[0.10]" />
         <div className="absolute right-[8%] top-12 h-px w-40 bg-gradient-to-r from-transparent via-orange/60 to-transparent" />
       </div>
 
@@ -32,7 +32,7 @@ export default function Hero() {
           <h1 className="max-w-4xl font-display text-[2.85rem] font-semibold leading-[0.98] tracking-[-0.045em] sm:text-6xl md:text-7xl lg:text-[4.7rem]">
             Woning leeghalen? Wij regelen de complete <span className="text-orange-light">oplevering.</span>
           </h1>
-          <p className="mt-7 max-w-2xl text-lg leading-8 text-white/78 md:text-[1.28rem] md:leading-9">
+          <p className="mt-7 max-w-2xl text-lg leading-8 text-white/[0.78] md:text-[1.28rem] md:leading-9">
             Van het verwijderen van de inboedel tot schoonmaak en afgesproken herstelwerkzaamheden. Eén aanspreekpunt, vooraf duidelijkheid over de kosten en een woning die klaar is voor overdracht.
           </p>
 
@@ -47,7 +47,7 @@ export default function Hero() {
             </a>
           </div>
 
-          <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm text-white/65">
+          <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm text-white/[0.65]">
             {["Duidelijke projectprijs", "Eén aanspreekpunt", "Planning vóór uitvoering"].map((item) => (
               <span key={item} className="inline-flex items-center gap-2">
                 <span className="flex h-5 w-5 items-center justify-center rounded-full bg-orange/15 text-orange-light"><Check className="h-3.5 w-3.5" /></span>
@@ -75,13 +75,13 @@ export default function Hero() {
               className="object-cover"
               style={{ objectPosition: "center 52%" }}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-navy/28 via-transparent to-white/[0.04]" />
+            <div className="absolute inset-0 bg-gradient-to-t from-navy/[0.28] via-transparent to-white/[0.04]" />
           </div>
 
           <motion.div
             animate={reduceMotion ? undefined : { y: [0, -8, 0] }}
             transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute -left-3 bottom-7 hidden w-[250px] rounded-[20px] border border-white/70 bg-white/96 p-5 text-navy shadow-[0_18px_55px_rgba(11,29,51,0.20)] backdrop-blur md:block lg:-left-8"
+            className="absolute -left-3 bottom-7 hidden w-[250px] rounded-[20px] border border-white/70 bg-white/[0.96] p-5 text-navy shadow-[0_18px_55px_rgba(11,29,51,0.20)] backdrop-blur md:block lg:-left-8"
           >
             <p className="text-xs font-semibold uppercase tracking-[0.12em] text-orange">Complete oplevering</p>
             <div className="mt-3 space-y-2.5">
@@ -98,7 +98,7 @@ export default function Hero() {
             href="tel:+31645316851"
             animate={reduceMotion ? undefined : { y: [0, 6, 0] }}
             transition={{ duration: 4.6, repeat: Infinity, ease: "easeInOut", delay: 0.35 }}
-            className="absolute -right-2 top-6 flex items-center gap-3 rounded-full border border-white/80 bg-white/96 py-2.5 pl-3 pr-4 text-navy shadow-[0_14px_45px_rgba(11,29,51,0.18)] backdrop-blur md:-right-5 lg:-right-7"
+            className="absolute -right-2 top-6 flex items-center gap-3 rounded-full border border-white/80 bg-white/[0.96] py-2.5 pl-3 pr-4 text-navy shadow-[0_14px_45px_rgba(11,29,51,0.18)] backdrop-blur md:-right-5 lg:-right-7"
             aria-label={`Bel OpleverMeester op ${PHONE_DISPLAY}`}
           >
             <span className="relative flex h-11 w-11 items-center justify-center rounded-full bg-orange text-white">
@@ -111,7 +111,7 @@ export default function Hero() {
             </span>
           </motion.a>
 
-          <div className="absolute -bottom-4 right-5 rounded-full border border-white/10 bg-navy/92 px-4 py-2 text-sm font-medium text-white shadow-lg backdrop-blur">
+          <div className="absolute -bottom-4 right-5 rounded-full border border-white/10 bg-navy/[0.92] px-4 py-2 text-sm font-medium text-white shadow-lg backdrop-blur">
             Klaar voor overdracht
           </div>
         </motion.aside>
