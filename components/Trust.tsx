@@ -19,7 +19,7 @@ export default function Trust() {
         <div className="max-w-4xl">
           <p className="text-sm font-semibold uppercase tracking-[0.14em] text-orange">Persoonlijk geregeld</p>
           <h2 className="mt-3 font-display text-4xl font-semibold tracking-[-0.04em] text-navy md:text-6xl">
-            U houdt overzicht. <span className="text-navy/45">Wij regelen de uitvoering.</span>
+            U houdt overzicht. <span className="text-navy/[0.45]">Wij regelen de uitvoering.</span>
           </h2>
           <p className="mt-5 max-w-2xl text-lg leading-8 text-muted">
             Geen wirwar van losse partijen. We maken vooraf duidelijk wat er moet gebeuren en houden de voortgang bij tot de afgesproken overdracht.
