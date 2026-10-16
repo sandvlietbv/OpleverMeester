@@ -19,7 +19,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-surface-mid/60 bg-white/92 shadow-[0_8px_30px_rgba(11,29,51,0.04)] backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-surface-mid/60 bg-white/[0.92] shadow-[0_8px_30px_rgba(11,29,51,0.04)] backdrop-blur-xl">
       <div className="container-om flex h-[72px] items-center justify-between lg:h-[84px]">
         <Link href="/" className="font-display text-xl font-semibold tracking-[-0.03em] text-navy md:text-2xl">
           Oplever<span className="text-orange">Meester</span>
