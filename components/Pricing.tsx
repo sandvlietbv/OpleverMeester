@@ -1,17 +1,44 @@
 import Link from "next/link";
+import { ArrowRight, Check } from "lucide-react";
+
+const FACTORS = ["Omvang van de ruimte", "Hoeveelheid inboedel", "Bereikbaarheid en opleverwerk"];
 
 export default function Pricing() {
   return (
-    <section id="prijzen" className="bg-surface-light py-14 md:py-16">
+    <section id="prijzen" className="bg-[#fbf6f1] py-20 md:py-24">
       <div className="container-om">
-        <div className="grid gap-8 rounded-om border border-surface-mid bg-white p-6 shadow-sm md:p-8 lg:grid-cols-[1fr_auto] lg:items-center lg:gap-12">
+        <div className="grid gap-10 lg:grid-cols-[.9fr_1.1fr] lg:items-center">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-orange">Prijsindicatie</p>
-            <h2 className="mt-2 max-w-2xl font-display text-3xl font-semibold tracking-tight text-navy md:text-4xl">Een compacte opdracht begint vanaf €595 inclusief btw.</h2>
-            <p className="mt-4 max-w-2xl leading-relaxed text-muted">De uiteindelijke projectprijs hangt af van de ruimte, hoeveelheid inboedel, bereikbaarheid en werkzaamheden. U ziet via de prijscheck eerst een passende orde van grootte.</p>
-            <Link href="/kosten-woningontruiming" className="mt-4 inline-flex text-sm font-semibold text-navy hover:text-orange">Bekijk hoe de prijs is opgebouwd →</Link>
+            <p className="text-sm font-semibold uppercase tracking-[0.14em] text-orange">Prijsindicatie</p>
+            <div className="mt-4 flex flex-wrap items-end gap-x-3 gap-y-1">
+              <span className="font-display text-6xl font-semibold tracking-[-0.055em] text-navy md:text-7xl">€595</span>
+              <span className="pb-2 text-lg font-medium text-muted">vanaf · incl. btw</span>
+            </div>
+            <p className="mt-5 max-w-lg text-lg leading-8 text-muted">
+              Een compacte opdracht begint vanaf €595. De echte situatie bepaalt de uiteindelijke projectprijs.
+            </p>
+            <Link href="/kosten-woningontruiming" className="mt-5 inline-flex items-center gap-2 text-base font-semibold text-navy hover:text-orange">
+              Bekijk hoe de prijs is opgebouwd <ArrowRight className="h-4 w-4" />
+            </Link>
           </div>
-          <a href="#intake" className="inline-flex justify-center rounded-om bg-orange px-6 py-3.5 font-semibold text-white hover:bg-orange-light">Ontvang een prijsindicatie</a>
+
+          <div className="rounded-[24px] border border-orange/15 bg-white p-7 shadow-[0_18px_50px_rgba(11,29,51,0.08)] md:p-9">
+            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-orange">Wat bepaalt de prijs?</p>
+            <div className="mt-5 grid gap-3 sm:grid-cols-3">
+              {FACTORS.map((factor) => (
+                <div key={factor} className="flex gap-3 border-t border-surface-mid pt-4 sm:block">
+                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-orange/10 text-orange sm:mb-3">
+                    <Check className="h-4 w-4" />
+                  </span>
+                  <span className="text-sm font-semibold leading-6 text-navy">{factor}</span>
+                </div>
+              ))}
+            </div>
+            <a href="#intake" className="group mt-8 inline-flex min-h-14 w-full items-center justify-center gap-3 rounded-om bg-orange px-6 py-4 text-base font-semibold text-white shadow-[0_12px_28px_rgba(231,111,44,0.22)] transition hover:-translate-y-0.5 hover:bg-orange-light sm:w-auto">
+              Ontvang een prijsindicatie
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </a>
+          </div>
         </div>
       </div>
     </section>
