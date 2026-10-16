@@ -81,9 +81,9 @@ export default function SituationNavigator() {
                 onClick={() => window.gtag?.("event", "situation_selected", { situation: situation.label, destination: situation.href, source_page: window.location.pathname })}
                 className="group relative grid min-h-[92px] grid-cols-[auto_1fr_auto] items-center gap-4 border-b border-surface-mid py-5 transition-colors"
               >
-                <span className={`text-sm font-semibold transition-colors ${active === index ? "text-orange" : "text-navy/35 group-hover:text-orange"}`}>0{index + 1}</span>
+                <span className={`text-sm font-semibold transition-colors ${active === index ? "text-orange" : "text-navy/[0.35] group-hover:text-orange"}`}>0{index + 1}</span>
                 <span>
-                  <strong className={`block font-display text-xl font-semibold tracking-[-0.02em] transition-colors sm:text-2xl ${active === index ? "text-navy" : "text-navy/78 group-hover:text-navy"}`}>{situation.label}</strong>
+                  <strong className={`block font-display text-xl font-semibold tracking-[-0.02em] transition-colors sm:text-2xl ${active === index ? "text-navy" : "text-navy/[0.78] group-hover:text-navy"}`}>{situation.label}</strong>
                   <span className="mt-1 block text-sm leading-snug text-muted sm:text-base">{situation.short}</span>
                 </span>
                 <motion.span
@@ -109,7 +109,7 @@ export default function SituationNavigator() {
                 className="absolute inset-0"
               >
                 <Image src={current.image} alt={current.alt} fill sizes="(min-width: 1024px) 55vw, 100vw" className="object-cover" style={{ objectPosition: current.position }} />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy/78 via-navy/8 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy/[0.78] via-navy/[0.08] to-transparent" />
                 <figcaption className="absolute inset-x-0 bottom-0 p-7 text-white md:p-9">
                   <p className="text-xs font-semibold uppercase tracking-[0.14em] text-orange-light">Uw situatie</p>
                   <p className="mt-2 max-w-xl font-display text-3xl font-semibold tracking-[-0.03em] md:text-4xl">{current.label}</p>
