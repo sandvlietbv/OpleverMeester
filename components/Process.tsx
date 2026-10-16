@@ -1,28 +1,66 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
+import { ArrowRight, ClipboardList, Sparkles, UserRoundSearch } from "lucide-react";
 
 const STEPS = [
-  { title: "Vertel wat er speelt", body: "Kies uw situatie of start de prijscheck. U hoeft de juiste vakterm niet te kennen." },
-  { title: "Krijg een duidelijk plan", body: "We stemmen werkzaamheden, planning en prijs af voordat we beginnen." },
-  { title: "Wij regelen de oplevering", body: "Na akkoord organiseren we de uitvoering tot de afgesproken eindstaat." },
+  { icon: UserRoundSearch, title: "Vertel wat er speelt", body: "Kies uw situatie en geef kort door wat er geregeld moet worden." },
+  { icon: ClipboardList, title: "Krijg een duidelijk plan", body: "We stemmen werkzaamheden, planning en prijs af voordat we beginnen." },
+  { icon: Sparkles, title: "Wij regelen de oplevering", body: "Na akkoord organiseren we de uitvoering tot de afgesproken eindstaat." },
 ];
 
 export default function Process() {
+  const reduceMotion = useReducedMotion();
+
   return (
-    <section id="werkwijze" className="bg-navy py-20 text-white">
-      <div className="container-om">
-        <motion.h2 initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.45 }} className="max-w-xl font-display text-3xl font-semibold tracking-tight md:text-4xl">
-          Zo pakken we het aan
-        </motion.h2>
-        <p className="mt-3 max-w-xl leading-relaxed text-white/70">Kort, duidelijk en met één aanspreekpunt.</p>
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
+    <section id="werkwijze" className="relative overflow-hidden bg-navy py-20 text-white md:py-28">
+      <div aria-hidden="true" className="absolute inset-0 opacity-40">
+        <div className="absolute left-[8%] top-12 h-px w-72 bg-gradient-to-r from-transparent via-orange/60 to-transparent" />
+        <div className="absolute -right-16 bottom-[-5rem] h-64 w-64 rounded-full border border-white/8" />
+      </div>
+
+      <div className="container-om relative">
+        <div className="grid gap-5 md:grid-cols-[.8fr_1.2fr] md:items-end">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.14em] text-orange-light">Zo werkt het</p>
+            <h2 className="mt-3 max-w-xl font-display text-4xl font-semibold tracking-[-0.04em] md:text-6xl">Drie heldere stappen.</h2>
+          </div>
+          <p className="max-w-xl text-lg leading-8 text-white/68 md:justify-self-end">
+            U hoeft niets uit te zoeken. We brengen eerst de situatie terug tot een duidelijk plan en nemen daarna de uitvoering over.
+          </p>
+        </div>
+
+        <div className="relative mt-14 grid gap-10 md:grid-cols-3 md:gap-8">
+          <motion.div
+            aria-hidden="true"
+            initial={reduceMotion ? false : { scaleX: 0 }}
+            whileInView={reduceMotion ? undefined : { scaleX: 1 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+            className="absolute left-[7%] right-[7%] top-7 hidden h-px origin-left bg-gradient-to-r from-orange/20 via-orange/80 to-orange/20 md:block"
+          />
+
           {STEPS.map((step, i) => (
-            <motion.div key={step.title} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-60px" }} transition={{ duration: 0.4, delay: i * 0.07 }} className="border-t border-white/15 pt-5">
-              <span className="text-sm font-semibold text-orange-light">0{i + 1}</span>
-              <h3 className="mt-2 font-display text-xl font-semibold">{step.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-white/65">{step.body}</p>
-            </motion.div>
+            <motion.article
+              key={step.title}
+              initial={reduceMotion ? false : { opacity: 0, y: 22 }}
+              whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-70px" }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              className="relative"
+            >
+              <div className="relative z-10 flex items-center justify-between">
+                <span className="flex h-14 w-14 items-center justify-center rounded-full border border-orange/50 bg-navy text-sm font-semibold text-orange-light shadow-[0_0_0_8px_rgba(11,29,51,1)]">
+                  0{i + 1}
+                </span>
+                {i < STEPS.length - 1 && <ArrowRight className="h-5 w-5 text-white/18 md:hidden" />}
+              </div>
+              <div className="mt-8 flex h-12 w-12 items-center justify-center rounded-om bg-white/[0.07] text-orange-light">
+                <step.icon className="h-5 w-5" strokeWidth={1.7} />
+              </div>
+              <h3 className="mt-5 font-display text-2xl font-semibold tracking-[-0.025em] md:text-[1.85rem]">{step.title}</h3>
+              <p className="mt-3 max-w-sm text-base leading-7 text-white/65">{step.body}</p>
+            </motion.article>
           ))}
         </div>
       </div>
