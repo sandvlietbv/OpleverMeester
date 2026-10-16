@@ -56,7 +56,7 @@ export default function Reviews() {
             target="_blank"
             rel="noreferrer"
             onClick={() => trackGoogleReviewClick("view")}
-            className="group inline-flex min-h-13 items-center justify-center gap-2 rounded-om border border-surface-mid bg-white px-5 py-3.5 text-sm font-semibold text-navy transition hover:border-orange hover:text-orange"
+            className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-om border border-surface-mid bg-white px-5 py-3.5 text-sm font-semibold text-navy transition hover:border-orange hover:text-orange"
           >
             Bekijk op Google
             <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
