@@ -16,7 +16,7 @@ export default function Process() {
     <section id="werkwijze" className="relative overflow-hidden bg-navy py-20 text-white md:py-28">
       <div aria-hidden="true" className="absolute inset-0 opacity-40">
         <div className="absolute left-[8%] top-12 h-px w-72 bg-gradient-to-r from-transparent via-orange/60 to-transparent" />
-        <div className="absolute -right-16 bottom-[-5rem] h-64 w-64 rounded-full border border-white/8" />
+        <div className="absolute -right-16 bottom-[-5rem] h-64 w-64 rounded-full border border-white/[0.08]" />
       </div>
 
       <div className="container-om relative">
@@ -25,7 +25,7 @@ export default function Process() {
             <p className="text-sm font-semibold uppercase tracking-[0.14em] text-orange-light">Zo werkt het</p>
             <h2 className="mt-3 max-w-xl font-display text-4xl font-semibold tracking-[-0.04em] md:text-6xl">Drie heldere stappen.</h2>
           </div>
-          <p className="max-w-xl text-lg leading-8 text-white/68 md:justify-self-end">
+          <p className="max-w-xl text-lg leading-8 text-white/[0.68] md:justify-self-end">
             U hoeft niets uit te zoeken. We brengen eerst de situatie terug tot een duidelijk plan en nemen daarna de uitvoering over.
           </p>
         </div>
@@ -53,13 +53,13 @@ export default function Process() {
                 <span className="flex h-14 w-14 items-center justify-center rounded-full border border-orange/50 bg-navy text-sm font-semibold text-orange-light shadow-[0_0_0_8px_rgba(11,29,51,1)]">
                   0{i + 1}
                 </span>
-                {i < STEPS.length - 1 && <ArrowRight className="h-5 w-5 text-white/18 md:hidden" />}
+                {i < STEPS.length - 1 && <ArrowRight className="h-5 w-5 text-white/[0.18] md:hidden" />}
               </div>
               <div className="mt-8 flex h-12 w-12 items-center justify-center rounded-om bg-white/[0.07] text-orange-light">
                 <step.icon className="h-5 w-5" strokeWidth={1.7} />
               </div>
               <h3 className="mt-5 font-display text-2xl font-semibold tracking-[-0.025em] md:text-[1.85rem]">{step.title}</h3>
-              <p className="mt-3 max-w-sm text-base leading-7 text-white/65">{step.body}</p>
+              <p className="mt-3 max-w-sm text-base leading-7 text-white/[0.65]">{step.body}</p>
             </motion.article>
           ))}
         </div>
