@@ -19,8 +19,8 @@ const VARIANTS = {
   balanced: { section: "bg-white py-16 md:py-24", grid: "lg:grid-cols-[.9fr_1.1fr]", figure: "shadow-[0_22px_60px_rgba(11,29,51,0.12)]", media: "aspect-[16/10] sm:aspect-[16/9]" },
   editorial: { section: "bg-white py-16 md:py-24", grid: "lg:grid-cols-[1.03fr_.97fr] lg:gap-16", figure: "border border-surface-mid shadow-[0_18px_50px_rgba(11,29,51,0.09)]", media: "aspect-[4/3]" },
   compact: { section: "bg-surface-light py-16 md:py-20", grid: "lg:grid-cols-[1.18fr_.82fr]", figure: "border border-surface-mid shadow-[0_14px_38px_rgba(11,29,51,0.08)] lg:max-w-md lg:justify-self-end", media: "aspect-[4/3]" },
-  business: { section: "bg-surface-light py-16 md:py-22", grid: "lg:grid-cols-[1.12fr_.88fr]", figure: "border border-navy/10 shadow-[0_18px_48px_rgba(11,29,51,0.1)]", media: "aspect-[16/10]" },
-  process: { section: "bg-white py-16 md:py-22", grid: "lg:grid-cols-[1.18fr_.82fr]", figure: "border border-surface-mid shadow-[0_18px_48px_rgba(11,29,51,0.1)]", media: "aspect-[3/2]" },
+  business: { section: "bg-surface-light py-16 md:py-24", grid: "lg:grid-cols-[1.12fr_.88fr]", figure: "border border-navy/10 shadow-[0_18px_48px_rgba(11,29,51,0.1)]", media: "aspect-[16/10]" },
+  process: { section: "bg-white py-16 md:py-24", grid: "lg:grid-cols-[1.18fr_.82fr]", figure: "border border-surface-mid shadow-[0_18px_48px_rgba(11,29,51,0.1)]", media: "aspect-[3/2]" },
 };
 
 export default function VisualProof({ src, alt, eyebrow, title, text, imagePosition = "center", imageFirst = false, variant = "balanced", considerations = [] }: VisualProofProps) {
@@ -64,7 +64,7 @@ export default function VisualProof({ src, alt, eyebrow, title, text, imagePosit
         >
           <div className={`relative ${style.media}`}>
             <Image src={src} alt={alt} fill sizes={variant === "compact" ? "(min-width: 1024px) 34vw, 100vw" : "(min-width: 1024px) 54vw, 100vw"} className="object-cover transition-transform duration-700 hover:scale-[1.015]" style={{ objectPosition: imagePosition }} />
-            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-navy/16 via-transparent to-transparent" />
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-navy/[0.16] via-transparent to-transparent" />
           </div>
           <motion.span
             aria-hidden="true"
