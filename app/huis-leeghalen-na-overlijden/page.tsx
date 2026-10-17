@@ -64,7 +64,7 @@ export default function HuisLeeghalenNaOverlijdenPage() {
             <div className="mt-8 flex flex-wrap gap-3">
               <a
                 href="#intake"
-                className="rounded-om bg-orange px-7 py-3.5 font-semibold text-white hover:bg-orange-light"
+                className="rounded-om bg-orange px-7 py-3.5 font-semibold text-white hover:bg-orange-light hover:text-navy"
               >
                 Start intake
               </a>
