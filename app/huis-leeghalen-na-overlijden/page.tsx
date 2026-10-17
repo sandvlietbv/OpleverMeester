@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Contact from "@/components/Contact";
 import VisualProof from "@/components/VisualProof";
+import CompactHeader from "@/components/CompactHeader";
 
 export const metadata: Metadata = {
   title: "Huis leeghalen na overlijden",
@@ -46,19 +47,7 @@ export default function HuisLeeghalenNaOverlijdenPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }}
       />
 
-      <header className="border-b border-surface-mid bg-white">
-        <div className="container-om flex h-16 items-center justify-between md:h-20">
-          <Link href="/" className="font-display text-lg font-semibold tracking-tight text-navy md:text-xl">
-            Oplever<span className="text-orange">Meester</span>
-          </Link>
-          <a
-            href="#intake"
-            className="rounded-om bg-orange px-5 py-2.5 text-sm font-semibold text-white hover:bg-orange-light"
-          >
-            Start intake
-          </a>
-        </div>
-      </header>
+      <CompactHeader />
 
       <main>
         <section className="bg-navy py-16 text-white md:py-24">
