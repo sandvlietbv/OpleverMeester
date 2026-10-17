@@ -4,9 +4,9 @@ import { motion, useReducedMotion } from "framer-motion";
 import { CalendarCheck, ClipboardCheck, UserRound } from "lucide-react";
 
 const VALUES = [
-  { icon: UserRound, number: "01", label: "Eén vast aanspreekpunt", text: "Van eerste vraag tot overdracht houdt u één lijn." },
-  { icon: ClipboardCheck, number: "02", label: "Duidelijke afspraken", text: "Vooraf helder wat we doen, wat het kost en wat de eindstaat is." },
-  { icon: CalendarCheck, number: "03", label: "Planning vóór uitvoering", text: "Eerst overzicht en timing. Daarna pas aan de slag." },
+  { icon: UserRound, number: "01", label: "Eén vast aanspreekpunt", text: "Van eerste vraag tot overdracht: één lijn." },
+  { icon: ClipboardCheck, number: "02", label: "Duidelijke afspraken", text: "Vooraf helder: werk, prijs en eindstaat." },
+  { icon: CalendarCheck, number: "03", label: "Planning vóór uitvoering", text: "Eerst de planning. Dan de uitvoering." },
 ];
 
 export default function Trust() {
@@ -17,12 +17,12 @@ export default function Trust() {
       <div aria-hidden="true" className="absolute right-[-8rem] top-8 h-64 w-64 rounded-full border border-orange/10" />
       <div className="container-om relative">
         <div className="max-w-4xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.14em] text-orange">Persoonlijk geregeld</p>
+          <p className="text-sm font-semibold uppercase tracking-[0.14em] text-orange">Rust in de uitvoering</p>
           <h2 className="mt-3 font-display text-4xl font-semibold tracking-[-0.04em] text-navy md:text-6xl">
-            U houdt overzicht. <span className="text-navy/[0.45]">Wij regelen de uitvoering.</span>
+            U houdt overzicht. <span className="text-navy/[0.45]">Wij regelen.</span>
           </h2>
           <p className="mt-5 max-w-2xl text-lg leading-8 text-muted">
-            Geen wirwar van losse partijen. We maken vooraf duidelijk wat er moet gebeuren en houden de voortgang bij tot de afgesproken overdracht.
+            Eén plan. Eén aanspreekpunt. Duidelijkheid over kosten, planning en eindstaat.
           </p>
         </div>
 
