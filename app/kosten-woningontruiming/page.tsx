@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import CompactHeader from "@/components/CompactHeader";
 
 export const metadata: Metadata = {
   title: "Kosten woningontruiming | Vanaf €595 incl. btw",
@@ -18,7 +19,7 @@ const tiers = [
 
 export default function Page() {
   return <>
-    <header className="border-b border-surface-mid bg-white"><div className="container-om flex min-h-16 items-center justify-between gap-4 py-3"><Link href="/" className="font-display text-lg font-semibold text-navy">Oplever<span className="text-orange">Meester</span></Link><div className="flex items-center gap-3"><a href="tel:+31645316851" className="hidden text-sm font-semibold text-navy sm:inline">06 45 31 68 51</a><a href="#intake" className="rounded-om bg-orange px-5 py-2.5 text-sm font-semibold text-white">Start intake</a></div></div></header>
+    <CompactHeader showPhone />
     <main>
       <section className="bg-navy py-16 text-white md:py-24"><div className="container-om max-w-5xl"><p className="text-sm font-semibold uppercase tracking-[0.14em] text-orange-light">Kosten woningontruiming</p><h1 className="mt-4 max-w-4xl font-display text-4xl font-semibold leading-tight md:text-6xl">Een duidelijke prijsrichting vóór u beslist.</h1><p className="mt-6 max-w-3xl text-lg leading-relaxed text-white/75">We werken met projectprijzen. Via de intake maken we de indicatie specifieker voor uw woning, hoeveelheid inboedel, bereikbaarheid en planning.</p><a href="#intake" className="mt-8 inline-block rounded-om bg-orange px-7 py-3.5 font-semibold text-white">Bereken mijn indicatie</a></div></section>
 
