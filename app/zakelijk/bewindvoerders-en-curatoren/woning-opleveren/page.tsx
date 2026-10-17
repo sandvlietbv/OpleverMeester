@@ -30,7 +30,7 @@ const checklist = [
 
 export default function Page() {
   return <>
-    <CompactHeader ctaLabel="Zakelijke intake" />
+    <CompactHeader ctaLabel="Kies wat er speelt" ctaHref="#route" />
     <main>
       <section className="bg-navy py-16 text-white md:py-24"><div className="container-om max-w-5xl"><p className="text-sm font-semibold uppercase tracking-[0.14em] text-orange-light">Praktische route voor bewindvoerders</p><h1 className="mt-4 max-w-4xl font-display text-4xl font-semibold leading-tight md:text-6xl">Wat ligt er nu op uw bureau?</h1><p className="mt-6 max-w-3xl text-lg leading-relaxed text-white/75">Een verhuizing, zorgopname of overlijden kan de aanleiding zijn. Voor de uitvoering telt vooral wat er nu met de woning moet gebeuren. Kies het praktische probleem dat het beste bij het dossier past.</p><a href="#route" className="mt-8 inline-block rounded-om bg-orange px-7 py-3.5 font-semibold text-white">Kies het praktische probleem</a></div></section>
       <BewindvoerderProblemRoute situations={situations} />
