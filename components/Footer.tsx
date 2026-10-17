@@ -31,7 +31,6 @@ export default function Footer() {
     <div className="container-om grid gap-12 py-16 md:grid-cols-4">
       <div>
         <div className="inline-flex rounded-om bg-white px-4 py-3"><BrandLogo href="/" compact tagline={false} /></div>
-        <p className="mt-5 max-w-xs font-brand text-2xl leading-tight text-white">Wij regelen. Jij gaat verder.</p>
         <div className="mt-5 text-sm leading-7 text-white/65">
           <p>OpleverMeester · Groningen</p>
           <a href="tel:+31645316851" className="block hover:text-[#efb42c]">06 45 31 68 51</a>
@@ -41,6 +40,6 @@ export default function Footer() {
       </div>
       {FOOTER_LINKS.map((col) => <div key={col.heading}><h3 className="text-sm font-semibold text-white/80">{col.heading}</h3><ul className="mt-4 flex flex-col gap-2.5">{col.links.map((link) => <li key={link.href}><Link href={link.href} className="text-sm text-white/60 hover:text-orange-light">{link.label}</Link></li>)}</ul></div>)}
     </div>
-    <div className="border-t border-white/10"><div className="container-om flex flex-col gap-2 py-6 text-xs text-white/45 sm:flex-row sm:justify-between"><span>© {new Date().getFullYear()} OpleverMeester</span><span>Eenmanszaak · KvK 96147067 · Groningen</span></div></div>
+    <div className="border-t border-white/10"><div className="container-om flex flex-col gap-2 py-6 text-xs text-white/45 sm:flex-row sm:justify-between"><span>© {new Date().getFullYear()} OpleverMeester</span><span>KvK 96147067 · Groningen</span></div></div>
   </footer>;
 }
