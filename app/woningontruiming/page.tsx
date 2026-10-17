@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Contact from "@/components/Contact";
 import VisualProof from "@/components/VisualProof";
+import CompactHeader from "@/components/CompactHeader";
 
 export const metadata: Metadata = {
   title: "Woningontruiming | Leeg, netjes en correct opgeleverd",
@@ -14,7 +15,7 @@ const JSON_LD = { "@context":"https://schema.org", "@type":"Service", name:"Woni
 export default function Page() {
   return <>
     <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(JSON_LD)}} />
-    <header className="border-b border-surface-mid bg-white"><div className="container-om flex h-16 items-center justify-between md:h-20"><Link href="/" className="font-display text-lg font-semibold text-navy md:text-xl">Oplever<span className="text-orange">Meester</span></Link><a href="#intake" className="rounded-om bg-orange px-5 py-2.5 text-sm font-semibold text-white">Start intake</a></div></header>
+    <CompactHeader />
     <main>
       <section className="bg-navy py-16 text-white md:py-24"><div className="container-om max-w-5xl"><p className="text-sm font-semibold uppercase tracking-[0.14em] text-orange-light">Woningontruiming</p><h1 className="mt-4 max-w-4xl font-display text-4xl font-semibold leading-tight md:text-6xl">Van volle woning naar leeg, netjes en klaar voor de volgende stap.</h1><p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/75">OpleverMeester regelt het leeghalen van de woning en, waar afgesproken, afvoer, schoonmaak en kleine herstelpunten. Eén aanspreekpunt voor het hele traject.</p><a href="#intake" className="mt-8 inline-block rounded-om bg-orange px-7 py-3.5 font-semibold text-white">Start intake</a></div></section>
       <VisualProof src="/images/visual-proof/woningontruiming.webp" alt="Woning met verhuisdozen en steekwagen tijdens het leeghalen" eyebrow="Praktische uitvoering" title="Zichtbaar overzicht tijdens het leeghalen." text="Dozen, losse inventaris en afvoer vragen om een duidelijke volgorde. We stemmen af wat blijft, wat weg kan en hoe de woning naar de afgesproken eindstaat gaat." considerations={["Spullen die moeten blijven", "Bereikbaarheid van de woning", "De afgesproken opleverdatum"]} imageFirst variant="process" />
