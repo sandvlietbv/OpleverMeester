@@ -62,11 +62,11 @@ export default function SituationNavigator() {
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.14em] text-orange">Begin bij uw situatie</p>
             <h2 id="situaties-title" className="mt-3 max-w-2xl font-display text-4xl font-semibold tracking-[-0.035em] text-navy md:text-5xl">
-              Wat moet er geregeld worden?
+              Wat speelt er?
             </h2>
           </div>
           <p className="max-w-xl text-lg leading-8 text-muted lg:justify-self-end">
-            U hoeft geen dienst of vakterm te kennen. Kies wat het meest herkenbaar is; wij laten zien wat de logische volgende stap is.
+            Kies wat het meest herkenbaar is. Wij wijzen de kortste route naar een duidelijke oplevering.
           </p>
         </div>
 
@@ -98,7 +98,7 @@ export default function SituationNavigator() {
             ))}
           </nav>
 
-          <div className="relative min-h-[360px] overflow-hidden rounded-[24px] bg-surface-light shadow-[0_24px_70px_rgba(11,29,51,0.14)] sm:min-h-[470px] lg:min-h-0">
+          <div className="relative min-h-[360px] overflow-hidden rounded-[24px] bg-surface-light shadow-[0_24px_70px_rgba(76,61,35,0.14)] sm:min-h-[470px] lg:min-h-0">
             <AnimatePresence mode="wait">
               <motion.figure
                 key={current.image}
@@ -113,7 +113,7 @@ export default function SituationNavigator() {
                 <figcaption className="absolute inset-x-0 bottom-0 p-7 text-white md:p-9">
                   <p className="text-xs font-semibold uppercase tracking-[0.14em] text-orange-light">Uw situatie</p>
                   <p className="mt-2 max-w-xl font-display text-3xl font-semibold tracking-[-0.03em] md:text-4xl">{current.label}</p>
-                  <p className="mt-2 text-base text-white/78">Bekijk de aanpak en ga direct door naar de juiste intake.</p>
+                  <p className="mt-2 text-base text-white/78">Bekijk de aanpak. Ga door wanneer het klopt.</p>
                 </figcaption>
               </motion.figure>
             </AnimatePresence>
@@ -124,7 +124,7 @@ export default function SituationNavigator() {
               transition={{ duration: 5.2, repeat: Infinity, ease: "easeInOut" }}
               className="absolute right-5 top-5 rounded-full border border-white/45 bg-white/90 px-4 py-2 text-sm font-semibold text-navy shadow-lg backdrop-blur"
             >
-              Kies. Bekijk. Regel.
+              Kies. Wij regelen.
             </motion.div>
           </div>
         </div>
