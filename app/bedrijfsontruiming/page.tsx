@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Contact from "@/components/Contact";
 import VisualProof from "@/components/VisualProof";
+import CompactHeader from "@/components/CompactHeader";
 
 export const metadata: Metadata = {
   title: "Bedrijfsontruiming | Bedrijfspand leeg en opleverklaar",
@@ -14,7 +15,7 @@ const JSON_LD = { "@context":"https://schema.org", "@type":"Service", name:"Bedr
 export default function Page() {
   return <>
     <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(JSON_LD)}} />
-    <header className="border-b border-surface-mid bg-white"><div className="container-om flex h-16 items-center justify-between md:h-20"><Link href="/" className="font-display text-lg font-semibold text-navy md:text-xl">Oplever<span className="text-orange">Meester</span></Link><a href="#intake" className="rounded-om bg-orange px-5 py-2.5 text-sm font-semibold text-white">Start intake</a></div></header>
+    <CompactHeader showPhone />
     <main>
       <section className="bg-navy py-16 text-white md:py-24"><div className="container-om max-w-5xl"><p className="text-sm font-semibold uppercase tracking-[0.14em] text-orange-light">Bedrijfsontruiming</p><h1 className="mt-4 max-w-4xl font-display text-4xl font-semibold leading-tight md:text-6xl">Bedrijfspand leeg en duidelijk richting overdracht.</h1><p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/75">Bij verhuizing, huurbeëindiging, herbestemming of andere bedrijfswijzigingen voert OpleverMeester de praktische regie over leeghalen, afvoer, schoonmaak en afgesproken opleverpunten.</p><a href="#intake" className="mt-8 inline-block rounded-om bg-orange px-7 py-3.5 font-semibold text-white">Zakelijke intake starten</a></div></section>
       <VisualProof src="/images/visual-proof/bedrijfsontruiming.webp" alt="Kantoorruimte met verhuisdozen, lege stellingen en steekwagen" eyebrow="Bedrijfsruimte in overgang" title="Inventaris eruit, ruimte door naar de volgende fase." text="Kantoorinventaris, stellingen en restmateriaal worden volgens een uitvoeringsplan verwijderd, met aandacht voor toegang, planning en de afgesproken overdracht." considerations={["Toegang en werktijden", "Inventaris en gescheiden afvoer", "De geplande overdrachtsdatum"]} imageFirst variant="business" />
