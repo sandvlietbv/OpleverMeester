@@ -25,7 +25,7 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
-        display: ["var(--font-geist-sans)", "var(--font-inter)", "system-ui", "sans-serif"],
+        display: ["Georgia", "Times New Roman", "serif"],
         brand: ["Georgia", "Times New Roman", "serif"],
       },
       borderRadius: {
