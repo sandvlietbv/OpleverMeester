@@ -8,7 +8,7 @@ type Props = {
 
 export default function CompactHeader({ ctaLabel = "Start intake", ctaHref = "#intake", showPhone = false }: Props) {
   return (
-    <header className="border-b border-surface-mid/80 bg-[#fffdf9]">
+    <header className="border-b border-surface-mid/80 bg-white">
       <div className="container-om flex min-h-20 items-center justify-between gap-4 py-3">
         <BrandLogo tagline={false} />
         <div className="flex items-center gap-3">
