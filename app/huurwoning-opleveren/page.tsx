@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Contact from "@/components/Contact";
 import VisualProof from "@/components/VisualProof";
+import CompactHeader from "@/components/CompactHeader";
 
 export const metadata: Metadata = {
   title: "Huurwoning opleveren | Leeg, netjes en klaar voor overdracht",
@@ -14,7 +15,7 @@ const JSON_LD = { "@context": "https://schema.org", "@type": "Service", name: "H
 
 export default function HuurwoningOpleverenPage() {
   return <><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }} />
-    <header className="border-b border-surface-mid bg-white"><div className="container-om flex h-16 items-center justify-between md:h-20"><Link href="/" className="font-display text-lg font-semibold tracking-tight text-navy md:text-xl">Oplever<span className="text-orange">Meester</span></Link><a href="#intake" className="rounded-om bg-orange px-5 py-2.5 text-sm font-semibold text-white hover:bg-orange-light">Start intake</a></div></header>
+    <CompactHeader />
     <main>
       <section className="bg-navy py-16 text-white md:py-24"><div className="container-om max-w-5xl"><p className="text-sm font-semibold uppercase tracking-[0.14em] text-orange-light">Huurwoning opleveren</p><h1 className="mt-4 max-w-4xl font-display text-4xl font-semibold leading-tight tracking-tight md:text-6xl">Uw huurwoning leeg, netjes en klaar voor de overdracht.</h1><p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/75 md:text-xl">De huur stopt en de woning moet worden opgeleverd. OpleverMeester helpt met leeghalen, afvoer, schoonmaak en afgesproken herstelpunten, zodat u niet zelf meerdere partijen hoeft te regelen.</p><div className="mt-8 flex flex-wrap gap-3"><a href="#intake" className="rounded-om bg-orange px-7 py-3.5 font-semibold text-white hover:bg-orange-light">Start intake</a><Link href="/woningontruiming-groningen" className="rounded-om border border-white/20 px-7 py-3.5 font-semibold text-white hover:bg-white/10">Woningontruiming Groningen</Link></div></div></section>
       <section className="bg-white py-16 md:py-20"><div className="container-om grid gap-10 lg:grid-cols-3"><div><p className="text-sm font-semibold text-orange">Voor inspectie en sleuteloverdracht</p><h2 className="mt-2 font-display text-3xl font-semibold tracking-tight text-navy">Wat moet er nog gebeuren voordat u de sleutel inlevert?</h2></div><div className="lg:col-span-2 grid gap-5 md:grid-cols-2">{[["Woning leeghalen","Achtergebleven meubels, spullen en restmateriaal volgens afspraak verwijderen."],["Afvoer regelen","Spullen en materiaal afvoeren en waar mogelijk gescheiden verwerken."],["Schoon opleveren","De woning schoonmaken richting het afgesproken opleverniveau."],["Herstelpunten","Afgesproken kleine herstelpunten meenemen in één plan voor de oplevering."]].map(([title,body]) => <div key={title} className="rounded-om border border-surface-mid bg-surface-light p-6"><h3 className="font-display text-lg font-semibold text-navy">{title}</h3><p className="mt-2 text-sm leading-relaxed text-muted">{body}</p></div>)}</div></div></section>
