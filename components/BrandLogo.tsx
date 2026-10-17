@@ -12,7 +12,7 @@ function KeyMark({ compact = false }: { compact?: boolean }) {
     <svg
       viewBox="0 0 140 72"
       aria-hidden="true"
-      className={compact ? "h-9 w-[70px] shrink-0" : "h-11 w-[86px] shrink-0 sm:h-12 sm:w-[94px]"}
+      className={compact ? "h-8 w-[58px] shrink-0 sm:h-9 sm:w-[66px]" : "h-9 w-[64px] shrink-0 sm:h-11 sm:w-[80px] lg:h-12 lg:w-[88px]"}
     >
       <defs>
         <linearGradient id="om-brand-gold" x1="0" y1="0" x2="0.9" y2="1">
@@ -43,11 +43,11 @@ export default function BrandLogo({ href = "/", compact = false, tagline = true,
     <span className={`inline-flex items-center gap-2.5 sm:gap-3 ${className}`}>
       <KeyMark compact={compact} />
       <span className="min-w-0 leading-none">
-        <span className={`block whitespace-nowrap font-brand font-normal tracking-[-0.055em] text-[#151515] ${compact ? "text-[1.45rem] sm:text-[1.58rem]" : "text-[1.7rem] sm:text-[1.95rem]"}`}>
+        <span className={`block whitespace-nowrap font-brand font-normal tracking-[-0.055em] text-[#151515] ${compact ? "text-[1.45rem] sm:text-[1.58rem]" : "text-[1.38rem] sm:text-[1.72rem] lg:text-[1.88rem]"}`}>
           OpleverMeester
         </span>
         {tagline && !compact && (
-          <span className="mt-1.5 block whitespace-nowrap text-[0.68rem] font-medium tracking-[0.01em] text-[#5d5954] sm:text-[0.75rem]">
+          <span className="mt-1.5 block whitespace-nowrap text-[0.58rem] font-medium tracking-[0.01em] text-[#5d5954] sm:text-[0.69rem] lg:text-[0.73rem]">
             Wij regelen. Jij gaat verder.
           </span>
         )}
