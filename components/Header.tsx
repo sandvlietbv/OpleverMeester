@@ -20,7 +20,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-surface-mid/80 bg-[#fffdf9]/[0.94] shadow-[0_8px_30px_rgba(60,45,20,0.05)] backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-surface-mid/80 bg-white/[0.96] shadow-[0_8px_30px_rgba(60,45,20,0.05)] backdrop-blur-xl">
       <div className="container-om flex h-[72px] items-center justify-between lg:h-[84px]">
         <BrandLogo tagline />
 
