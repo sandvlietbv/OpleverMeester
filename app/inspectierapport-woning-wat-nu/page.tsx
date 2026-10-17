@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import OpleverpuntenPlan from "@/components/OpleverpuntenPlan";
 import Contact from "@/components/Contact";
+import CompactHeader from "@/components/CompactHeader";
 
 export const metadata: Metadata = {
   title: "Inspectierapport gekregen? Regel wat nog moet gebeuren",
@@ -29,7 +30,7 @@ const JSON_LD = {
 export default function InspectierapportWoningPage() {
   return <>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }} />
-    <header className="border-b border-surface-mid bg-white"><div className="container-om flex h-16 items-center justify-between md:h-20"><Link href="/" className="font-display text-lg font-semibold tracking-tight text-navy md:text-xl">Oplever<span className="text-orange">Meester</span></Link><a href="#opleverplan" className="rounded-om bg-orange px-5 py-2.5 text-sm font-semibold text-white hover:bg-orange-light">Bekijk wat er nog moet gebeuren</a></div></header>
+    <CompactHeader ctaLabel="Bekijk wat er nog moet gebeuren" ctaHref="#opleverplan" />
     <main>
       <section className="bg-navy py-16 text-white md:py-24"><div className="container-om max-w-5xl">
         <p className="text-sm font-semibold uppercase tracking-[0.14em] text-orange-light">Na de woninginspectie</p>
