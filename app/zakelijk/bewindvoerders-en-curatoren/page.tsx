@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Contact from "@/components/Contact";
 import VisualProof from "@/components/VisualProof";
+import CompactHeader from "@/components/CompactHeader";
 
 export const metadata: Metadata = {
   title: "Woningontruiming voor bewindvoerders en curatoren",
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return <>
-    <header className="border-b border-surface-mid bg-white"><div className="container-om flex h-16 items-center justify-between md:h-20"><Link href="/" className="font-display text-lg font-semibold text-navy md:text-xl">Oplever<span className="text-orange">Meester</span></Link><a href="#intake" className="rounded-om bg-orange px-5 py-2.5 text-sm font-semibold text-white">Zakelijke intake</a></div></header>
+    <CompactHeader ctaLabel="Zakelijke intake" />
     <main>
       <section className="bg-navy py-16 text-white md:py-24"><div className="container-om max-w-5xl"><p className="text-sm font-semibold uppercase tracking-[0.14em] text-orange-light">Voor bewindvoerders en curatoren</p><h1 className="mt-4 max-w-4xl font-display text-4xl font-semibold leading-tight md:text-6xl">Een dossier vraagt uitvoering. Wij brengen de praktische oplevering terug tot één aanspreekpunt.</h1><p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/75">Wanneer een woning of ruimte moet worden leeggehaald en opgeleverd, organiseert OpleverMeester de uitvoering op basis van het dossier, de locatie en de afgesproken eindstaat. Eén vast aanspreekpunt bewaakt toegang, planning, werkzaamheden en terugkoppeling.</p><div className="mt-8 flex flex-wrap gap-3"><a href="#intake" className="inline-block rounded-om bg-orange px-7 py-3.5 font-semibold text-white">Bespreek een dossier</a><Link href="/zakelijk/bewindvoerders-en-curatoren/woning-opleveren" className="inline-block rounded-om border border-white/30 px-7 py-3.5 font-semibold text-white">Bekijk wat u eerst nodig heeft →</Link></div></div></section>
       <VisualProof src="/images/visual-proof/bewindvoerders-curatoren.webp" alt="Werkplek met dossiers, laptop, telefoon en bril" eyebrow="Van dossier naar uitvoering" title="De praktische opdracht snel helder krijgen." text="Adres, toegang, termijn, contactpersonen en bijzondere aandachtspunten vormen samen een concrete opdracht die uitvoerbaar en controleerbaar blijft." considerations={["Toestemming en contactpersoon", "Toegang en sleutelbeheer", "Termijn en gewenste eindstaat"]} imageFirst variant="compact" />

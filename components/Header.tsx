@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import BrandLogo from "@/components/BrandLogo";
 import { MessageCircle, Phone } from "lucide-react";
 
 const NAV_LINKS = [
@@ -19,11 +20,9 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-surface-mid/60 bg-white/[0.92] shadow-[0_8px_30px_rgba(11,29,51,0.04)] backdrop-blur-xl">
-      <div className="container-om flex h-[72px] items-center justify-between lg:h-[84px]">
-        <Link href="/" className="font-display text-xl font-semibold tracking-[-0.03em] text-navy md:text-2xl">
-          Oplever<span className="text-orange">Meester</span>
-        </Link>
+    <header className="sticky top-0 z-50 border-b border-surface-mid/80 bg-white/[0.96] shadow-[0_8px_30px_rgba(60,45,20,0.05)] backdrop-blur-xl">
+      <div className="container-om flex h-[92px] items-center justify-between lg:h-[88px]">
+        <BrandLogo tagline />
 
         <nav className="hidden items-center gap-7 lg:flex" aria-label="Hoofdmenu">
           {NAV_LINKS.map((link) => (
@@ -35,7 +34,7 @@ export default function Header() {
 
         <div className="hidden items-center gap-3 lg:flex">
           <a href={PHONE_HREF} className="group flex items-center gap-2.5 rounded-full px-2 py-2 text-sm font-semibold text-navy hover:text-orange" aria-label={`Bel OpleverMeester op ${PHONE_DISPLAY}`}>
-            <span className="relative flex h-9 w-9 items-center justify-center rounded-full bg-navy text-white transition-transform group-hover:scale-105">
+            <span className="relative flex h-9 w-9 items-center justify-center rounded-full bg-[#292724] text-white transition-transform group-hover:scale-105">
               <span className="om-pulse-ring absolute inset-0 rounded-full border border-navy/30" aria-hidden="true" />
               <Phone className="relative h-4 w-4" />
             </span>
@@ -48,17 +47,17 @@ export default function Header() {
             <MessageCircle className="h-4 w-4" />
             WhatsApp
           </a>
-          <a href="/#intake" className="inline-flex min-h-12 items-center rounded-om bg-orange px-5 py-3 text-sm font-semibold text-white shadow-[0_10px_25px_rgba(231,111,44,0.22)] transition hover:-translate-y-0.5 hover:bg-orange-light">
+          <a href="/#intake" className="inline-flex min-h-12 items-center rounded-om bg-orange px-5 py-3 text-sm font-semibold text-white shadow-[0_10px_25px_rgba(169,104,0,0.20)] transition hover:-translate-y-0.5 hover:bg-orange-light">
             Ontvang prijsindicatie
           </a>
         </div>
 
-        <button type="button" className="flex h-12 w-12 items-center justify-center rounded-om text-navy lg:hidden" onClick={() => setOpen((v) => !v)} aria-expanded={open} aria-controls="mobiel-menu" aria-label={open ? "Menu sluiten" : "Menu openen"}>
+        <button type="button" className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-navy transition hover:bg-surface-light lg:hidden" onClick={() => setOpen((v) => !v)} aria-expanded={open} aria-controls="mobiel-menu" aria-label={open ? "Menu sluiten" : "Menu openen"}>
           <span className="sr-only">Menu</span>
-          <div className="flex flex-col gap-1.5">
-            <span className={`h-0.5 w-6 bg-navy transition-transform ${open ? "translate-y-2 rotate-45" : ""}`} />
-            <span className={`h-0.5 w-6 bg-navy transition-opacity ${open ? "opacity-0" : ""}`} />
-            <span className={`h-0.5 w-6 bg-navy transition-transform ${open ? "-translate-y-2 -rotate-45" : ""}`} />
+          <div className="flex flex-col gap-[6px]">
+            <span className={`h-[3px] w-7 bg-navy transition-transform ${open ? "translate-y-2 rotate-45" : ""}`} />
+            <span className={`h-[3px] w-7 bg-navy transition-opacity ${open ? "opacity-0" : ""}`} />
+            <span className={`h-[3px] w-7 bg-navy transition-transform ${open ? "-translate-y-2 -rotate-45" : ""}`} />
           </div>
         </button>
       </div>

@@ -33,7 +33,7 @@ export default function Reviews() {
           className="grid gap-8 border-y border-surface-mid py-9 md:grid-cols-[1fr_auto] md:items-center md:py-11"
         >
           <div className="flex items-start gap-5">
-            <div className="relative flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-navy text-white shadow-[0_10px_30px_rgba(11,29,51,0.15)]">
+            <div className="relative flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-navy text-white shadow-[0_10px_30px_rgba(76,61,35,0.15)]">
               <span className="font-display text-lg font-bold">G</span>
               <motion.span
                 aria-hidden="true"
@@ -46,8 +46,8 @@ export default function Reviews() {
             </div>
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.14em] text-orange">Google Reviews</p>
-              <h2 className="mt-2 font-display text-3xl font-semibold tracking-[-0.035em] text-navy md:text-4xl">Bekijk ervaringen rechtstreeks bij Google.</h2>
-              <p className="mt-3 max-w-2xl text-base leading-7 text-muted">Geen losse claims van onszelf. Bekijk wat klanten publiek over OpleverMeester hebben achtergelaten.</p>
+              <h2 className="mt-2 font-display text-3xl font-semibold tracking-[-0.035em] text-navy md:text-4xl">Bekijk wat klanten op Google zeggen.</h2>
+              <p className="mt-3 max-w-2xl text-base leading-7 text-muted">Onafhankelijke beoordelingen. Rechtstreeks bij Google.</p>
             </div>
           </div>
 

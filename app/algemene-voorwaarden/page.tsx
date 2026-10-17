@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Footer from "@/components/Footer";
+import BrandLogo from "@/components/BrandLogo";
 
 export const metadata:Metadata={title:"Algemene voorwaarden",description:"Algemene voorwaarden van OpleverMeester.",alternates:{canonical:"/algemene-voorwaarden"}};
 
@@ -17,4 +18,4 @@ const sections=[
 ["10. Toepasselijk recht","Op overeenkomsten met OpleverMeester is Nederlands recht van toepassing. Dwingende wettelijke regels voor consumenten blijven onverkort gelden."],
 ];
 
-export default function Page(){return <><main className="bg-white"><div className="container-om max-w-4xl py-14 md:py-20"><Link href="/" className="font-display text-lg font-semibold text-navy">Oplever<span className="text-orange">Meester</span></Link><p className="mt-12 text-sm font-semibold uppercase tracking-[.12em] text-orange">Juridisch</p><h1 className="mt-2 font-display text-4xl font-semibold text-navy">Algemene voorwaarden</h1><p className="mt-4 text-sm text-muted">Laatst bijgewerkt: 13 september 2026.</p><div className="mt-10 space-y-8">{sections.map(([t,b])=><section key={t}><h2 className="font-display text-xl font-semibold text-navy">{t}</h2><p className="mt-2 leading-relaxed text-muted">{b}</p></section>)}</div></div></main><Footer/></>}
+export default function Page(){return <><main className="bg-white"><div className="container-om max-w-4xl py-14 md:py-20"><BrandLogo compact /><p className="mt-12 text-sm font-semibold uppercase tracking-[.12em] text-orange">Juridisch</p><h1 className="mt-2 font-display text-4xl font-semibold text-navy">Algemene voorwaarden</h1><p className="mt-4 text-sm text-muted">Laatst bijgewerkt: 13 september 2026.</p><div className="mt-10 space-y-8">{sections.map(([t,b])=><section key={t}><h2 className="font-display text-xl font-semibold text-navy">{t}</h2><p className="mt-2 leading-relaxed text-muted">{b}</p></section>)}</div></div></main><Footer/></>}

@@ -4,9 +4,9 @@ import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight, ClipboardList, Sparkles, UserRoundSearch } from "lucide-react";
 
 const STEPS = [
-  { icon: UserRoundSearch, title: "Vertel wat er speelt", body: "Kies uw situatie en geef kort door wat er geregeld moet worden." },
-  { icon: ClipboardList, title: "Krijg een duidelijk plan", body: "We stemmen werkzaamheden, planning en prijs af voordat we beginnen." },
-  { icon: Sparkles, title: "Wij regelen de oplevering", body: "Na akkoord organiseren we de uitvoering tot de afgesproken eindstaat." },
+  { icon: UserRoundSearch, title: "Vertel wat er speelt.", body: "U geeft kort door wat er speelt." },
+  { icon: ClipboardList, title: "Wij maken het plan.", body: "U krijgt duidelijkheid over werk, planning en prijs." },
+  { icon: Sparkles, title: "Wij regelen de oplevering.", body: "Na akkoord nemen wij de uitvoering over." },
 ];
 
 export default function Process() {
@@ -23,10 +23,10 @@ export default function Process() {
         <div className="grid gap-5 md:grid-cols-[.8fr_1.2fr] md:items-end">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.14em] text-orange-light">Zo werkt het</p>
-            <h2 className="mt-3 max-w-xl font-display text-4xl font-semibold tracking-[-0.04em] md:text-6xl">Drie heldere stappen.</h2>
+            <h2 className="mt-3 max-w-xl font-display text-4xl font-semibold tracking-[-0.04em] md:text-6xl">Van vraag naar overdracht.</h2>
           </div>
           <p className="max-w-xl text-lg leading-8 text-white/[0.68] md:justify-self-end">
-            U hoeft niets uit te zoeken. We brengen eerst de situatie terug tot een duidelijk plan en nemen daarna de uitvoering over.
+            Kort. Duidelijk. Eén aanspreekpunt van intake tot overdracht.
           </p>
         </div>
 
@@ -50,7 +50,7 @@ export default function Process() {
               className="relative"
             >
               <div className="relative z-10 flex items-center justify-between">
-                <span className="flex h-14 w-14 items-center justify-center rounded-full border border-orange/50 bg-navy text-sm font-semibold text-orange-light shadow-[0_0_0_8px_rgba(11,29,51,1)]">
+                <span className="flex h-14 w-14 items-center justify-center rounded-full border border-orange/50 bg-navy text-sm font-semibold text-orange-light shadow-[0_0_0_8px_rgba(26,26,26,1)]">
                   0{i + 1}
                 </span>
                 {i < STEPS.length - 1 && <ArrowRight className="h-5 w-5 text-white/[0.18] md:hidden" />}

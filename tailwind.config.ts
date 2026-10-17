@@ -9,23 +9,24 @@ const config: Config = {
     extend: {
       colors: {
         navy: {
-          DEFAULT: "#0b1d33",
-          light: "#14304f",
-          soft: "#1c3b5e",
+          DEFAULT: "#1a1a1a",
+          light: "#3f3d3a",
+          soft: "#66615b",
         },
         orange: {
-          DEFAULT: "#e76f2c",
-          light: "#f2905a",
+          DEFAULT: "#a96800",
+          light: "#e0a11a",
         },
         surface: {
-          light: "#f7f6f3",
-          mid: "#e7e4de",
+          light: "#faf7f1",
+          mid: "#e7dfd2",
         },
-        muted: "#586170",
+        muted: "#69625b",
       },
       fontFamily: {
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
-        display: ["var(--font-geist-sans)", "var(--font-inter)", "system-ui", "sans-serif"],
+        display: ["Georgia", "Times New Roman", "serif"],
+        brand: ["Georgia", "Times New Roman", "serif"],
       },
       borderRadius: {
         om: "16px",
