@@ -10,7 +10,7 @@ export default function CompactHeader({ ctaLabel = "Start intake", ctaHref = "#i
   return (
     <header className="border-b border-surface-mid/80 bg-white">
       <div className="container-om flex min-h-20 items-center justify-between gap-4 py-3">
-        <BrandLogo tagline={false} />
+        <BrandLogo compact tagline={false} />
         <div className="flex items-center gap-3">
           {showPhone && (
             <a href="tel:+31645316851" className="hidden text-sm font-semibold text-navy sm:inline">
