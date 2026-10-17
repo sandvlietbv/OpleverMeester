@@ -36,7 +36,7 @@ export default function InspectierapportWoningPage() {
         <p className="text-sm font-semibold uppercase tracking-[0.14em] text-orange-light">Na de woninginspectie</p>
         <h1 className="mt-4 max-w-4xl font-display text-4xl font-semibold leading-tight tracking-tight md:text-6xl">Er moeten nog dingen gebeuren vóór u de sleutels kunt inleveren?</h1>
         <p className="mt-6 max-w-3xl text-lg leading-relaxed text-white/75 md:text-xl">Heeft u na de woninginspectie een inspectierapport of lijst met punten gekregen? Zet hieronder wat er nog moet gebeuren. U krijgt direct een duidelijke werklijst. Wilt u het niet zelf regelen, dan kunt u de uitvoering meteen aan OpleverMeester voorleggen.</p>
-        <a href="#opleverplan" className="mt-8 inline-block rounded-om bg-orange px-7 py-3.5 font-semibold text-white hover:bg-orange-light">Bekijk wat er nog moet gebeuren →</a>
+        <a href="#opleverplan" className="mt-8 inline-block rounded-om bg-orange px-7 py-3.5 font-semibold text-white hover:bg-orange-light hover:text-navy">Bekijk wat er nog moet gebeuren →</a>
       </div></section>
 
       <section className="bg-surface-light py-12 md:py-16"><div className="container-om max-w-5xl grid gap-5 md:grid-cols-3">
