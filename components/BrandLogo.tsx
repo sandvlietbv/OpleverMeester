@@ -17,7 +17,7 @@ export default function BrandLogo({ href = "/", compact = false, className = "" 
         width={520}
         height={221}
         priority
-        className={compact ? "h-auto w-[150px] sm:w-[170px]" : "h-auto w-[178px] sm:w-[205px]"}
+        className={compact ? "h-auto w-[150px] sm:w-[170px]" : "h-auto w-[155px] sm:w-[180px]"}
       />
     </span>
   );
