@@ -1,4 +1,4 @@
-"use client";
+import { PHOTO_WHATSAPP_HREF } from "@/lib/whatsapp";\n"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -131,7 +131,7 @@ export default function SituationNavigator() {
 
         <div className="mt-8 flex flex-col gap-4 border-t border-surface-mid pt-7 text-sm sm:flex-row sm:items-center sm:justify-between">
           <p className="text-muted">Zakelijk? Bekijk ook <Link href="/zakelijk/bewindvoerders-en-curatoren" className="font-semibold text-navy hover:text-orange">bewind en curatele</Link> of <Link href="/zakelijk/vastgoedbeheer-en-corporaties" className="font-semibold text-navy hover:text-orange">vastgoedbeheer en corporaties</Link>.</p>
-          <a href="#intake" className="shrink-0 text-base font-semibold text-orange hover:underline">Andere situatie? Start de prijscheck →</a>
+          <a href={PHOTO_WHATSAPP_HREF} target="_blank" rel="noopener noreferrer" className="shrink-0 text-base font-semibold text-orange hover:underline">Andere situatie? App een paar foto\u0027s →</a>
         </div>
       </div>
     </section>
