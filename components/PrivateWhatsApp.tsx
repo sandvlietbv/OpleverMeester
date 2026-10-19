@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Building2, Camera, Check, CheckCheck, ImageIcon, MessageCircle, Send } from "lucide-react";
+import { ArrowRight, Building2, Camera, Check, CheckCheck, MessageCircle, Send } from "lucide-react";
 import { PHOTO_WHATSAPP_HREF } from "@/lib/whatsapp";
 
 /** Illustratie van een gesprek, nadrukkelijk geen echte klantchat of offerte. */
@@ -27,8 +27,12 @@ export function PhoneChatDemo() {
               Hoi! Ik wil een woning laten leeghalen.
             </div>
             <div className="ml-auto flex w-fit max-w-[86%] items-center gap-2 rounded-[13px] rounded-br-[4px] bg-[#f7dc99] p-2 text-[#2b2824] shadow-sm">
-              <span className="flex h-11 w-12 items-center justify-center rounded-lg bg-white/60"><ImageIcon className="h-6 w-6 text-[#a96800]" aria-hidden="true" /></span>
-              <span className="pr-2 text-xs font-medium">Foto's van de woning<br /><span className="text-[10px] text-[#756a55]">3 afbeeldingen · voorbeeld</span></span>
+              <span className="grid w-[154px] grid-cols-3 gap-1 overflow-hidden rounded-lg bg-white/60 p-1.5">
+                <Image src="/images/visual-proof/woningontruiming.webp" width={48} height={54} alt="Voorbeeldfoto van een woning" className="h-[54px] w-full rounded object-cover" />
+                <Image src="/images/visual-proof/huurwoning-inspectie.webp" width={48} height={54} alt="Voorbeeldfoto van een kamer" className="h-[54px] w-full rounded object-cover" />
+                <Image src="/images/visual-proof/senioren.webp" width={48} height={54} alt="Voorbeeldfoto van de inboedel" className="h-[54px] w-full rounded object-cover" />
+              </span>
+              <span className="pr-2 text-[11px] font-medium">3 voorbeeldfoto's<br /><span className="text-[10px] text-[#756a55]">Meegestuurd via WhatsApp</span></span>
             </div>
             <div className="mr-auto max-w-[94%] rounded-[16px] rounded-bl-[4px] bg-white px-3 py-2.5 text-[#2b2824] shadow-sm">
               Dank je! Wat is de postcode en wanneer moet de woning klaar zijn? Dan bekijken we wat nodig is en geven we een prijsindicatie.
@@ -60,7 +64,7 @@ export default function PrivateWhatsApp() {
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.14em] text-[#a96800]">Voor particulieren</p>
             <h2 className="mt-3 max-w-2xl font-display text-4xl font-semibold tracking-[-0.04em] text-navy md:text-5xl">Laat zien wat er weg moet. Wij regelen de rest.</h2>
-            <p className="mt-5 max-w-xl text-lg leading-8 text-muted">Geen lange vragenlijst. Open WhatsApp en stuur een paar duidelijke foto's van de woning. We stellen alleen de vragen die nodig zijn voor een passende prijsindicatie.</p>
+            <p className="mt-5 max-w-xl text-lg leading-8 text-muted">Geen lange vragenlijst. Open WhatsApp en stuur een paar duidelijke foto's van de woning. Elke woning is anders. We stellen alleen de vragen die nodig zijn voor een passende prijsindicatie.</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a href={PHOTO_WHATSAPP_HREF} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-14 items-center justify-center gap-3 rounded-full bg-[#b36f00] px-7 py-4 text-base font-semibold text-white shadow-[0_12px_30px_rgba(169,104,0,0.22)] transition hover:-translate-y-0.5 hover:bg-[#996000]">
                 <MessageCircle className="h-5 w-5" /> Stuur foto's via WhatsApp <ArrowRight className="h-4 w-4" />
