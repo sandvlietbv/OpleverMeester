@@ -50,7 +50,7 @@ export default function WoningontruimingGroningenPage() {
 
       <section className="bg-white py-16 md:py-20">
         <div className="container-om grid gap-10 lg:grid-cols-[.8fr_1.2fr]">
-          <div><p className="text-sm font-semibold text-orange">Groningen in de praktijk</p><h2 className="mt-2 font-display text-3xl font-semibold tracking-tight text-navy">Bereikbaarheid telt mee in de planning.</h2><p className="mt-4 leading-relaxed text-muted">Een appartement in de stad vraagt een andere aanpak dan een eengezinswoning in een omliggende plaats. Daarom vragen we in de intake naar verdieping, lift, oppervlakte, hoeveelheid inboedel en de opleverdatum.</p></div>
+          <div><p className="text-sm font-semibold text-orange">Groningen in de praktijk</p><h2 className="mt-2 font-display text-3xl font-semibold tracking-tight text-navy">Bereikbaarheid telt mee in de planning.</h2><p className="mt-4 leading-relaxed text-muted">Een appartement in de stad vraagt een andere aanpak dan een eengezinswoning in een omliggende plaats. Na de foto's vragen we zo nodig naar verdieping, lift, oppervlakte, hoeveelheid inboedel en opleverdatum.</p></div>
           <div className="grid gap-5 md:grid-cols-2">{[
             ["Stad Groningen", "Bij appartementen, bovenwoningen en woningen met beperkte laadruimte nemen we toegang en loopafstand direct mee in de inschatting."],
             ["Haren & Hoogezand", "Bij een verhuizing of einde huur kunnen leeghalen, afvoer en schoon opleveren in één traject worden gecombineerd."],
