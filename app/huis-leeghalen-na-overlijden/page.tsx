@@ -8,7 +8,7 @@ import CompactHeader from "@/components/CompactHeader";
 export const metadata: Metadata = {
   title: "Huis leeghalen na overlijden",
   description:
-    "Huis leeghalen na overlijden? OpleverMeester helpt met ontruimen, afvoer, schoonmaak en opleverklaar maken vanuit één aanspreekpunt. Start de intake.",
+    "Huis leeghalen na overlijden? OpleverMeester helpt met ontruimen, afvoer, schoonmaak en opleverklaar maken vanuit één aanspreekpunt. App foto's via WhatsApp.",
   alternates: {
     canonical: "/huis-leeghalen-na-overlijden",
   },
@@ -67,7 +67,7 @@ export default function HuisLeeghalenNaOverlijdenPage() {
                 href={PHOTO_WHATSAPP_HREF} target="_blank" rel="noopener noreferrer"
                 className="rounded-om bg-orange px-7 py-3.5 font-semibold text-white hover:bg-orange-light hover:text-navy"
               >
-                Start intake
+                Stuur foto&apos;s via WhatsApp
               </a>
               <Link
                 href="/woningontruiming-groningen"
@@ -141,7 +141,7 @@ export default function HuisLeeghalenNaOverlijdenPage() {
             </h2>
             <div className="mt-8 grid gap-4 md:grid-cols-3">
               {[
-                ["01", "Start intake", "Geef de locatie, omvang, planning en situatie door."],
+                ["01", "Foto's sturen", "Stuur via WhatsApp foto's van de woning en de gewenste opleverdatum."],
                 ["02", "Persoonlijk afstemmen", "We nemen door wat er moet gebeuren en wat bijzondere aandacht nodig heeft."],
                 ["03", "Plan en offerte", "U krijgt duidelijkheid over aanpak, planning en prijs voordat de uitvoering start."],
               ].map(([number, title, body]) => (
@@ -162,7 +162,7 @@ export default function HuisLeeghalenNaOverlijdenPage() {
               Ook wanneer u niet zelf in de woning woont.
             </h2>
             <p className="mt-4 max-w-2xl leading-relaxed text-muted">
-              De aanvraag kan ook worden gestart door een familielid, executeur, bewindvoerder, makelaar of andere partij die de oplevering moet organiseren. In de intake kunt u kort aangeven wat uw rol en situatie is.
+              De aanvraag kan ook worden gestart door een familielid, executeur, bewindvoerder, makelaar of andere partij die de oplevering moet organiseren. Via WhatsApp kunt u kort aangeven wat uw rol en situatie is.
             </p>
           </div>
         </section>
