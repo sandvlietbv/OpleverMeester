@@ -3,7 +3,8 @@
 import { useState } from "react";
 import Link from "next/link";
 import BrandLogo from "@/components/BrandLogo";
-import { MessageCircle, Phone } from "lucide-react";
+import { PHOTO_WHATSAPP_HREF } from "@/lib/whatsapp";
+import { Building2, Phone } from "lucide-react";
 
 const NAV_LINKS = [
   { label: "Situaties", href: "/#situaties" },
@@ -14,7 +15,7 @@ const NAV_LINKS = [
 
 const PHONE_DISPLAY = "06 45 31 68 51";
 const PHONE_HREF = "tel:+31645316851";
-const WHATSAPP_HREF = "https://wa.me/31645316851?text=Hallo%20OpleverMeester%2C%20ik%20wil%20graag%20mijn%20situatie%20bespreken.";
+const WHATSAPP_HREF = PHOTO_WHATSAPP_HREF;
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -43,12 +44,12 @@ export default function Header() {
               <span className="block text-sm">{PHONE_DISPLAY}</span>
             </span>
           </a>
-          <a href={WHATSAPP_HREF} target="_blank" rel="noreferrer" className="inline-flex min-h-12 items-center gap-2 rounded-om border border-surface-mid px-4 py-3 text-sm font-semibold text-navy transition hover:border-orange hover:bg-orange/[0.04]">
-            <MessageCircle className="h-4 w-4" />
-            WhatsApp
-          </a>
-          <a href="/#intake" className="inline-flex min-h-12 items-center rounded-om bg-orange px-5 py-3 text-sm font-semibold text-white shadow-[0_10px_25px_rgba(169,104,0,0.20)] transition hover:-translate-y-0.5 hover:bg-orange-light">
-            Ontvang prijsindicatie
+          <Link href="/zakelijk" className="inline-flex min-h-12 items-center gap-2 rounded-om border border-surface-mid px-4 py-3 text-sm font-semibold text-navy transition hover:border-orange hover:bg-orange/[0.04]">
+            <Building2 className="h-4 w-4" />
+            Zakelijk
+          </Link>
+          <a href={WHATSAPP_HREF} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 items-center rounded-om bg-orange px-5 py-3 text-sm font-semibold text-white shadow-[0_10px_25px_rgba(169,104,0,0.20)] transition hover:-translate-y-0.5 hover:bg-orange-light">
+            Stuur foto&apos;s
           </a>
         </div>
 
@@ -72,10 +73,10 @@ export default function Header() {
             ))}
             <div className="mt-3 grid grid-cols-2 gap-2">
               <a href={PHONE_HREF} className="rounded-om bg-navy px-4 py-3.5 text-center text-sm font-semibold text-white">Bel direct</a>
-              <a href={WHATSAPP_HREF} target="_blank" rel="noreferrer" className="rounded-om border border-surface-mid px-4 py-3.5 text-center text-sm font-semibold text-navy">WhatsApp</a>
+              <Link href="/zakelijk" className="rounded-om border border-surface-mid px-4 py-3.5 text-center text-sm font-semibold text-navy" onClick={() => setOpen(false)}>Zakelijk</Link>
             </div>
-            <a href="/#intake" className="mt-2 rounded-om bg-orange px-5 py-4 text-center text-base font-semibold text-white" onClick={() => setOpen(false)}>
-              Ontvang prijsindicatie
+            <a href={WHATSAPP_HREF} target="_blank" rel="noopener noreferrer" className="mt-2 rounded-om bg-orange px-5 py-4 text-center text-base font-semibold text-white" onClick={() => setOpen(false)}>
+              Stuur foto&apos;s via WhatsApp
             </a>
           </nav>
         </div>
