@@ -4,12 +4,7 @@ import Link from "next/link";
 import { PhoneChatDemo } from "@/components/PrivateWhatsApp";
 import { PHOTO_WHATSAPP_HREF } from "@/lib/whatsapp";
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowRight, Check, MessageCircle, Building2 } from "lucide-react";
-
-const PHONE_DISPLAY = "06 45 31 68 51";
-const WHATSAPP_HREF = "https://wa.me/31645316851?text=Hallo%20OpleverMeester%2C%20ik%20heb%20een%20vraag%20over%20het%20leeghalen%20en%20opleveren%20van%20een%20woning.";
-
-const CHECKS = ["Inboedel verwijderen", "Schoon en opleverklaar", "Afgesproken herstelpunten"];
+import { ArrowRight, Check, Building2 } from "lucide-react";
 
 export default function Hero() {
   const reduceMotion = useReducedMotion();
