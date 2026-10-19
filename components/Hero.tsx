@@ -33,14 +33,14 @@ export default function Hero() {
             Van ontruiming tot oplevering. Eén aanspreekpunt, duidelijke kosten vooraf en een woning die klaar is voor overdracht.
           </p>
 
-          <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
-            <a href={PHOTO_WHATSAPP_HREF} target="_blank" rel="noopener noreferrer" className="group inline-flex min-h-16 items-center justify-center gap-3 rounded-full bg-gradient-to-r from-[#b36f00] to-[#d3920f] px-8 py-4 text-base font-semibold text-white shadow-[0_16px_36px_rgba(169,104,0,0.24)] transition hover:-translate-y-0.5 hover:shadow-[0_20px_44px_rgba(169,104,0,0.28)]">
-              Stuur foto&apos;s via WhatsApp
+          <div className="mt-10 grid max-w-[640px] gap-3 sm:grid-cols-2 sm:items-stretch">
+            <a href={PHOTO_WHATSAPP_HREF} target="_blank" rel="noopener noreferrer" className="group inline-flex min-h-16 items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#b36f00] to-[#d3920f] px-8 py-4 text-base font-semibold text-white shadow-[0_16px_36px_rgba(169,104,0,0.24)] transition hover:-translate-y-0.5 hover:shadow-[0_20px_44px_rgba(169,104,0,0.28)]">
+              Particulier: stuur foto&apos;s
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </a>
-            <Link href="/zakelijk" className="inline-flex min-h-16 items-center justify-center gap-3 rounded-full border border-orange/55 bg-white/90 px-7 py-4 text-base font-semibold text-navy shadow-sm transition hover:border-orange hover:bg-[#fffaf0]">
+            <Link href="/zakelijk" className="inline-flex min-h-16 items-center justify-center gap-2 rounded-full border border-orange/55 bg-white/90 px-7 py-4 text-base font-semibold text-navy shadow-sm transition hover:border-orange hover:bg-[#fffaf0]">
               <Building2 className="h-5 w-5" />
-              Zakelijke offerte aanvragen
+              Zakelijk: offerte aanvragen
             </Link>
           </div>
 
