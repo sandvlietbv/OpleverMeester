@@ -4,8 +4,8 @@ import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight, ClipboardList, Sparkles, UserRoundSearch } from "lucide-react";
 
 const STEPS = [
-  { icon: UserRoundSearch, title: "Vertel wat er speelt.", body: "U geeft kort door wat er speelt." },
-  { icon: ClipboardList, title: "Wij maken het plan.", body: "U krijgt duidelijkheid over werk, planning en prijs." },
+  { icon: UserRoundSearch, title: "Stuur foto’s via WhatsApp.", body: "Als particulier stuurt u foto’s van de woning en legt u kort uit wat er speelt." },
+  { icon: ClipboardList, title: "U ontvangt een prijsindicatie.", body: "Wij bekijken de foto’s en vragen zo nodig naar de omvang, bereikbaarheid en opleverdatum." },
   { icon: Sparkles, title: "Wij regelen de oplevering.", body: "Na akkoord nemen wij de uitvoering over." },
 ];
 
@@ -26,7 +26,7 @@ export default function Process() {
             <h2 className="mt-3 max-w-xl font-display text-4xl font-semibold tracking-[-0.04em] md:text-6xl">Van vraag naar overdracht.</h2>
           </div>
           <p className="max-w-xl text-lg leading-8 text-white/[0.68] md:justify-self-end">
-            Kort. Duidelijk. Eén aanspreekpunt van intake tot overdracht.
+            Voor particulieren begint het met foto’s via WhatsApp. Zakelijke klanten gebruiken hun eigen offerteaanvraag.
           </p>
         </div>
 

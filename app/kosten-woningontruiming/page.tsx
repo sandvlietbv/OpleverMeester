@@ -1,3 +1,4 @@
+import { PHOTO_WHATSAPP_HREF } from "@/lib/whatsapp";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Contact from "@/components/Contact";
@@ -6,12 +7,12 @@ import CompactHeader from "@/components/CompactHeader";
 
 export const metadata: Metadata = {
   title: "Kosten woningontruiming | Vanaf €595 incl. btw",
-  description: "Wat kost een woningontruiming? Bekijk projectprijzen vanaf €595 inclusief btw en krijg via de intake een indicatie op basis van uw situatie.",
+  description: "Wat kost een woningontruiming? Bekijk projectprijzen vanaf €595 inclusief btw en krijg via WhatsApp een indicatie op basis van uw situatie.",
   alternates: { canonical: "/kosten-woningontruiming" },
 };
 
 const tiers = [
-  ["Compacte opdracht", "vanaf €595 incl. btw", "Beperkte ontruiming, enkele opleverpunten of een kleine ruimte."],
+  ["Compacte opdracht", "vanaf €595 incl. btw", "Kleine, vrij nette ruimte met lage vuilgraad en beperkte werkzaamheden."],
   ["Standaard opdracht", "vanaf €1.095 incl. btw", "Een normale woning of appartement met meerdere werkzaamheden."],
   ["Uitgebreide opdracht", "vanaf €1.595 incl. btw", "Een grotere woning, meer inboedel of meerdere opleverwerkzaamheden."],
   ["Meerdaagse opdracht", "vanaf €2.195 incl. btw", "Grotere of complexere oplevering met extra inzet, bereikbaarheid of afvoer."],
@@ -21,7 +22,7 @@ export default function Page() {
   return <>
     <CompactHeader showPhone />
     <main>
-      <section className="bg-navy py-16 text-white md:py-24"><div className="container-om max-w-5xl"><p className="text-sm font-semibold uppercase tracking-[0.14em] text-orange-light">Kosten woningontruiming</p><h1 className="mt-4 max-w-4xl font-display text-4xl font-semibold leading-tight md:text-6xl">Een duidelijke prijsrichting vóór u beslist.</h1><p className="mt-6 max-w-3xl text-lg leading-relaxed text-white/75">We werken met projectprijzen. Via de intake maken we de indicatie specifieker voor uw woning, hoeveelheid inboedel, bereikbaarheid en planning.</p><a href="#intake" className="mt-8 inline-block rounded-om bg-orange px-7 py-3.5 font-semibold text-white">Bereken mijn indicatie</a></div></section>
+      <section className="bg-navy py-16 text-white md:py-24"><div className="container-om max-w-5xl"><p className="text-sm font-semibold uppercase tracking-[0.14em] text-orange-light">Kosten woningontruiming</p><h1 className="mt-4 max-w-4xl font-display text-4xl font-semibold leading-tight md:text-6xl">Een duidelijke prijsrichting vóór u beslist.</h1><p className="mt-6 max-w-3xl text-lg leading-relaxed text-white/75">We werken met projectprijzen. Op basis van de foto's en een paar praktische gegevens maken we de indicatie specifieker voor uw woning, hoeveelheid inboedel, bereikbaarheid en planning.</p><a href={PHOTO_WHATSAPP_HREF} target="_blank" rel="noopener noreferrer" className="mt-8 inline-block rounded-om bg-orange px-7 py-3.5 font-semibold text-white">App voor een prijsindicatie</a></div></section>
 
       <section className="bg-white py-16 md:py-20"><div className="container-om max-w-6xl"><p className="text-sm font-semibold text-orange">Richtprijzen</p><h2 className="mt-2 font-display text-3xl font-semibold text-navy">Vanafprijzen inclusief 21% btw.</h2><div className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-4">{tiers.map(([t,p,b])=><article key={t} className="rounded-om border border-surface-mid p-6"><p className="text-sm font-semibold text-orange">{t}</p><p className="mt-2 font-display text-2xl font-semibold text-navy">{p}</p><p className="mt-3 text-sm leading-relaxed text-muted">{b}</p></article>)}</div><p className="mt-6 max-w-4xl text-sm leading-relaxed text-muted">Deze bedragen zijn prijsankers, geen offerte. Afvoer, stortkosten, materialen, specialistische werkzaamheden en de exacte omvang kunnen de uiteindelijke projectprijs beïnvloeden. Dat maken we vóór akkoord duidelijk.</p></div></section>
 

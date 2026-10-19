@@ -1,3 +1,4 @@
+import { PHOTO_WHATSAPP_HREF } from "@/lib/whatsapp";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
@@ -42,14 +43,14 @@ export default function WoningontruimingGroningenPage() {
           <p className="text-sm font-semibold uppercase tracking-[0.14em] text-orange-light">Woningontruiming Groningen · lokaal aanspreekpunt</p>
           <h1 className="mt-4 max-w-4xl font-display text-4xl font-semibold leading-tight tracking-tight md:text-6xl">Woning leeg en correct opleveren in Groningen.</h1>
           <p className="mt-6 max-w-3xl text-lg leading-relaxed text-white/75 md:text-xl">OpleverMeester is gevestigd in Groningen. Moet een woning leeg vanwege verhuizing, overlijden, verkoop of einde huur, dan kijken we eerst naar de woning, bereikbaarheid en deadline en maken daar één opleverplan van.</p>
-          <div className="mt-8 flex flex-wrap gap-3"><a href="#intake" className="rounded-om bg-orange px-7 py-3.5 font-semibold text-white hover:bg-orange-light">Start intake</a><a href="tel:+31645316851" className="rounded-om border border-white/25 px-7 py-3.5 font-semibold text-white">Bel 06 45 31 68 51</a></div>
+          <div className="mt-8 flex flex-wrap gap-3"><a href={PHOTO_WHATSAPP_HREF} target="_blank" rel="noopener noreferrer" className="rounded-om bg-orange px-7 py-3.5 font-semibold text-white hover:bg-orange-light">Stuur foto&apos;s via WhatsApp</a><a href="tel:+31645316851" className="rounded-om border border-white/25 px-7 py-3.5 font-semibold text-white">Bel 06 45 31 68 51</a></div>
           <p className="mt-4 text-sm text-white/55">Indicatieve projectprijzen beginnen vanaf €595 incl. btw.</p>
         </div>
       </section>
 
       <section className="bg-white py-16 md:py-20">
         <div className="container-om grid gap-10 lg:grid-cols-[.8fr_1.2fr]">
-          <div><p className="text-sm font-semibold text-orange">Groningen in de praktijk</p><h2 className="mt-2 font-display text-3xl font-semibold tracking-tight text-navy">Bereikbaarheid telt mee in de planning.</h2><p className="mt-4 leading-relaxed text-muted">Een appartement in de stad vraagt een andere aanpak dan een eengezinswoning in een omliggende plaats. Daarom vragen we in de intake naar verdieping, lift, oppervlakte, hoeveelheid inboedel en de opleverdatum.</p></div>
+          <div><p className="text-sm font-semibold text-orange">Groningen in de praktijk</p><h2 className="mt-2 font-display text-3xl font-semibold tracking-tight text-navy">Bereikbaarheid telt mee in de planning.</h2><p className="mt-4 leading-relaxed text-muted">Een appartement in de stad vraagt een andere aanpak dan een eengezinswoning in een omliggende plaats. Na de foto's vragen we zo nodig naar verdieping, lift, oppervlakte, hoeveelheid inboedel en opleverdatum.</p></div>
           <div className="grid gap-5 md:grid-cols-2">{[
             ["Stad Groningen", "Bij appartementen, bovenwoningen en woningen met beperkte laadruimte nemen we toegang en loopafstand direct mee in de inschatting."],
             ["Haren & Hoogezand", "Bij een verhuizing of einde huur kunnen leeghalen, afvoer en schoon opleveren in één traject worden gecombineerd."],

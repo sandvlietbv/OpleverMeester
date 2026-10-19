@@ -1,7 +1,8 @@
+import { PHOTO_WHATSAPP_HREF } from "@/lib/whatsapp";
 import Link from "next/link";
 import { ArrowRight, Check } from "lucide-react";
 
-const FACTORS = ["Omvang van de ruimte", "Hoeveelheid inboedel", "Bereikbaarheid en opleverwerk"];
+const FACTORS = ["Ruimte en omvang", "Hoeveelheid en staat van de inboedel", "Bereikbaarheid, vuilgraad en opleverwerk"];
 
 export default function Pricing() {
   return (
@@ -15,7 +16,7 @@ export default function Pricing() {
               <span className="pb-2 text-lg font-medium text-muted">vanaf · incl. btw</span>
             </div>
             <p className="mt-5 max-w-lg text-lg leading-8 text-muted">
-              Vanaf €595 incl. btw. Eerst een indicatie. Daarna duidelijkheid vóór akkoord.
+              De vanafprijs geldt voor een kleine, vrij nette ruimte met een lage vuilgraad. Iedere woning en situatie is anders: u ontvangt vooraf een prijsvoorstel op maat.
             </p>
             <Link href="/kosten-woningontruiming" className="mt-5 inline-flex items-center gap-2 text-base font-semibold text-navy hover:text-orange">
               Bekijk hoe de prijs is opgebouwd <ArrowRight className="h-4 w-4" />
@@ -34,8 +35,8 @@ export default function Pricing() {
                 </div>
               ))}
             </div>
-            <a href="#intake" className="group mt-8 inline-flex min-h-14 w-full items-center justify-center gap-3 rounded-om bg-orange px-6 py-4 text-base font-semibold text-white shadow-[0_12px_28px_rgba(169,104,0,0.20)] transition hover:-translate-y-0.5 hover:bg-orange-light sm:w-auto">
-              Ontvang een prijsindicatie
+            <a href={PHOTO_WHATSAPP_HREF} target="_blank" rel="noopener noreferrer" className="group mt-8 inline-flex min-h-14 w-full items-center justify-center gap-3 rounded-om bg-orange px-6 py-4 text-base font-semibold text-white shadow-[0_12px_28px_rgba(169,104,0,0.20)] transition hover:-translate-y-0.5 hover:bg-orange-light sm:w-auto">
+              Stuur foto&apos;s voor een prijsindicatie
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </a>
           </div>

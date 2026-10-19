@@ -10,6 +10,7 @@ const FOOTER_LINKS = [
     { label: "Kosten woningontruiming", href: "/kosten-woningontruiming" },
   ]},
   { heading: "Regio & zakelijk", links: [
+    { label: "Zakelijke offerte aanvragen", href: "/zakelijk" },
     { label: "Groningen", href: "/woningontruiming-groningen" },
     { label: "Friesland", href: "/woningontruiming-friesland" },
     { label: "Drenthe", href: "/woningontruiming-drenthe" },
@@ -19,7 +20,7 @@ const FOOTER_LINKS = [
   { heading: "OpleverMeester", links: [
     { label: "Over ons", href: "/over-ons" },
     { label: "Contact", href: "/contact" },
-    { label: "Start intake", href: "/#intake" },
+    { label: "Stuur foto's", href: "/#intake" },
     { label: "Privacy", href: "/privacy" },
     { label: "Algemene voorwaarden", href: "/algemene-voorwaarden" },
     { label: "Cookiebeleid", href: "/cookies" },
