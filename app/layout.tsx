@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     default: "Woningontruiming & opleveren in Noord-Nederland | OpleverMeester",
     template: "%s | OpleverMeester",
   },
-  description: "Woning of bedrijfspand ontruimen en opleverklaar maken in Groningen, Friesland en Drenthe. Start de intake of bel direct met OpleverMeester.",
+  description: "Woning of bedrijfspand ontruimen en opleverklaar maken in Groningen, Friesland en Drenthe. Particulier? Stuur foto’s via WhatsApp. Zakelijk? Vraag een offerte aan.",
   alternates: { canonical: "/" },
   openGraph: {
     title: "Woningontruiming & opleveren in Noord-Nederland | OpleverMeester",
