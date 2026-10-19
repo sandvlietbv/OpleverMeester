@@ -1,3 +1,4 @@
+import { PHOTO_WHATSAPP_HREF } from "@/lib/whatsapp";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
@@ -42,7 +43,7 @@ export default function WoningontruimingGroningenPage() {
           <p className="text-sm font-semibold uppercase tracking-[0.14em] text-orange-light">Woningontruiming Groningen · lokaal aanspreekpunt</p>
           <h1 className="mt-4 max-w-4xl font-display text-4xl font-semibold leading-tight tracking-tight md:text-6xl">Woning leeg en correct opleveren in Groningen.</h1>
           <p className="mt-6 max-w-3xl text-lg leading-relaxed text-white/75 md:text-xl">OpleverMeester is gevestigd in Groningen. Moet een woning leeg vanwege verhuizing, overlijden, verkoop of einde huur, dan kijken we eerst naar de woning, bereikbaarheid en deadline en maken daar één opleverplan van.</p>
-          <div className="mt-8 flex flex-wrap gap-3"><a href="#intake" className="rounded-om bg-orange px-7 py-3.5 font-semibold text-white hover:bg-orange-light">Start intake</a><a href="tel:+31645316851" className="rounded-om border border-white/25 px-7 py-3.5 font-semibold text-white">Bel 06 45 31 68 51</a></div>
+          <div className="mt-8 flex flex-wrap gap-3"><a href={PHOTO_WHATSAPP_HREF} target="_blank" rel="noopener noreferrer" className="rounded-om bg-orange px-7 py-3.5 font-semibold text-white hover:bg-orange-light">Stuur foto&apos;s via WhatsApp</a><a href="tel:+31645316851" className="rounded-om border border-white/25 px-7 py-3.5 font-semibold text-white">Bel 06 45 31 68 51</a></div>
           <p className="mt-4 text-sm text-white/55">Indicatieve projectprijzen beginnen vanaf €595 incl. btw.</p>
         </div>
       </section>
