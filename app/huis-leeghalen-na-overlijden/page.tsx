@@ -1,3 +1,4 @@
+import { PHOTO_WHATSAPP_HREF } from "@/lib/whatsapp";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Contact from "@/components/Contact";
@@ -63,7 +64,7 @@ export default function HuisLeeghalenNaOverlijdenPage() {
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a
-                href="#intake"
+                href={PHOTO_WHATSAPP_HREF} target="_blank" rel="noopener noreferrer"
                 className="rounded-om bg-orange px-7 py-3.5 font-semibold text-white hover:bg-orange-light hover:text-navy"
               >
                 Start intake
