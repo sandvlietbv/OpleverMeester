@@ -27,12 +27,10 @@ export function PhoneChatDemo() {
               Hoi! Ik wil een woning laten leeghalen.
             </div>
             <div className="ml-auto flex w-fit max-w-[86%] items-center gap-2 rounded-[13px] rounded-br-[4px] bg-[#f7dc99] p-2 text-[#2b2824] shadow-sm">
-              <span className="grid w-[154px] grid-cols-3 gap-1 overflow-hidden rounded-lg bg-white/60 p-1.5">
-                <Image src="/images/visual-proof/woningontruiming.webp" width={48} height={54} alt="Voorbeeldfoto van een woning" className="h-[54px] w-full rounded object-cover" />
-                <Image src="/images/visual-proof/huurwoning-inspectie.webp" width={48} height={54} alt="Voorbeeldfoto van een kamer" className="h-[54px] w-full rounded object-cover" />
-                <Image src="/images/visual-proof/senioren.webp" width={48} height={54} alt="Voorbeeldfoto van de inboedel" className="h-[54px] w-full rounded object-cover" />
+              <span className="block w-[158px] overflow-hidden rounded-lg bg-white/70 p-1.5">
+                <Image src="/images/real-projects/whatsapp-fotos.jpg" width={148} height={99} alt="Zes echte voorbeeldfoto's van ruimtes en spullen bij een ontruiming" className="h-auto w-full rounded object-cover" unoptimized />
+                <span className="block px-1 pt-1 text-[10px] font-medium text-[#756a55]">6 foto's · voorbeeld</span>
               </span>
-              <span className="pr-2 text-[11px] font-medium">3 voorbeeldfoto's<br /><span className="text-[10px] text-[#756a55]">Meegestuurd via WhatsApp</span></span>
             </div>
             <div className="mr-auto max-w-[94%] rounded-[16px] rounded-bl-[4px] bg-white px-3 py-2.5 text-[#2b2824] shadow-sm">
               Dank je! Wat is de postcode en wanneer moet de woning klaar zijn? Dan bekijken we wat nodig is en geven we een prijsindicatie.
