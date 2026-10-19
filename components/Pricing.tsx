@@ -1,4 +1,5 @@
-import { PHOTO_WHATSAPP_HREF } from "@/lib/whatsapp";\nimport Link from "next/link";
+import { PHOTO_WHATSAPP_HREF } from "@/lib/whatsapp";
+import Link from "next/link";
 import { ArrowRight, Check } from "lucide-react";
 
 const FACTORS = ["Omvang van de ruimte", "Hoeveelheid inboedel", "Bereikbaarheid en opleverwerk"];
@@ -35,7 +36,7 @@ export default function Pricing() {
               ))}
             </div>
             <a href={PHOTO_WHATSAPP_HREF} target="_blank" rel="noopener noreferrer" className="group mt-8 inline-flex min-h-14 w-full items-center justify-center gap-3 rounded-om bg-orange px-6 py-4 text-base font-semibold text-white shadow-[0_12px_28px_rgba(169,104,0,0.20)] transition hover:-translate-y-0.5 hover:bg-orange-light sm:w-auto">
-              Ontvang een prijsindicatie
+              Stuur foto&apos;s voor een prijsindicatie
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </a>
           </div>
