@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
+import PrivateWhatsApp from "@/components/PrivateWhatsApp";
 
 declare global { interface Window { gtag?: (...args: unknown[]) => void } }
 
@@ -76,7 +78,7 @@ function getEstimate(data: IntakeData): Estimate {
   return { label: "Meerdaagse opdracht", price: "vanaf €2.195 incl. btw", amount: 2195 };
 }
 
-export default function Contact() {
+function BusinessIntake() {
   const [step, setStep] = useState(0);
   const [data, setData] = useState<IntakeData>(EMPTY);
   const [photos, setPhotos] = useState<IntakePhoto[]>([]);
@@ -281,3 +283,11 @@ function Slide({ eyebrow, title, text, children }: { eyebrow: string; title: str
 function Nav({ back, next, disabled }: { back?: () => void; next: () => void; disabled?: boolean }) { return <div className={`mt-8 flex items-center gap-4 ${back ? "justify-between" : "justify-end"}`}>{back && <button type="button" onClick={back} className="min-h-14 px-2 text-base font-semibold text-muted">← Terug</button>}<button type="button" onClick={next} disabled={disabled} className="min-h-14 rounded-om bg-orange px-7 py-4 text-base font-semibold text-white shadow-[0_10px_26px_rgba(231,111,44,0.18)] transition hover:-translate-y-0.5 disabled:opacity-50">Verder →</button></div>; }
 function Input({ label, value, onChange, type = "text", required }: { label: string; value: string; onChange: (v: string) => void; type?: string; required?: boolean }) { return <label className="block text-base font-medium text-navy">{label}<input type={type} value={value} onChange={(e) => onChange(e.target.value)} required={required} className="mt-2 w-full rounded-om border border-surface-mid bg-white px-4 py-4 text-base shadow-sm transition focus:border-orange" /></label>; }
 function Select({ label, value, onChange, options, required }: { label: string; value: string; onChange: (v: string) => void; options: string[]; required?: boolean }) { return <label className="block text-base font-medium text-navy">{label}<select value={value} onChange={(e) => onChange(e.target.value)} required={required} className="mt-2 w-full rounded-om border border-surface-mid bg-white px-4 py-4 text-base shadow-sm transition focus:border-orange"><option value="">Kies wat past</option>{options.map((o) => <option key={o}>{o}</option>)}</select></label>; }
+
+
+/** Persoonlijke aanvragen via WhatsApp; B2B-formulier alleen op zakelijke routes. */
+export default function Contact() {
+  const pathname = usePathname();
+  const isBusiness = pathname.startsWith("/zakelijk") || pathname === "/bedrijfsontruiming";
+  return isBusiness ? <BusinessIntake /> : <PrivateWhatsApp />;
+}
