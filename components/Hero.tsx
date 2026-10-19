@@ -35,13 +35,13 @@ export default function Hero() {
 
           <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
             <a href={PHOTO_WHATSAPP_HREF} target="_blank" rel="noopener noreferrer" className="group inline-flex min-h-16 items-center justify-center gap-3 rounded-full bg-gradient-to-r from-[#b36f00] to-[#d3920f] px-8 py-4 text-base font-semibold text-white shadow-[0_16px_36px_rgba(169,104,0,0.24)] transition hover:-translate-y-0.5 hover:shadow-[0_20px_44px_rgba(169,104,0,0.28)]">
-              Ontvang een prijsindicatie
+              Stuur foto&apos;s via WhatsApp
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </a>
             <Link href="/zakelijk" className="inline-flex min-h-16 items-center justify-center gap-3 rounded-full border border-orange/55 bg-white/90 px-7 py-4 text-base font-semibold text-navy shadow-sm transition hover:border-orange hover:bg-[#fffaf0]">
-              <MessageCircle className="h-5 w-5" />
-              Stel een vraag via WhatsApp
-            </a>
+              <Building2 className="h-5 w-5" />
+              Zakelijke offerte aanvragen
+            </Link>
           </div>
 
           <div className="mt-8 hidden flex-wrap gap-x-6 gap-y-3 text-sm text-muted sm:flex">
