@@ -1,6 +1,6 @@
 const FAQS = [
   ["Hoe snel kunnen jullie starten?", "Bij een korte deadline kijken we direct wat praktisch mogelijk is. Bel bij spoed rechtstreeks via 06 45 31 68 51."],
-  ["Wat kost een ontruiming of oplevering?", "Een compacte opdracht begint vanaf €595 inclusief btw. De uiteindelijke projectprijs hangt af van omvang, hoeveelheid inboedel, bereikbaarheid en de afgesproken werkzaamheden. Stuur via WhatsApp foto\u0027s voor een eerste beoordeling; daarna stemmen we de definitieve prijs af."],
+  ["Wat kost een ontruiming of oplevering?", "Onze vanafprijs van €595 inclusief btw is gebaseerd op een kleine, vrij nette ruimte met een lage vuilgraad. Elke woning en situatie is anders. De projectprijs hangt af van de omvang, hoeveelheid inboedel, vervuiling, bereikbaarheid en afgesproken werkzaamheden. Stuur via WhatsApp foto\u0027s voor een eerste beoordeling; daarna stemmen we de definitieve prijs af."],
   ["Werken jullie ook met spoed?", "Ja. Geef de deadline direct door of bel ons. We zeggen meteen wat haalbaar is en welke planning daarbij past."],
   ["Wat gebeurt er met de inboedel?", "We spreken vooraf af wat moet blijven, apart gezet moet worden of kan worden afgevoerd. Waar passend kiezen we voor hergebruik en gescheiden verwerking."],
   ["In welke regio's zijn jullie actief?", "Onze vaste focus is Noord-Nederland: Groningen, Friesland en Drenthe. Voor grotere opdrachten buiten de regio bekijken we per situatie wat mogelijk is."],
